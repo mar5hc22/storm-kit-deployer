@@ -1,0 +1,30 @@
+{
+ "key": "83a8ccbf2a954e0fb24bfd2fe3c45c0c",
+ "type": "Web Map",
+ "title": "Impacted Community Checklist (form map)",
+ "snippet": null,
+ "description": null,
+ "tags": [
+  "Survey123"
+ ],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS Online",
+  "Data Editing",
+  "Explorer Web Map",
+  "Map",
+  "Offline",
+  "Online Map",
+  "Web Map"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "relationships": []
+}

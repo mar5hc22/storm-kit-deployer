@@ -1,0 +1,41 @@
+{
+ "key": "07da41e6e7954c3b872e579a12a1bffa",
+ "type": "Web Map",
+ "title": "Team Update Map",
+ "snippet": "Map for the section update dashboard",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [
+  [
+   -164.14100207811714,
+   59.008990957677575
+  ],
+  [
+   -154.33021106249473,
+   63.3788125727716
+  ]
+ ],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Collector",
+  "Data Editing",
+  "Explorer Web Map",
+  "Map",
+  "Online Map",
+  "Web Map"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

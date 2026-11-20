@@ -1,0 +1,60 @@
+{
+ "key": "29920d92b407461f8ba96a8d4089bad0",
+ "type": "Form",
+ "title": "Home Damage Assessment",
+ "snippet": "to be used as a template",
+ "description": "",
+ "tags": [
+  "Survey123"
+ ],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": {
+  "connectVersion": "3.21.62",
+  "isVersionLocked": true,
+  "versionInfo": {
+   "created": {
+    "build": "3.24.102",
+    "env": "prod",
+    "timestamp": 1761414867430
+   },
+   "published": {
+    "build": "3.24.102",
+    "env": "prod",
+    "timestamp": 1761419370313
+   },
+   "saved": {
+    "build": "3.24.102",
+    "env": "prod",
+    "timestamp": 1761419372327
+   }
+  },
+  "websiteVersion": "3.24"
+ },
+ "typeKeywords": [
+  "Form",
+  "Survey123",
+  "Survey123 Connect",
+  "Survey123 Hub",
+  "xForm"
+ ],
+ "data": {
+  "file": "data.zip",
+  "name": "form.zip",
+  "form": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": [
+  {
+   "type": "Survey2Service",
+   "to": "e63bf365045944068e0eac4d0f367068"
+  },
+  {
+   "type": "Survey2Data",
+   "to": "7fc39ab4bdad4a8eb347cfa33c20ccb5"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "key": "1e8c409fb72948feb6ecd51d431c4797",
+ "type": "Form",
+ "title": "Team Update",
+ "snippet": null,
+ "description": null,
+ "tags": [
+  "Survey123"
+ ],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": {
+  "versionInfo": {
+   "created": {
+    "build": "3.24.64",
+    "timestamp": 1760297057651,
+    "env": "prod"
+   },
+   "saved": {
+    "build": "3.24.64",
+    "timestamp": 1760404582619,
+    "env": "prod"
+   },
+   "published": {
+    "build": "3.24.64",
+    "timestamp": 1760404580941,
+    "env": "prod"
+   }
+  },
+  "websiteVersion": "3.24",
+  "isVersionLocked": true
+ },
+ "typeKeywords": [
+  "Form",
+  "Survey123",
+  "Survey123 Hub",
+  "xForm"
+ ],
+ "data": {
+  "file": "data.zip",
+  "name": "form.zip",
+  "form": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": [
+  {
+   "type": "Survey2Service",
+   "to": "0da7af6291d44f87a9f4198ed43ce69c"
+  },
+  {
+   "type": "Survey2Data",
+   "to": "a724ca755df04d8b93a702636a4d27d7"
+  }
+ ]
+}

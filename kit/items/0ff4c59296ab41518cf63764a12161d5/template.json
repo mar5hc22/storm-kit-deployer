@@ -1,0 +1,112 @@
+{
+ "key": "0ff4c59296ab41518cf63764a12161d5",
+ "type": "Feature Service",
+ "title": "Video Services (read only view)",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [
+  [
+   -180,
+   -89.00000000000001
+  ],
+  [
+   180,
+   80
+  ]
+ ],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "extra_keywords": [
+  "ArcGIS API for JavaScript"
+ ],
+ "service": {
+  "name": "VideoServices_readonly",
+  "is_view": true,
+  "create": {
+   "serviceDescription": "",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 1000,
+   "capabilities": "Query",
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   },
+   "initialExtent": {
+    "xmin": -20037508.342789244,
+    "ymin": -30240971.958386146,
+    "xmax": 20037508.342789244,
+    "ymax": 15538711.096309224,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriMeters",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "source": "{{e4c4797cc7134c22a42eec21560f58b7.itemId}}",
+  "view_layers": [
+   {
+    "id": 1,
+    "name": "VideoServiceExtents",
+    "is_table": false,
+    "source_layer_id": 1,
+    "hidden_fields": [],
+    "definition_query": null,
+    "update": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "symbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         76,
+         129,
+         205,
+         191
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          0,
+          0,
+          0,
+          255
+         ],
+         "width": 0.75
+        }
+       }
+      },
+      "transparency": 0,
+      "labelingInfo": null
+     },
+     "minScale": 0,
+     "maxScale": 0,
+     "capabilities": "Query"
+    }
+   }
+  ]
+ },
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

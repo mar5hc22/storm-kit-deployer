@@ -1,0 +1,3895 @@
+{
+ "operationalLayers": [
+  {
+   "id": "d9b58af9982a4b69aceed71dc2ede44e",
+   "opacity": 1,
+   "title": "{{org.name}} Layers",
+   "visibility": true,
+   "layers": [
+    {
+     "id": "c1b09817d72742dba5a6f05f1e2db6bd",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "Road Centerlines",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/AKDOTPF_Route_Data/FeatureServer/20",
+     "visibility": true,
+     "itemId": "01584dde2adb444196c9e483d623f310",
+     "layerType": "ArcGISFeatureLayer",
+     "blendMode": "normal",
+     "showLabels": true,
+     "layerDefinition": {
+      "drawingInfo": {
+       "labelingInfo": [
+        {
+         "name": "Default",
+         "allowOverrun": true,
+         "deconflictionStrategy": "dynamic",
+         "labelExpression": "[Route_Name]",
+         "labelExpressionInfo": {
+          "expression": "$feature.Route_Name",
+          "title": "Custom"
+         },
+         "labelPlacement": "esriServerLinePlacementAboveAlong",
+         "maxScale": 0,
+         "minScale": 100000,
+         "repeatLabel": false,
+         "symbol": {
+          "type": "esriTS",
+          "color": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "font": {
+           "family": "Arial",
+           "size": 10,
+           "weight": "bold"
+          },
+          "horizontalAlignment": "center",
+          "kerning": true,
+          "haloColor": [
+           0,
+           92,
+           230,
+           255
+          ],
+          "haloSize": 1,
+          "rightToLeft": false,
+          "rotated": false,
+          "text": "",
+          "verticalAlignment": "bottom",
+          "xoffset": 0,
+          "yoffset": 0,
+          "angle": 0
+         },
+         "useCodedValues": true
+        }
+       ],
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMLineSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMSolidStroke",
+            "enable": true,
+            "capStyle": "Round",
+            "joinStyle": "Round",
+            "lineStyle3D": "Strip",
+            "miterLimit": 10,
+            "width": 1.5,
+            "height3D": 1,
+            "anchor3D": "Center",
+            "color": [
+             0,
+             92,
+             230,
+             255
+            ]
+           }
+          ]
+         }
+        }
+       }
+      }
+     },
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "GlobalID",
+          "isEditable": false,
+          "label": "GlobalID",
+          "visible": true
+         },
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_ID",
+          "isEditable": true,
+          "label": "Route ID",
+          "visible": true
+         },
+         {
+          "fieldName": "From_Date",
+          "isEditable": true,
+          "label": "From Date",
+          "visible": true
+         },
+         {
+          "fieldName": "To_Date",
+          "isEditable": true,
+          "label": "To Date",
+          "visible": true
+         },
+         {
+          "fieldName": "CDS_Num",
+          "isEditable": true,
+          "label": "CDS Number",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Location_Code",
+          "isEditable": true,
+          "label": "Route Location Code",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Number",
+          "isEditable": true,
+          "label": "Route_Number",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Type",
+          "isEditable": true,
+          "label": "Route Type",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Qualifier",
+          "isEditable": true,
+          "label": "Route Qualifier",
+          "visible": true
+         },
+         {
+          "fieldName": "Edit_Comment",
+          "isEditable": true,
+          "label": "Edit Comment",
+          "visible": true
+         },
+         {
+          "fieldName": "created_user",
+          "isEditable": false,
+          "label": "created_user",
+          "visible": true
+         },
+         {
+          "fieldName": "created_date",
+          "isEditable": false,
+          "label": "created_date",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_user",
+          "isEditable": false,
+          "label": "last_edited_user",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_date",
+          "isEditable": false,
+          "label": "last_edited_date",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name_Desc_1",
+          "isEditable": true,
+          "label": "Route Name Desc 1",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name_Desc_2",
+          "isEditable": true,
+          "label": "Route_Name_Desc_2",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name",
+          "isEditable": true,
+          "label": "Route Name",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name_Unique",
+          "isEditable": true,
+          "label": "Route Name Unique",
+          "visible": true
+         },
+         {
+          "fieldName": "Seg_Length_Miles",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Segment Length in Miles",
+          "visible": true
+         },
+         {
+          "fieldName": "Geometry_Update_Status",
+          "isEditable": true,
+          "label": "Geometry Update Status",
+          "visible": true
+         },
+         {
+          "fieldName": "Geometry_Update_Notes",
+          "isEditable": true,
+          "label": "Geometry Update Notes",
+          "visible": true
+         },
+         {
+          "fieldName": "SHAPE__Length",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": false,
+          "label": "SHAPE__Length",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "GlobalID",
+        "isEditable": false,
+        "label": "GlobalID",
+        "visible": true
+       },
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_ID",
+        "isEditable": true,
+        "label": "Route ID",
+        "visible": true
+       },
+       {
+        "fieldName": "From_Date",
+        "isEditable": true,
+        "label": "From Date",
+        "visible": true
+       },
+       {
+        "fieldName": "To_Date",
+        "isEditable": true,
+        "label": "To Date",
+        "visible": true
+       },
+       {
+        "fieldName": "CDS_Num",
+        "isEditable": true,
+        "label": "CDS Number",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Location_Code",
+        "isEditable": true,
+        "label": "Route Location Code",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Number",
+        "isEditable": true,
+        "label": "Route_Number",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Type",
+        "isEditable": true,
+        "label": "Route Type",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Qualifier",
+        "isEditable": true,
+        "label": "Route Qualifier",
+        "visible": true
+       },
+       {
+        "fieldName": "Edit_Comment",
+        "isEditable": true,
+        "label": "Edit Comment",
+        "visible": true
+       },
+       {
+        "fieldName": "created_user",
+        "isEditable": false,
+        "label": "created_user",
+        "visible": true
+       },
+       {
+        "fieldName": "created_date",
+        "isEditable": false,
+        "label": "created_date",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_user",
+        "isEditable": false,
+        "label": "last_edited_user",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_date",
+        "isEditable": false,
+        "label": "last_edited_date",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name_Desc_1",
+        "isEditable": true,
+        "label": "Route Name Desc 1",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name_Desc_2",
+        "isEditable": true,
+        "label": "Route_Name_Desc_2",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name",
+        "isEditable": true,
+        "label": "Route Name",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name_Unique",
+        "isEditable": true,
+        "label": "Route Name Unique",
+        "visible": true
+       },
+       {
+        "fieldName": "Seg_Length_Miles",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Segment Length in Miles",
+        "visible": true
+       },
+       {
+        "fieldName": "Geometry_Update_Status",
+        "isEditable": true,
+        "label": "Geometry Update Status",
+        "visible": true
+       },
+       {
+        "fieldName": "Geometry_Update_Notes",
+        "isEditable": true,
+        "label": "Geometry Update Notes",
+        "visible": true
+       },
+       {
+        "fieldName": "SHAPE__Length",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": false,
+        "label": "SHAPE__Length",
+        "visible": true
+       }
+      ],
+      "title": "{ROUTE_NAME}"
+     }
+    },
+    {
+     "id": "22200bb3112940ca9291a9f0c2811bcb",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "{{org.name}} Managed / Owned",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/AKDOTPF_Route_Data/FeatureServer/11",
+     "visibility": false,
+     "itemId": "01584dde2adb444196c9e483d623f310",
+     "layerType": "ArcGISFeatureLayer",
+     "blendMode": "normal",
+     "layerDefinition": {
+      "definitionExpression": "Mgmt_Resp_Type = 1",
+      "drawingInfo": {
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMLineSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMSolidStroke",
+            "enable": true,
+            "capStyle": "Round",
+            "joinStyle": "Round",
+            "lineStyle3D": "Strip",
+            "miterLimit": 10,
+            "width": 1.5,
+            "height3D": 1,
+            "anchor3D": "Center",
+            "color": [
+             255,
+             0,
+             0,
+             255
+            ]
+           }
+          ]
+         }
+        }
+       }
+      }
+     },
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "GlobalID",
+          "isEditable": false,
+          "label": "GlobalID",
+          "visible": true
+         },
+         {
+          "fieldName": "created_user",
+          "isEditable": false,
+          "label": "created_user",
+          "visible": true
+         },
+         {
+          "fieldName": "created_date",
+          "isEditable": false,
+          "label": "created_date",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_user",
+          "isEditable": false,
+          "label": "last_edited_user",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_date",
+          "isEditable": false,
+          "label": "last_edited_date",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name_Unique",
+          "isEditable": true,
+          "label": "Route Name Unique",
+          "visible": true
+         },
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "Event_ID",
+          "isEditable": true,
+          "label": "Event GUID",
+          "visible": true
+         },
+         {
+          "fieldName": "Field_Establish_Date",
+          "isEditable": true,
+          "label": "Field Establish Date",
+          "visible": true
+         },
+         {
+          "fieldName": "From_Date",
+          "isEditable": true,
+          "label": "From Date",
+          "visible": true
+         },
+         {
+          "fieldName": "To_Date",
+          "isEditable": true,
+          "label": "To_Date",
+          "visible": true
+         },
+         {
+          "fieldName": "From_MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "From Milepoint",
+          "visible": true
+         },
+         {
+          "fieldName": "To_MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "To Milepoint",
+          "visible": true
+         },
+         {
+          "fieldName": "Edit_Comment",
+          "isEditable": true,
+          "label": "Editor Comments",
+          "visible": true
+         },
+         {
+          "fieldName": "Mgmt_Resp_Type",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Responsible Entity Type",
+          "visible": true
+         },
+         {
+          "fieldName": "Mgmt_Resp_Name",
+          "isEditable": true,
+          "label": "Responsible Entity Name",
+          "visible": true
+         },
+         {
+          "fieldName": "From_Feature",
+          "isEditable": true,
+          "label": "From Reference Feature",
+          "visible": true
+         },
+         {
+          "fieldName": "To_Feature",
+          "isEditable": true,
+          "label": "To Reference Feature",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_ID",
+          "isEditable": true,
+          "label": "Route_ID",
+          "visible": true
+         },
+         {
+          "fieldName": "LocError",
+          "isEditable": true,
+          "label": "LocError",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name",
+          "isEditable": true,
+          "label": "Route Name",
+          "visible": true
+         },
+         {
+          "fieldName": "Seg_Length_Miles",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Segment Length in Miles",
+          "visible": true
+         },
+         {
+          "fieldName": "SHAPE__Length",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": false,
+          "label": "SHAPE__Length",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "GlobalID",
+        "isEditable": false,
+        "label": "GlobalID",
+        "visible": true
+       },
+       {
+        "fieldName": "created_user",
+        "isEditable": false,
+        "label": "created_user",
+        "visible": true
+       },
+       {
+        "fieldName": "created_date",
+        "isEditable": false,
+        "label": "created_date",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_user",
+        "isEditable": false,
+        "label": "last_edited_user",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_date",
+        "isEditable": false,
+        "label": "last_edited_date",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name_Unique",
+        "isEditable": true,
+        "label": "Route Name Unique",
+        "visible": true
+       },
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "Event_ID",
+        "isEditable": true,
+        "label": "Event GUID",
+        "visible": true
+       },
+       {
+        "fieldName": "Field_Establish_Date",
+        "isEditable": true,
+        "label": "Field Establish Date",
+        "visible": true
+       },
+       {
+        "fieldName": "From_Date",
+        "isEditable": true,
+        "label": "From Date",
+        "visible": true
+       },
+       {
+        "fieldName": "To_Date",
+        "isEditable": true,
+        "label": "To_Date",
+        "visible": true
+       },
+       {
+        "fieldName": "From_MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "From Milepoint",
+        "visible": true
+       },
+       {
+        "fieldName": "To_MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "To Milepoint",
+        "visible": true
+       },
+       {
+        "fieldName": "Edit_Comment",
+        "isEditable": true,
+        "label": "Editor Comments",
+        "visible": true
+       },
+       {
+        "fieldName": "Mgmt_Resp_Type",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Responsible Entity Type",
+        "visible": true
+       },
+       {
+        "fieldName": "Mgmt_Resp_Name",
+        "isEditable": true,
+        "label": "Responsible Entity Name",
+        "visible": true
+       },
+       {
+        "fieldName": "From_Feature",
+        "isEditable": true,
+        "label": "From Reference Feature",
+        "visible": true
+       },
+       {
+        "fieldName": "To_Feature",
+        "isEditable": true,
+        "label": "To Reference Feature",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_ID",
+        "isEditable": true,
+        "label": "Route_ID",
+        "visible": true
+       },
+       {
+        "fieldName": "LocError",
+        "isEditable": true,
+        "label": "LocError",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name",
+        "isEditable": true,
+        "label": "Route Name",
+        "visible": true
+       },
+       {
+        "fieldName": "Seg_Length_Miles",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Segment Length in Miles",
+        "visible": true
+       },
+       {
+        "fieldName": "SHAPE__Length",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": false,
+        "label": "SHAPE__Length",
+        "visible": true
+       }
+      ],
+      "title": "{Mgmt_Resp_Name}"
+     }
+    },
+    {
+     "id": "5615e5916f15430aba9a494470c1bd15",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "Harbors",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/AKDOTPF_Route_Data/FeatureServer/1",
+     "visibility": true,
+     "itemId": "01584dde2adb444196c9e483d623f310",
+     "layerType": "ArcGISFeatureLayer",
+     "blendMode": "normal",
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "GlobalID",
+          "isEditable": false,
+          "label": "GlobalID",
+          "visible": true
+         },
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "LOCATION",
+          "isEditable": true,
+          "label": "LOCATION",
+          "visible": true
+         },
+         {
+          "fieldName": "PDFS",
+          "isEditable": true,
+          "label": "PDFS",
+          "visible": true
+         },
+         {
+          "fieldName": "FACILITY",
+          "isEditable": true,
+          "label": "FACILITY",
+          "visible": true
+         },
+         {
+          "fieldName": "LAT_DD",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "LAT_DD",
+          "visible": true
+         },
+         {
+          "fieldName": "LONG_DD",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "LONG_DD",
+          "visible": true
+         },
+         {
+          "fieldName": "OWNERSHIP",
+          "isEditable": true,
+          "label": "OWNERSHIP",
+          "visible": true
+         },
+         {
+          "fieldName": "MAINTAINED",
+          "isEditable": true,
+          "label": "MAINTAINED",
+          "visible": true
+         },
+         {
+          "fieldName": "REGION",
+          "isEditable": true,
+          "label": "REGION",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "GlobalID",
+        "isEditable": false,
+        "label": "GlobalID",
+        "visible": true
+       },
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "LOCATION",
+        "isEditable": true,
+        "label": "LOCATION",
+        "visible": true
+       },
+       {
+        "fieldName": "PDFS",
+        "isEditable": true,
+        "label": "PDFS",
+        "visible": true
+       },
+       {
+        "fieldName": "FACILITY",
+        "isEditable": true,
+        "label": "FACILITY",
+        "visible": true
+       },
+       {
+        "fieldName": "LAT_DD",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "LAT_DD",
+        "visible": true
+       },
+       {
+        "fieldName": "LONG_DD",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "LONG_DD",
+        "visible": true
+       },
+       {
+        "fieldName": "OWNERSHIP",
+        "isEditable": true,
+        "label": "OWNERSHIP",
+        "visible": true
+       },
+       {
+        "fieldName": "MAINTAINED",
+        "isEditable": true,
+        "label": "MAINTAINED",
+        "visible": true
+       },
+       {
+        "fieldName": "REGION",
+        "isEditable": true,
+        "label": "REGION",
+        "visible": true
+       }
+      ],
+      "title": "{LOCATION}"
+     },
+     "layerDefinition": {
+      "drawingInfo": {
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMPointSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "colorLocked": true,
+            "anchorPoint": {
+             "x": -0.03460422859213244,
+             "y": -7.165450246210033e-06
+            },
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 14,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -337,
+             "ymin": -300,
+             "xmax": 337,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  9,
+                  -5
+                 ],
+                 [
+                  18,
+                  -8
+                 ],
+                 [
+                  27,
+                  -12
+                 ],
+                 [
+                  34,
+                  -19
+                 ],
+                 [
+                  40,
+                  -27
+                 ],
+                 [
+                  45,
+                  -35
+                 ],
+                 [
+                  48,
+                  -44
+                 ],
+                 [
+                  49,
+                  -53
+                 ],
+                 [
+                  48,
+                  -63
+                 ],
+                 [
+                  45,
+                  -73
+                 ],
+                 [
+                  40,
+                  -81
+                 ],
+                 [
+                  34,
+                  -89
+                 ],
+                 [
+                  27,
+                  -95
+                 ],
+                 [
+                  18,
+                  -100
+                 ],
+                 [
+                  9,
+                  -102
+                 ],
+                 [
+                  -1,
+                  -103
+                 ],
+                 [
+                  -11,
+                  -102
+                 ],
+                 [
+                  -20,
+                  -100
+                 ],
+                 [
+                  -28,
+                  -95
+                 ],
+                 [
+                  -36,
+                  -89
+                 ],
+                 [
+                  -42,
+                  -81
+                 ],
+                 [
+                  -47,
+                  -73
+                 ],
+                 [
+                  -50,
+                  -63
+                 ],
+                 [
+                  -50,
+                  -53
+                 ],
+                 [
+                  -49,
+                  -44
+                 ],
+                 [
+                  -46,
+                  -35
+                 ],
+                 [
+                  -42,
+                  -26
+                 ],
+                 [
+                  -36,
+                  -19
+                 ],
+                 [
+                  -33,
+                  -16
+                 ],
+                 [
+                  -29,
+                  -13
+                 ],
+                 [
+                  -20,
+                  -8
+                 ],
+                 [
+                  -11,
+                  -5
+                 ],
+                 [
+                  -1,
+                  -4
+                 ],
+                 [
+                  9,
+                  -5
+                 ]
+                ],
+                [
+                 [
+                  -183,
+                  -164
+                 ],
+                 [
+                  182,
+                  -164
+                 ],
+                 [
+                  2,
+                  152
+                 ],
+                 [
+                  -183,
+                  -164
+                 ]
+                ],
+                [
+                 [
+                  202,
+                  -175
+                 ],
+                 [
+                  -202,
+                  -175
+                 ],
+                 [
+                  2,
+                  175
+                 ],
+                 [
+                  202,
+                  -175
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  0,
+                  0,
+                  0,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           },
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "anchorPoint": {
+             "x": -6.8875479690735694e-06,
+             "y": -7.473921353143472e-06
+            },
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 14,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -326,
+             "ymin": -300,
+             "xmax": 326,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  185,
+                  -166
+                 ],
+                 [
+                  -184,
+                  -166
+                 ],
+                 [
+                  3,
+                  166
+                 ],
+                 [
+                  185,
+                  -166
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  255,
+                  190,
+                  232,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           }
+          ],
+          "haloSize": 1,
+          "scaleX": 1,
+          "angleAlignment": "Map"
+         }
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": "f66ba9e77e9c4e479c4c57d8f487e8d5",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "Bridge Points",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/AKDOTPF_Route_Data/FeatureServer/18",
+     "visibility": true,
+     "itemId": "01584dde2adb444196c9e483d623f310",
+     "layerType": "ArcGISFeatureLayer",
+     "layerDefinition": {
+      "minScale": 3000000,
+      "drawingInfo": {
+       "labelingInfo": [
+        {
+         "name": "Default",
+         "deconflictionStrategy": "dynamic",
+         "labelExpressionInfo": {
+          "expression": "$feature.Bridge_Name + \",\" + \" \" + $feature.Bridge_Number",
+          "title": "Custom"
+         },
+         "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+         "maxScale": 0,
+         "minScale": 100000,
+         "repeatLabel": true,
+         "symbol": {
+          "type": "esriTS",
+          "color": [
+           0,
+           0,
+           0,
+           255
+          ],
+          "font": {
+           "family": "Arial",
+           "size": 8
+          },
+          "horizontalAlignment": "center",
+          "kerning": true,
+          "haloColor": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "haloSize": 1,
+          "rightToLeft": false,
+          "rotated": false,
+          "text": "",
+          "verticalAlignment": "bottom",
+          "xoffset": 0,
+          "yoffset": 0,
+          "angle": 0
+         },
+         "useCodedValues": true
+        }
+       ],
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMPointSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "colorLocked": true,
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 7,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -300,
+             "ymin": -300,
+             "xmax": 300,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  -198,
+                  -198
+                 ],
+                 [
+                  198,
+                  -198
+                 ],
+                 [
+                  198,
+                  198
+                 ],
+                 [
+                  -198,
+                  198
+                 ],
+                 [
+                  -198,
+                  -198
+                 ]
+                ],
+                [
+                 [
+                  210,
+                  210
+                 ],
+                 [
+                  210,
+                  -210
+                 ],
+                 [
+                  -210,
+                  -210
+                 ],
+                 [
+                  -210,
+                  210
+                 ],
+                 [
+                  210,
+                  210
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  168,
+                  0,
+                  0,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           },
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 7,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -300,
+             "ymin": -300,
+             "xmax": 300,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  204,
+                  204
+                 ],
+                 [
+                  204,
+                  -204
+                 ],
+                 [
+                  -204,
+                  -204
+                 ],
+                 [
+                  -204,
+                  204
+                 ],
+                 [
+                  204,
+                  204
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  255,
+                  0,
+                  0,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           }
+          ],
+          "haloSize": 1,
+          "scaleX": 1,
+          "angleAlignment": "Map"
+         }
+        }
+       }
+      }
+     },
+     "blendMode": "normal",
+     "showLabels": true,
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "Route_Name_Unique",
+          "isEditable": true,
+          "label": "Route Name Unique",
+          "visible": true
+         },
+         {
+          "fieldName": "GlobalID",
+          "isEditable": false,
+          "label": "GlobalID",
+          "visible": true
+         },
+         {
+          "fieldName": "Bridge_Name_Route",
+          "isEditable": true,
+          "label": "Bridge Name Route",
+          "visible": true
+         },
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "Event_ID",
+          "isEditable": true,
+          "label": "Event ID",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_ID",
+          "isEditable": true,
+          "label": "Route ID",
+          "visible": true
+         },
+         {
+          "fieldName": "Field_Establish_Date",
+          "isEditable": true,
+          "label": "Field Establish Date",
+          "visible": true
+         },
+         {
+          "fieldName": "From_Date",
+          "isEditable": true,
+          "label": "From Date",
+          "visible": true
+         },
+         {
+          "fieldName": "To_Date",
+          "isEditable": true,
+          "label": "To Date",
+          "visible": true
+         },
+         {
+          "fieldName": "From_MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "From Milepoint",
+          "visible": true
+         },
+         {
+          "fieldName": "To_MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "To Milepoint",
+          "visible": true
+         },
+         {
+          "fieldName": "Edit_Comment",
+          "isEditable": true,
+          "label": "Edit Comment",
+          "visible": true
+         },
+         {
+          "fieldName": "Bridge_Name",
+          "isEditable": true,
+          "label": "Bridge Name",
+          "visible": true
+         },
+         {
+          "fieldName": "Bridge_Number",
+          "isEditable": true,
+          "label": "Bridge Number",
+          "visible": true
+         },
+         {
+          "fieldName": "Length_Ft",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Length (Ft)",
+          "visible": true
+         },
+         {
+          "fieldName": "Side",
+          "isEditable": true,
+          "label": "Side",
+          "visible": true
+         },
+         {
+          "fieldName": "From_Frame_ID",
+          "isEditable": true,
+          "label": "From Frame Location",
+          "visible": true
+         },
+         {
+          "fieldName": "To_Frame_ID",
+          "isEditable": true,
+          "label": "To Frame Location",
+          "visible": true
+         },
+         {
+          "fieldName": "NBI",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "NBI",
+          "visible": true
+         },
+         {
+          "fieldName": "Structure_Type",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Structure Type",
+          "visible": true
+         },
+         {
+          "fieldName": "HPMS_Structure_Type",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "HPMS Structure Type",
+          "visible": true
+         },
+         {
+          "fieldName": "Dup_Num",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Duplicate Bridge Number",
+          "visible": true
+         },
+         {
+          "fieldName": "LocError",
+          "isEditable": true,
+          "label": "LocError",
+          "visible": true
+         },
+         {
+          "fieldName": "Deck_Cond",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Deck Condition",
+          "visible": true
+         },
+         {
+          "fieldName": "Superstruct_Cond",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Superstruct Cond",
+          "visible": true
+         },
+         {
+          "fieldName": "Substruct_Cond",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Substruct Cond",
+          "visible": true
+         },
+         {
+          "fieldName": "PMR_Deck",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "PMR Deck",
+          "visible": true
+         },
+         {
+          "fieldName": "PMR_Superstruct",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "PMR Superstruct",
+          "visible": true
+         },
+         {
+          "fieldName": "PMR_Substruct",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "PMR Substruct",
+          "visible": true
+         },
+         {
+          "fieldName": "PMR_Overall",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "PMR Overall",
+          "visible": true
+         },
+         {
+          "fieldName": "Seg_Length_Miles",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Segment Length in Miles",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name",
+          "isEditable": true,
+          "label": "Route Name",
+          "visible": true
+         },
+         {
+          "fieldName": "Mid_MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Mid_MPT",
+          "visible": true
+         },
+         {
+          "fieldName": "Shape_STLength_1",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Shape_STLength_1",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "Route_Name_Unique",
+        "isEditable": true,
+        "label": "Route Name Unique",
+        "visible": true
+       },
+       {
+        "fieldName": "GlobalID",
+        "isEditable": false,
+        "label": "GlobalID",
+        "visible": true
+       },
+       {
+        "fieldName": "Bridge_Name_Route",
+        "isEditable": true,
+        "label": "Bridge Name Route",
+        "visible": true
+       },
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "Event_ID",
+        "isEditable": true,
+        "label": "Event ID",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_ID",
+        "isEditable": true,
+        "label": "Route ID",
+        "visible": true
+       },
+       {
+        "fieldName": "Field_Establish_Date",
+        "isEditable": true,
+        "label": "Field Establish Date",
+        "visible": true
+       },
+       {
+        "fieldName": "From_Date",
+        "isEditable": true,
+        "label": "From Date",
+        "visible": true
+       },
+       {
+        "fieldName": "To_Date",
+        "isEditable": true,
+        "label": "To Date",
+        "visible": true
+       },
+       {
+        "fieldName": "From_MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "From Milepoint",
+        "visible": true
+       },
+       {
+        "fieldName": "To_MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "To Milepoint",
+        "visible": true
+       },
+       {
+        "fieldName": "Edit_Comment",
+        "isEditable": true,
+        "label": "Edit Comment",
+        "visible": true
+       },
+       {
+        "fieldName": "Bridge_Name",
+        "isEditable": true,
+        "label": "Bridge Name",
+        "visible": true
+       },
+       {
+        "fieldName": "Bridge_Number",
+        "isEditable": true,
+        "label": "Bridge Number",
+        "visible": true
+       },
+       {
+        "fieldName": "Length_Ft",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Length (Ft)",
+        "visible": true
+       },
+       {
+        "fieldName": "Side",
+        "isEditable": true,
+        "label": "Side",
+        "visible": true
+       },
+       {
+        "fieldName": "From_Frame_ID",
+        "isEditable": true,
+        "label": "From Frame Location",
+        "visible": true
+       },
+       {
+        "fieldName": "To_Frame_ID",
+        "isEditable": true,
+        "label": "To Frame Location",
+        "visible": true
+       },
+       {
+        "fieldName": "NBI",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "NBI",
+        "visible": true
+       },
+       {
+        "fieldName": "Structure_Type",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Structure Type",
+        "visible": true
+       },
+       {
+        "fieldName": "HPMS_Structure_Type",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "HPMS Structure Type",
+        "visible": true
+       },
+       {
+        "fieldName": "Dup_Num",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Duplicate Bridge Number",
+        "visible": true
+       },
+       {
+        "fieldName": "LocError",
+        "isEditable": true,
+        "label": "LocError",
+        "visible": true
+       },
+       {
+        "fieldName": "Deck_Cond",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Deck Condition",
+        "visible": true
+       },
+       {
+        "fieldName": "Superstruct_Cond",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Superstruct Cond",
+        "visible": true
+       },
+       {
+        "fieldName": "Substruct_Cond",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Substruct Cond",
+        "visible": true
+       },
+       {
+        "fieldName": "PMR_Deck",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "PMR Deck",
+        "visible": true
+       },
+       {
+        "fieldName": "PMR_Superstruct",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "PMR Superstruct",
+        "visible": true
+       },
+       {
+        "fieldName": "PMR_Substruct",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "PMR Substruct",
+        "visible": true
+       },
+       {
+        "fieldName": "PMR_Overall",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "PMR Overall",
+        "visible": true
+       },
+       {
+        "fieldName": "Seg_Length_Miles",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Segment Length in Miles",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name",
+        "isEditable": true,
+        "label": "Route Name",
+        "visible": true
+       },
+       {
+        "fieldName": "Mid_MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Mid_MPT",
+        "visible": true
+       },
+       {
+        "fieldName": "Shape_STLength_1",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Shape_STLength_1",
+        "visible": true
+       }
+      ],
+      "title": "{Bridge_Name}"
+     }
+    },
+    {
+     "id": "95e2947c145642fb9f94923a4e84fadf",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "Ferry Terminals",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/AKDOTPF_Route_Data/FeatureServer/3",
+     "visibility": true,
+     "itemId": "01584dde2adb444196c9e483d623f310",
+     "layerType": "ArcGISFeatureLayer",
+     "blendMode": "normal",
+     "showLabels": true,
+     "layerDefinition": {
+      "drawingInfo": {
+       "labelingInfo": [
+        {
+         "name": "Default",
+         "deconflictionStrategy": "dynamic",
+         "labelExpression": "[NAME]",
+         "labelExpressionInfo": {
+          "expression": "$feature[\"NAME\"]"
+         },
+         "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+         "maxScale": 0,
+         "minScale": 1500000,
+         "repeatLabel": true,
+         "symbol": {
+          "type": "esriTS",
+          "color": [
+           0,
+           0,
+           0,
+           255
+          ],
+          "font": {
+           "family": "Arial",
+           "size": 8
+          },
+          "horizontalAlignment": "center",
+          "kerning": true,
+          "haloColor": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "haloSize": 2,
+          "rightToLeft": false,
+          "rotated": false,
+          "text": "",
+          "verticalAlignment": "bottom",
+          "xoffset": 0,
+          "yoffset": 0,
+          "angle": 0
+         },
+         "useCodedValues": true
+        }
+       ],
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMPointSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "anchorPoint": {
+             "x": 0.0012705692605777588,
+             "y": -3.300148506610867e-06
+            },
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 18,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -301,
+             "ymin": -300,
+             "xmax": 299,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  31,
+                  203
+                 ],
+                 [
+                  31,
+                  76
+                 ],
+                 [
+                  121,
+                  166
+                 ],
+                 [
+                  166,
+                  121
+                 ],
+                 [
+                  76,
+                  31
+                 ],
+                 [
+                  203,
+                  31
+                 ],
+                 [
+                  203,
+                  -32
+                 ],
+                 [
+                  76,
+                  -32
+                 ],
+                 [
+                  166,
+                  -122
+                 ],
+                 [
+                  121,
+                  -166
+                 ],
+                 [
+                  31,
+                  -76
+                 ],
+                 [
+                  31,
+                  -203
+                 ],
+                 [
+                  -32,
+                  -203
+                 ],
+                 [
+                  -32,
+                  -76
+                 ],
+                 [
+                  -122,
+                  -166
+                 ],
+                 [
+                  -167,
+                  -122
+                 ],
+                 [
+                  -77,
+                  -32
+                 ],
+                 [
+                  -204,
+                  -32
+                 ],
+                 [
+                  -204,
+                  31
+                 ],
+                 [
+                  -77,
+                  31
+                 ],
+                 [
+                  -167,
+                  121
+                 ],
+                 [
+                  -122,
+                  166
+                 ],
+                 [
+                  -32,
+                  76
+                 ],
+                 [
+                  -32,
+                  203
+                 ],
+                 [
+                  31,
+                  203
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  0,
+                  92,
+                  230,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           }
+          ],
+          "haloSize": 1,
+          "scaleX": 1,
+          "angleAlignment": "Map"
+         }
+        }
+       }
+      }
+     },
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "GlobalID",
+          "isEditable": false,
+          "label": "GlobalID",
+          "visible": true
+         },
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "NAME",
+          "isEditable": true,
+          "label": "NAME",
+          "visible": true
+         },
+         {
+          "fieldName": "OWNERSHIP",
+          "isEditable": true,
+          "label": "OWNERSHIP",
+          "visible": true
+         },
+         {
+          "fieldName": "LOCATION",
+          "isEditable": true,
+          "label": "LOCATION",
+          "visible": true
+         },
+         {
+          "fieldName": "REGION",
+          "isEditable": true,
+          "label": "REGION",
+          "visible": true
+         },
+         {
+          "fieldName": "LAT_DD",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "LAT_DD",
+          "visible": true
+         },
+         {
+          "fieldName": "LONG_DD",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "LONG_DD",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "GlobalID",
+        "isEditable": false,
+        "label": "GlobalID",
+        "visible": true
+       },
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "NAME",
+        "isEditable": true,
+        "label": "NAME",
+        "visible": true
+       },
+       {
+        "fieldName": "OWNERSHIP",
+        "isEditable": true,
+        "label": "OWNERSHIP",
+        "visible": true
+       },
+       {
+        "fieldName": "LOCATION",
+        "isEditable": true,
+        "label": "LOCATION",
+        "visible": true
+       },
+       {
+        "fieldName": "REGION",
+        "isEditable": true,
+        "label": "REGION",
+        "visible": true
+       },
+       {
+        "fieldName": "LAT_DD",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "LAT_DD",
+        "visible": true
+       },
+       {
+        "fieldName": "LONG_DD",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "LONG_DD",
+        "visible": true
+       }
+      ],
+      "title": "{NAME}"
+     }
+    },
+    {
+     "id": "c00e035911684b1494697b3218e54edb",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "Lighting / Signals",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/Highway_Lighting_AKDOT/FeatureServer/0",
+     "visibility": true,
+     "itemId": "894bce08aca648b3bce9970fe1f36727",
+     "layerType": "ArcGISFeatureLayer",
+     "blendMode": "normal",
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "ID_HIGHWAYLIGHTING",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "ID_HIGHWAYLIGHTING",
+          "visible": true
+         },
+         {
+          "fieldName": "ROUTENAME",
+          "isEditable": true,
+          "label": "ROUTENAME",
+          "visible": true
+         },
+         {
+          "fieldName": "ROUTEID",
+          "isEditable": true,
+          "label": "ROUTEID",
+          "visible": true
+         },
+         {
+          "fieldName": "DIRECTION",
+          "isEditable": true,
+          "label": "DIRECTION",
+          "visible": true
+         },
+         {
+          "fieldName": "MILEPOINT_FUGRO",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "MILEPOINT_FUGRO",
+          "visible": true
+         },
+         {
+          "fieldName": "MILEPOINT_AK",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "MILEPOINT_AK",
+          "visible": true
+         },
+         {
+          "fieldName": "HIGHWAY_LIGHTING_TYPE",
+          "isEditable": true,
+          "label": "HIGHWAY_LIGHTING_TYPE",
+          "visible": true
+         },
+         {
+          "fieldName": "POLE_MATERIAL",
+          "isEditable": true,
+          "label": "POLE_MATERIAL",
+          "visible": true
+         },
+         {
+          "fieldName": "SIDE_OF_ROAD",
+          "isEditable": true,
+          "label": "SIDE_OF_ROAD",
+          "visible": true
+         },
+         {
+          "fieldName": "CONDITION",
+          "isEditable": true,
+          "label": "CONDITION",
+          "visible": true
+         },
+         {
+          "fieldName": "COMMENTS",
+          "isEditable": true,
+          "label": "COMMENTS",
+          "visible": true
+         },
+         {
+          "fieldName": "FILENAME",
+          "isEditable": true,
+          "label": "FILENAME",
+          "visible": true
+         },
+         {
+          "fieldName": "LATITUDE",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "LATITUDE",
+          "visible": true
+         },
+         {
+          "fieldName": "LONGITUDE",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "LONGITUDE",
+          "visible": true
+         },
+         {
+          "fieldName": "IMAGE",
+          "isEditable": true,
+          "label": "IMAGE",
+          "visible": true
+         },
+         {
+          "fieldName": "VEHICLEID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "VEHICLEID",
+          "visible": true
+         },
+         {
+          "fieldName": "COLLECTION_DATE",
+          "isEditable": true,
+          "label": "COLLECTION_DATE",
+          "visible": true
+         },
+         {
+          "fieldName": "EventID",
+          "isEditable": true,
+          "label": "EventID",
+          "visible": true
+         },
+         {
+          "fieldName": "Corrected_RID",
+          "isEditable": true,
+          "label": "Corrected_RID",
+          "visible": true
+         },
+         {
+          "fieldName": "Corrected_MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Corrected_MPT",
+          "visible": true
+         },
+         {
+          "fieldName": "created_user",
+          "isEditable": true,
+          "label": "created_user",
+          "visible": true
+         },
+         {
+          "fieldName": "created_date",
+          "isEditable": true,
+          "label": "created_date",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_user",
+          "isEditable": true,
+          "label": "last_edited_user",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_date",
+          "isEditable": true,
+          "label": "last_edited_date",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "ID_HIGHWAYLIGHTING",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "ID_HIGHWAYLIGHTING",
+        "visible": true
+       },
+       {
+        "fieldName": "ROUTENAME",
+        "isEditable": true,
+        "label": "ROUTENAME",
+        "visible": true
+       },
+       {
+        "fieldName": "ROUTEID",
+        "isEditable": true,
+        "label": "ROUTEID",
+        "visible": true
+       },
+       {
+        "fieldName": "DIRECTION",
+        "isEditable": true,
+        "label": "DIRECTION",
+        "visible": true
+       },
+       {
+        "fieldName": "MILEPOINT_FUGRO",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "MILEPOINT_FUGRO",
+        "visible": true
+       },
+       {
+        "fieldName": "MILEPOINT_AK",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "MILEPOINT_AK",
+        "visible": true
+       },
+       {
+        "fieldName": "HIGHWAY_LIGHTING_TYPE",
+        "isEditable": true,
+        "label": "HIGHWAY_LIGHTING_TYPE",
+        "visible": true
+       },
+       {
+        "fieldName": "POLE_MATERIAL",
+        "isEditable": true,
+        "label": "POLE_MATERIAL",
+        "visible": true
+       },
+       {
+        "fieldName": "SIDE_OF_ROAD",
+        "isEditable": true,
+        "label": "SIDE_OF_ROAD",
+        "visible": true
+       },
+       {
+        "fieldName": "CONDITION",
+        "isEditable": true,
+        "label": "CONDITION",
+        "visible": true
+       },
+       {
+        "fieldName": "COMMENTS",
+        "isEditable": true,
+        "label": "COMMENTS",
+        "visible": true
+       },
+       {
+        "fieldName": "FILENAME",
+        "isEditable": true,
+        "label": "FILENAME",
+        "visible": true
+       },
+       {
+        "fieldName": "LATITUDE",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "LATITUDE",
+        "visible": true
+       },
+       {
+        "fieldName": "LONGITUDE",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "LONGITUDE",
+        "visible": true
+       },
+       {
+        "fieldName": "IMAGE",
+        "isEditable": true,
+        "label": "IMAGE",
+        "visible": true
+       },
+       {
+        "fieldName": "VEHICLEID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "VEHICLEID",
+        "visible": true
+       },
+       {
+        "fieldName": "COLLECTION_DATE",
+        "isEditable": true,
+        "label": "COLLECTION_DATE",
+        "visible": true
+       },
+       {
+        "fieldName": "EventID",
+        "isEditable": true,
+        "label": "EventID",
+        "visible": true
+       },
+       {
+        "fieldName": "Corrected_RID",
+        "isEditable": true,
+        "label": "Corrected_RID",
+        "visible": true
+       },
+       {
+        "fieldName": "Corrected_MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Corrected_MPT",
+        "visible": true
+       },
+       {
+        "fieldName": "created_user",
+        "isEditable": true,
+        "label": "created_user",
+        "visible": true
+       },
+       {
+        "fieldName": "created_date",
+        "isEditable": true,
+        "label": "created_date",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_user",
+        "isEditable": true,
+        "label": "last_edited_user",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_date",
+        "isEditable": true,
+        "label": "last_edited_date",
+        "visible": true
+       }
+      ],
+      "title": "{ROUTENAME}"
+     },
+     "layerDefinition": {
+      "drawingInfo": {
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMPointSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Z",
+            "size": 4,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -2,
+             "ymin": -2,
+             "xmax": 2,
+             "ymax": 2
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  0,
+                  2
+                 ],
+                 [
+                  0.35,
+                  1.97
+                 ],
+                 [
+                  0.68,
+                  1.88
+                 ],
+                 [
+                  1,
+                  1.73
+                 ],
+                 [
+                  1.29,
+                  1.53
+                 ],
+                 [
+                  1.53,
+                  1.29
+                 ],
+                 [
+                  1.73,
+                  1
+                 ],
+                 [
+                  1.88,
+                  0.68
+                 ],
+                 [
+                  1.97,
+                  0.35
+                 ],
+                 [
+                  2,
+                  0
+                 ],
+                 [
+                  1.97,
+                  -0.35
+                 ],
+                 [
+                  1.88,
+                  -0.68
+                 ],
+                 [
+                  1.73,
+                  -1
+                 ],
+                 [
+                  1.53,
+                  -1.29
+                 ],
+                 [
+                  1.29,
+                  -1.53
+                 ],
+                 [
+                  1,
+                  -1.73
+                 ],
+                 [
+                  0.68,
+                  -1.88
+                 ],
+                 [
+                  0.35,
+                  -1.97
+                 ],
+                 [
+                  0,
+                  -2
+                 ],
+                 [
+                  -0.35,
+                  -1.97
+                 ],
+                 [
+                  -0.68,
+                  -1.88
+                 ],
+                 [
+                  -1,
+                  -1.73
+                 ],
+                 [
+                  -1.29,
+                  -1.53
+                 ],
+                 [
+                  -1.53,
+                  -1.29
+                 ],
+                 [
+                  -1.73,
+                  -1
+                 ],
+                 [
+                  -1.88,
+                  -0.68
+                 ],
+                 [
+                  -1.97,
+                  -0.35
+                 ],
+                 [
+                  -2,
+                  0
+                 ],
+                 [
+                  -1.97,
+                  0.35
+                 ],
+                 [
+                  -1.88,
+                  0.68
+                 ],
+                 [
+                  -1.73,
+                  1
+                 ],
+                 [
+                  -1.53,
+                  1.29
+                 ],
+                 [
+                  -1.29,
+                  1.53
+                 ],
+                 [
+                  -1,
+                  1.73
+                 ],
+                 [
+                  -0.68,
+                  1.88
+                 ],
+                 [
+                  -0.35,
+                  1.97
+                 ],
+                 [
+                  0,
+                  2
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidStroke",
+                 "enable": true,
+                 "capStyle": "Round",
+                 "joinStyle": "Round",
+                 "lineStyle3D": "Strip",
+                 "miterLimit": 10,
+                 "width": 0.7,
+                 "height3D": 1,
+                 "anchor3D": "Center",
+                 "color": [
+                  0,
+                  0,
+                  0,
+                  255
+                 ]
+                },
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  255,
+                  255,
+                  0,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           }
+          ],
+          "haloSize": 3,
+          "haloSymbol": {
+           "type": "CIMPolygonSymbol",
+           "symbolLayers": [
+            {
+             "type": "CIMSolidFill",
+             "enable": true,
+             "color": [
+              255,
+              255,
+              0,
+              255
+             ]
+            }
+           ],
+           "angleAlignment": "Map"
+          },
+          "scaleX": 1,
+          "angleAlignment": "Display"
+         }
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": "6a5b1a67518f499faf8e4d112e5196c3",
+     "showLegend": true,
+     "opacity": 1,
+     "disablePopup": false,
+     "title": "Mileposts",
+     "url": "https://services.arcgis.com/r4A0V7UzH9fcLVvv/arcgis/rest/services/AKDOTPF_Route_Data/FeatureServer/9",
+     "visibility": true,
+     "itemId": "01584dde2adb444196c9e483d623f310",
+     "layerType": "ArcGISFeatureLayer",
+     "layerDefinition": {
+      "minScale": 1000000,
+      "drawingInfo": {
+       "labelingInfo": [
+        {
+         "name": "Default",
+         "labelExpression": "[Milepost_Number]",
+         "labelExpressionInfo": {
+          "expression": "$feature.Milepost_Number",
+          "title": "Custom"
+         },
+         "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+         "maxScale": 0,
+         "minScale": 1000000,
+         "repeatLabel": true,
+         "symbol": {
+          "type": "esriTS",
+          "color": [
+           38,
+           115,
+           0,
+           255
+          ],
+          "font": {
+           "family": "Arial",
+           "size": 10,
+           "weight": "bold"
+          },
+          "horizontalAlignment": "center",
+          "kerning": true,
+          "haloColor": [
+           255,
+           255,
+           255,
+           255
+          ],
+          "haloSize": 1,
+          "rightToLeft": false,
+          "rotated": false,
+          "text": "",
+          "verticalAlignment": "bottom",
+          "xoffset": 0,
+          "yoffset": 0,
+          "angle": 0
+         },
+         "useCodedValues": true
+        }
+       ],
+       "renderer": {
+        "type": "simple",
+        "symbol": {
+         "type": "CIMSymbolReference",
+         "symbol": {
+          "type": "CIMPointSymbol",
+          "symbolLayers": [
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "colorLocked": true,
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 10,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -300,
+             "ymin": -300,
+             "xmax": 300,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  -198,
+                  -198
+                 ],
+                 [
+                  198,
+                  -198
+                 ],
+                 [
+                  198,
+                  198
+                 ],
+                 [
+                  -198,
+                  198
+                 ],
+                 [
+                  -198,
+                  -198
+                 ]
+                ],
+                [
+                 [
+                  210,
+                  210
+                 ],
+                 [
+                  210,
+                  -210
+                 ],
+                 [
+                  -210,
+                  -210
+                 ],
+                 [
+                  -210,
+                  210
+                 ],
+                 [
+                  210,
+                  210
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  0,
+                  0,
+                  0,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           },
+           {
+            "type": "CIMVectorMarker",
+            "enable": true,
+            "anchorPointUnits": "Relative",
+            "dominantSizeAxis3D": "Y",
+            "size": 10,
+            "billboardMode3D": "FaceNearPlane",
+            "frame": {
+             "xmin": -300,
+             "ymin": -300,
+             "xmax": 300,
+             "ymax": 300
+            },
+            "markerGraphics": [
+             {
+              "type": "CIMMarkerGraphic",
+              "geometry": {
+               "rings": [
+                [
+                 [
+                  204,
+                  204
+                 ],
+                 [
+                  204,
+                  -204
+                 ],
+                 [
+                  -204,
+                  -204
+                 ],
+                 [
+                  -204,
+                  204
+                 ],
+                 [
+                  204,
+                  204
+                 ]
+                ]
+               ]
+              },
+              "symbol": {
+               "type": "CIMPolygonSymbol",
+               "symbolLayers": [
+                {
+                 "type": "CIMSolidFill",
+                 "enable": true,
+                 "color": [
+                  76,
+                  230,
+                  0,
+                  255
+                 ]
+                }
+               ],
+               "angleAlignment": "Map"
+              }
+             }
+            ],
+            "scaleSymbolsProportionally": true,
+            "respectFrame": true
+           }
+          ],
+          "haloSize": 1,
+          "scaleX": 1,
+          "angleAlignment": "Map"
+         }
+        }
+       }
+      }
+     },
+     "blendMode": "normal",
+     "showLabels": true,
+     "popupInfo": {
+      "popupElements": [
+       {
+        "type": "fields",
+        "fieldInfos": [
+         {
+          "fieldName": "Status",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Status",
+          "visible": true
+         },
+         {
+          "fieldName": "GlobalID",
+          "isEditable": false,
+          "label": "GlobalID",
+          "visible": true
+         },
+         {
+          "fieldName": "created_user",
+          "isEditable": false,
+          "label": "created_user",
+          "visible": true
+         },
+         {
+          "fieldName": "created_date",
+          "isEditable": false,
+          "label": "created_date",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_user",
+          "isEditable": false,
+          "label": "last_edited_user",
+          "visible": true
+         },
+         {
+          "fieldName": "last_edited_date",
+          "isEditable": false,
+          "label": "last_edited_date",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name_Unique",
+          "isEditable": true,
+          "label": "Route Name Unique",
+          "visible": true
+         },
+         {
+          "fieldName": "OBJECTID",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": false,
+          "label": "OBJECTID",
+          "visible": true
+         },
+         {
+          "fieldName": "Event_ID",
+          "isEditable": true,
+          "label": "Event ID",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_ID",
+          "isEditable": true,
+          "label": "Route ID",
+          "visible": true
+         },
+         {
+          "fieldName": "Field_Establish_Date",
+          "isEditable": true,
+          "label": "Field Establish Date",
+          "visible": true
+         },
+         {
+          "fieldName": "From_Date",
+          "isEditable": true,
+          "label": "From Date",
+          "visible": true
+         },
+         {
+          "fieldName": "To_Date",
+          "isEditable": true,
+          "label": "To Date",
+          "visible": true
+         },
+         {
+          "fieldName": "MPT",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Milepoint",
+          "visible": true
+         },
+         {
+          "fieldName": "Edit_Comment",
+          "isEditable": true,
+          "label": "Edit Comment",
+          "visible": true
+         },
+         {
+          "fieldName": "Side",
+          "isEditable": true,
+          "label": "Side",
+          "visible": true
+         },
+         {
+          "fieldName": "Frame_ID",
+          "isEditable": true,
+          "label": "Frame ID",
+          "visible": true
+         },
+         {
+          "fieldName": "Collection_Source",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Collection Source",
+          "visible": true
+         },
+         {
+          "fieldName": "Collection_Year",
+          "format": {
+           "digitSeparator": false,
+           "places": 0
+          },
+          "isEditable": true,
+          "label": "Collection Year",
+          "visible": true
+         },
+         {
+          "fieldName": "Milepost_Number",
+          "format": {
+           "digitSeparator": false,
+           "places": 6
+          },
+          "isEditable": true,
+          "label": "Milepost_Number",
+          "visible": true
+         },
+         {
+          "fieldName": "LocError",
+          "isEditable": true,
+          "label": "LocError",
+          "visible": true
+         },
+         {
+          "fieldName": "Milepost_Route",
+          "isEditable": true,
+          "label": "Milepost Route",
+          "visible": true
+         },
+         {
+          "fieldName": "Route_Name",
+          "isEditable": true,
+          "label": "Route Name",
+          "visible": true
+         }
+        ]
+       }
+      ],
+      "expressionInfos": [],
+      "fieldInfos": [
+       {
+        "fieldName": "Status",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Status",
+        "visible": true
+       },
+       {
+        "fieldName": "GlobalID",
+        "isEditable": false,
+        "label": "GlobalID",
+        "visible": true
+       },
+       {
+        "fieldName": "created_user",
+        "isEditable": false,
+        "label": "created_user",
+        "visible": true
+       },
+       {
+        "fieldName": "created_date",
+        "isEditable": false,
+        "label": "created_date",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_user",
+        "isEditable": false,
+        "label": "last_edited_user",
+        "visible": true
+       },
+       {
+        "fieldName": "last_edited_date",
+        "isEditable": false,
+        "label": "last_edited_date",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name_Unique",
+        "isEditable": true,
+        "label": "Route Name Unique",
+        "visible": true
+       },
+       {
+        "fieldName": "OBJECTID",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": false,
+        "label": "OBJECTID",
+        "visible": true
+       },
+       {
+        "fieldName": "Event_ID",
+        "isEditable": true,
+        "label": "Event ID",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_ID",
+        "isEditable": true,
+        "label": "Route ID",
+        "visible": true
+       },
+       {
+        "fieldName": "Field_Establish_Date",
+        "isEditable": true,
+        "label": "Field Establish Date",
+        "visible": true
+       },
+       {
+        "fieldName": "From_Date",
+        "isEditable": true,
+        "label": "From Date",
+        "visible": true
+       },
+       {
+        "fieldName": "To_Date",
+        "isEditable": true,
+        "label": "To Date",
+        "visible": true
+       },
+       {
+        "fieldName": "MPT",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Milepoint",
+        "visible": true
+       },
+       {
+        "fieldName": "Edit_Comment",
+        "isEditable": true,
+        "label": "Edit Comment",
+        "visible": true
+       },
+       {
+        "fieldName": "Side",
+        "isEditable": true,
+        "label": "Side",
+        "visible": true
+       },
+       {
+        "fieldName": "Frame_ID",
+        "isEditable": true,
+        "label": "Frame ID",
+        "visible": true
+       },
+       {
+        "fieldName": "Collection_Source",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Collection Source",
+        "visible": true
+       },
+       {
+        "fieldName": "Collection_Year",
+        "format": {
+         "digitSeparator": false,
+         "places": 0
+        },
+        "isEditable": true,
+        "label": "Collection Year",
+        "visible": true
+       },
+       {
+        "fieldName": "Milepost_Number",
+        "format": {
+         "digitSeparator": false,
+         "places": 6
+        },
+        "isEditable": true,
+        "label": "Milepost_Number",
+        "visible": true
+       },
+       {
+        "fieldName": "LocError",
+        "isEditable": true,
+        "label": "LocError",
+        "visible": true
+       },
+       {
+        "fieldName": "Milepost_Route",
+        "isEditable": true,
+        "label": "Milepost Route",
+        "visible": true
+       },
+       {
+        "fieldName": "Route_Name",
+        "isEditable": true,
+        "label": "Route Name",
+        "visible": true
+       }
+      ],
+      "title": "{ROUTE_NAME}"
+     }
+    }
+   ],
+   "layerType": "GroupLayer",
+   "minScale": 320000,
+   "blendMode": "normal",
+   "visibilityMode": "independent"
+  },
+  {
+   "id": "199e34501c8-layer-34",
+   "title": "Solid Waste Sites",
+   "url": "https://dec.alaska.gov/arcgis/rest/services/EH/Solid_Waste_Sites/MapServer",
+   "itemId": "935c60978a554a51813eede2075b9a6a",
+   "layerType": "ArcGISMapServiceLayer",
+   "minScale": 320000
+  },
+  {
+   "id": "199ee431bf7-layer-25",
+   "title": "Communities",
+   "url": "{{c403e5b09fff455cb3fc22489b162517.url}}/0",
+   "itemId": "{{c403e5b09fff455cb3fc22489b162517.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "showLabels": true,
+   "layerDefinition": {
+    "drawingInfo": {
+     "labelingInfo": [
+      {
+       "labelExpression": "[community_name]",
+       "labelExpressionInfo": {
+        "expression": "$feature[\"community_name\"]"
+       },
+       "labelPlacement": "esriServerPointLabelPlacementAboveCenter",
+       "repeatLabel": true,
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         247,
+         247,
+         247,
+         255
+        ],
+        "font": {
+         "family": "Noto Sans",
+         "size": 9.75,
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "kerning": true,
+        "haloColor": [
+         38,
+         38,
+         38,
+         255
+        ],
+        "haloSize": 1.5,
+        "rotated": false,
+        "text": "",
+        "verticalAlignment": "baseline",
+        "xoffset": 0,
+        "yoffset": 0,
+        "angle": 0
+       }
+      }
+     ],
+     "renderer": {
+      "type": "simple",
+      "description": "Survey Data Locations",
+      "label": "{{event.name}} Impacted Communities",
+      "symbol": {
+       "type": "esriSMS",
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "angle": 0,
+       "xoffset": 0,
+       "yoffset": 0,
+       "size": 12,
+       "style": "esriSMSCircle",
+       "outline": {
+        "type": "esriSLS",
+        "color": [
+         215,
+         215,
+         224,
+         255
+        ],
+        "width": 2.25,
+        "style": "esriSLSSolid"
+       }
+      }
+     }
+    }
+   },
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "objectid",
+      "isEditable": false,
+      "label": "ObjectID",
+      "visible": false
+     },
+     {
+      "fieldName": "notes",
+      "isEditable": true,
+      "label": "Additional Notes",
+      "visible": true
+     },
+     {
+      "fieldName": "airport_status",
+      "isEditable": true,
+      "label": "Airport Status?",
+      "visible": true
+     },
+     {
+      "fieldName": "community_name",
+      "isEditable": true,
+      "label": "Community Name",
+      "visible": true
+     },
+     {
+      "fieldName": "power",
+      "isEditable": true,
+      "label": "Does the community have power?",
+      "visible": true
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "globalid",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     },
+     {
+      "fieldName": "drone_footage",
+      "isEditable": true,
+      "label": "Has {{org.name}} captured drone footage?",
+      "visible": true
+     },
+     {
+      "fieldName": "dot_pf_been_onsite",
+      "isEditable": true,
+      "label": "Has {{org.name}} personnel visited the site?",
+      "visible": true
+     },
+     {
+      "fieldName": "runway_open",
+      "isEditable": true,
+      "label": "Is the runway open?",
+      "visible": true
+     },
+     {
+      "fieldName": "water_restriction",
+      "isEditable": true,
+      "label": "Is there a water restriction?",
+      "visible": true
+     },
+     {
+      "fieldName": "drone_footage_details",
+      "isEditable": true,
+      "label": "Who captured the drone footage? When?",
+      "visible": true
+     },
+     {
+      "fieldName": "who_on_ground",
+      "isEditable": true,
+      "label": "Who is on the ground? When?",
+      "visible": true
+     }
+    ],
+    "title": "{{event.name}} Impacted Communities: {objectid}"
+   }
+  }
+ ],
+ "tables": [
+  {
+   "id": "199ee431bf8-layer-26",
+   "title": "{{event.name}} Communities EDITOR - Attach image",
+   "url": "{{c403e5b09fff455cb3fc22489b162517.url}}/1",
+   "itemId": "{{c403e5b09fff455cb3fc22489b162517.itemId}}",
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "objectid",
+      "isEditable": false,
+      "label": "ObjectID",
+      "visible": false
+     },
+     {
+      "fieldName": "CreationDate",
+      "isEditable": false,
+      "label": "CreationDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Creator",
+      "isEditable": false,
+      "label": "Creator",
+      "visible": false
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "globalid",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     }
+    ],
+    "title": "Attach image: {objectid}"
+   }
+  }
+ ],
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "b18de4b4828f4a62a99bcd9dd78f71cd",
+    "opacity": 1,
+    "title": "World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "blendMode": "normal"
+   }
+  ],
+  "title": "World Imagery"
+ },
+ "authoringApp": "ArcGISMapViewer",
+ "authoringAppVersion": "2025.2",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "spatialReference": {
+     "latestWkid": 3857,
+     "wkid": 102100
+    },
+    "xmin": -18610626.927570973,
+    "ymin": 8693902.35615265,
+    "xmax": -17326484.852380354,
+    "ymax": 9755459.804976895
+   }
+  }
+ },
+ "spatialReference": {
+  "latestWkid": 3857,
+  "wkid": 102100
+ },
+ "timeZone": "system",
+ "version": "2.34"
+}

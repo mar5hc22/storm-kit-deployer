@@ -1,0 +1,26 @@
+{
+ "key": "6050c8888d1b45dbbe586217c7cd8e04",
+ "type": "Image",
+ "title": "Organization logo (replace with your own)",
+ "snippet": "Alaska {{org.name}} logo with transparent background.",
+ "description": null,
+ "tags": [
+  "placeholder"
+ ],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "Data",
+  "Image",
+  "png"
+ ],
+ "data": {
+  "file": "data.bin",
+  "name": "logo.png"
+ },
+ "resources": [],
+ "relationships": []
+}

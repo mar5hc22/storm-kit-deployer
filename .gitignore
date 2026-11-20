@@ -1,0 +1,8 @@
+# What each deployment created, and where. Kept on the machine that ran it.
+deployer/runs/
+__pycache__/
+.pytest_cache/
+*.pyc
+.ipynb_checkpoints/
+.env
+video-player/config.json

@@ -1,0 +1,42 @@
+{
+ "key": "253ec26e592540fcb07c9c931f7e5193",
+ "type": "Form",
+ "title": "Impacted Community Checklist",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": {
+  "connectVersion": "3.23.48"
+ },
+ "typeKeywords": [
+  "Form",
+  "Survey123",
+  "Survey123 Connect",
+  "xForm"
+ ],
+ "data": {
+  "file": "data.zip",
+  "name": "form.zip",
+  "form": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": [
+  {
+   "type": "Survey2Service",
+   "to": "09f10e86c1f944f892d15a82ec7013cb"
+  },
+  {
+   "type": "Survey2Data",
+   "to": "09f10e86c1f944f892d15a82ec7013cb"
+  },
+  {
+   "type": "Survey2Data",
+   "to": "83a8ccbf2a954e0fb24bfd2fe3c45c0c"
+  }
+ ]
+}

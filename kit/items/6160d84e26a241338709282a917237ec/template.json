@@ -1,0 +1,39 @@
+{
+ "key": "6160d84e26a241338709282a917237ec",
+ "type": "Web Map",
+ "title": "Community Status Map",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [
+  [
+   -169.8407975670828,
+   61.32148433218565
+  ],
+  [
+   -154.10837569208695,
+   65.57533273179838
+  ]
+ ],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Explorer Web Map",
+  "Map",
+  "Online Map",
+  "Web Map"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

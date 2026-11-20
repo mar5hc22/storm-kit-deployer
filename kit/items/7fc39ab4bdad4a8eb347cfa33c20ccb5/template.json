@@ -1,0 +1,132 @@
+{
+ "key": "7fc39ab4bdad4a8eb347cfa33c20ccb5",
+ "type": "Feature Service",
+ "title": "Home Damage Assessment (results view)",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [
+  [
+   -180,
+   -90
+  ],
+  [
+   180,
+   90
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [
+  "{{29920d92b407461f8ba96a8d4089bad0.itemId}}",
+  "StakeholderView",
+  "Survey123",
+  "Survey123 Hub"
+ ],
+ "service": {
+  "name": "HomeDamageAssessment_results",
+  "is_view": true,
+  "create": {
+   "serviceDescription": "Feature service view of results for the survey {{29920d92b407461f8ba96a8d4089bad0.itemId}}",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 1000,
+   "capabilities": "Query,Extract",
+   "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+   },
+   "initialExtent": {
+    "xmin": -180,
+    "ymin": -90,
+    "xmax": 180,
+    "ymax": 90,
+    "spatialReference": {
+     "wkid": 4326,
+     "latestWkid": 4326
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriDecimalDegrees",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": true,
+    "enableOwnershipAccessControl": true,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": false,
+    "allowOthersToDelete": false,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+   },
+   "hasStaticData": true,
+   "supportedQueryFormats": "JSON"
+  },
+  "source": "{{4003a8031af248ad9c6a694b65e97919.itemId}}",
+  "view_layers": [
+   {
+    "id": 0,
+    "name": "survey",
+    "is_table": false,
+    "source_layer_id": 0,
+    "hidden_fields": [
+     "additional_information",
+     "cameraheight",
+     "camerapitch",
+     "cameraroll",
+     "fardistance",
+     "horizontalfieldofview",
+     "neardistance",
+     "verticalfieldofview",
+     "imagepath"
+    ],
+    "definition_query": null,
+    "update": {
+     "drawingInfo": {
+      "labelingInfo": null,
+      "renderer": {
+       "label": "Survey Point",
+       "symbol": {
+        "angle": 0,
+        "color": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "outline": {
+         "color": [
+          255,
+          255,
+          0,
+          255
+         ],
+         "width": 1
+        },
+        "size": 8,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0,
+        "yoffset": 0
+       },
+       "type": "simple"
+      },
+      "transparency": 0
+     },
+     "minScale": 0,
+     "maxScale": 0,
+     "capabilities": "Query,Extract"
+    }
+   }
+  ]
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

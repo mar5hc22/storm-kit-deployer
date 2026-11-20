@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Drone video player</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.33/esri/themes/dark/main.css" />
+  <script src="https://js.arcgis.com/4.33/"></script>
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+.esri-video-player {
+    --esri-video-player-view-max-height: 625px;
+    --esri-video-player-view-height: 625px;
+    --esri-video-player-view-aspect-ratio: 1.77;
+    --esri-video-player-color-swatch-size: 20px;
+    --esri-video-player-color-swatch-gap: 10px;
+    --esri-video-player-progress-width: 2px;
+    --esri-video-player-controls-spacing: var(--calcite-size-16, 16px);
+    min-width: calc(var(--esri-video-player-view-max-height) * var(--esri-video-player-view-aspect-ratio));
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Left side: Map and widgets */
+#left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+}
+
+#viewDiv {
+  flex: 1;
+  background-color: #d0e6f7; /* Placeholder color for map */
+}
+
+#widgets {
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+}
+
+/* Right side: Video and dropdown */
+#right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#videocontainer {
+  flex: 1;
+  flex-direction: column;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#video-container video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#controls {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+}
+
+/* Sign-in overlay: covers the app until credentials are available */
+#signInOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none; /* shown by script when interactive sign-in is needed */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #1a1a1a;
+  color: #eee;
+}
+
+#signInBtn {
+  padding: 10px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background: #0079c1;
+  color: #fff;
+}
+
+#signInBtn:hover {
+  background: #005e95;
+}
+
+
+  </style>
+</head>
+<body class="calcite-mode-dark">
+
+  <div id="signInOverlay">
+    <div id="signInMessage">Sign in with your ArcGIS account to view video services</div>
+    <button id="signInBtn">Sign in</button>
+  </div>
+
+  <div id="app">
+  <div id="left-panel">
+    <div id="viewDiv"></div>
+    <div id="widgets">
+      <!-- Add your map widgets here -->
+    </div>
+  </div>
+  <div id="right-panel">
+    <div id="videoContainer">
+      
+       <div id="statusMessage"></div>
+    </div>
+    <div id="controls">
+      <select id="videoList">
+        <option value="">Select a full motion video...</option>
+        <!-- Add options dynamically -->
+      </select>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    require([
+      "esri/WebMap",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer",
+      "esri/layers/VideoLayer",
+      "esri/widgets/VideoPlayer",
+      "esri/widgets/VideoPlayer/VideoPlayerViewModel",
+      "esri/Graphic",
+      "esri/widgets/Bookmarks",
+      "esri/core/reactiveUtils",
+      "esri/identity/OAuthInfo",
+      "esri/identity/IdentityManager"
+    ], function(WebMap, MapView, FeatureLayer, VideoLayer, VideoPlayer, VideoPlayerViewModel, Graphic, Bookmarks, reactiveUtils, OAuthInfo, esriId) {
+
+      // ========================== Settings ==========================
+      // Everything org-specific is read from config.json, a file hosted
+      // beside this page (see config.example.json). It is deliberately not
+      // read from the address bar: the page sends the signed-in user's token
+      // to the token broker, so a link must not be able to choose the broker.
+      fetch("config.json", { cache: "no-store" })
+        .then((resp) => { if (!resp.ok) throw new Error("HTTP " + resp.status); return resp.json(); })
+        .then(run)
+        .catch((err) => {
+          const overlay = document.getElementById("signInOverlay");
+          document.getElementById("signInBtn").style.display = "none";
+          document.getElementById("signInMessage").textContent =
+            "This player is not set up yet: config.json could not be read (" + err.message + ").";
+          overlay.style.display = "flex";
+        });
+
+      function run(config) {
+      // ======================= Authentication =======================
+      // stripSlash: a trailing slash would produce "…com//sharing", which
+      // breaks the match between the OAuthInfo and the requested resource.
+      function stripSlash(url) { return (url || "").replace(/\/+$/, ""); }
+      const AGOL_PORTAL = stripSlash(config.portalUrl);            // org URL
+      const AGOL_APPID  = config.appId;                            // OAuth app registered for this page's address
+      const ENT_PORTAL  = stripSlash(config.enterprisePortalUrl);  // Enterprise portal of the Video Server, if it is secured
+      // Token broker: exchanges the user's AGOL identity for a short-lived
+      // Enterprise token covering the video services. Leave it empty when
+      // the video services need no token.
+      const BROKER_URL  = config.tokenBrokerUrl || "";
+      const WEBMAP_ID   = config.webmapId;
+      const VIDEO_LINES_URL = config.videoLinesLayerUrl;
+
+      const CALLBACK_URL = window.location.origin +
+        window.location.pathname.replace(/[^\/]*$/, "") + "oauth-callback.html";
+      const CRED_STORAGE_KEY = "vsp-credentials";
+
+      esriId.registerOAuthInfos([
+        new OAuthInfo({
+          appId: AGOL_APPID,
+          portalUrl: AGOL_PORTAL,
+          // popup is required inside the Hub iframe: a full-page redirect to the
+          // portal sign-in page is blocked by its X-Frame-Options/frame-ancestors.
+          popup: true,
+          popupCallbackUrl: CALLBACK_URL,
+          flowType: "auto",
+          expiration: 20160 // minutes; the portal may cap this
+        })
+      ]);
+
+      // Persist credentials across page loads (best effort — storage may be
+      // partitioned or blocked inside the Hub iframe).
+      try {
+        const saved = localStorage.getItem(CRED_STORAGE_KEY);
+        if (saved) esriId.initialize(JSON.parse(saved));
+      } catch (e) {
+        console.warn("Credential restore skipped:", e);
+      }
+
+      function persistCredentials() {
+        try { localStorage.setItem(CRED_STORAGE_KEY, JSON.stringify(esriId.toJSON())); }
+        catch (e) { /* storage unavailable — session-only auth */ }
+      }
+      esriId.on("credential-create", persistCredentials);
+      esriId.on("credentials-destroy", () => {
+        try { localStorage.removeItem(CRED_STORAGE_KEY); } catch (e) {}
+      });
+      window.addEventListener("beforeunload", persistCredentials);
+
+      const signInOverlay = document.getElementById("signInOverlay");
+      const signInBtn = document.getElementById("signInBtn");
+      const signInMessage = document.getElementById("signInMessage");
+      let appStarted = false;
+
+      function launch() {
+        signInOverlay.style.display = "none";
+        if (appStarted) return;
+        appStarted = true;
+        ensureEnterpriseToken(); // prefetch so the first video plays without delay
+        startApp();
+      }
+
+      function isAuthError(err) {
+        const status = err && err.details && err.details.httpStatus;
+        return status === 401 || status === 403 || status === 498 || status === 499;
+      }
+
+      // Ensure a token for the Enterprise portal (video services). AGOL is the
+      // identity store: the broker validates our AGOL token and returns a
+      // short-lived Enterprise token, which we register with IdentityManager so
+      // the SDK attaches it to VideoServer requests. No popup, no second login.
+      let entTokenExpires = 0;
+      let entTokenRequest = null; // de-dupe concurrent refreshes
+
+      function ensureEnterpriseToken() {
+        if (!BROKER_URL) return Promise.resolve(true); // video services need no token
+        // still valid for at least 5 more minutes → nothing to do
+        if (Date.now() < entTokenExpires - 5 * 60 * 1000) return Promise.resolve(true);
+        if (entTokenRequest) return entTokenRequest;
+
+        entTokenRequest = (async () => {
+          try {
+            const agolCred = esriId.findCredential(AGOL_PORTAL + "/sharing");
+            if (!agolCred) return false;
+            const resp = await fetch(BROKER_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ agolToken: agolCred.token })
+            });
+            const data = await resp.json();
+            if (!resp.ok || !data.token) {
+              throw new Error(data.error || ("Broker HTTP " + resp.status));
+            }
+            esriId.registerToken({
+              server: ENT_PORTAL + "/sharing/rest",
+              token: data.token,
+              expires: data.expires,
+              ssl: true
+            });
+            entTokenExpires = data.expires;
+            return true;
+          } catch (err) {
+            console.error("Video token request failed:", err);
+            return false;
+          } finally {
+            entTokenRequest = null;
+          }
+        })();
+        return entTokenRequest;
+      }
+
+      // Silent path: a credential restored from storage lets the app start
+      // with no UI. Otherwise show the overlay — never auto-open a popup on
+      // page load (popup blockers require a user gesture).
+      esriId.checkSignInStatus(AGOL_PORTAL + "/sharing")
+        .then(launch)
+        .catch(() => { signInOverlay.style.display = "flex"; });
+
+      signInBtn.addEventListener("click", async () => {
+        try {
+          // ArcGIS Online first: near-instant if the user already has a Hub
+          // session — the popup flashes and closes.
+          await esriId.getCredential(AGOL_PORTAL + "/sharing", { oAuthPopupConfirmation: false });
+        } catch (err) {
+          signInMessage.textContent = "Sign-in failed or was cancelled. Please try again.";
+          console.error(err);
+          return;
+        }
+        persistCredentials();
+        launch();
+      });
+      // ===================== end authentication =====================
+
+      function startApp() {
+
+      const webmap = new WebMap({
+        portalItem: {
+          id: WEBMAP_ID
+        }
+      });
+
+      
+
+
+      const view = new MapView({
+        container: "viewDiv",
+        map: webmap
+      });
+
+      const statusMessage = document.getElementById("statusMessage");
+      const videoList = document.getElementById("videoList");
+      let videoPlayer;
+
+      const videoFeatureLayer = new FeatureLayer({
+       url: VIDEO_LINES_URL,
+        outFields: ["*"],
+        renderer: {
+          type: "simple",
+          symbol: {
+            type: "simple-line", // or "simple-marker" for points
+            color: [0, 0, 0, 50], // RGBA with 0 alpha = invisible
+            style: "solid",
+          }
+        },
+       
+      });
+
+      webmap.when(() => {
+        webmap.add(videoFeatureLayer);
+        webmap.basemap.baseLayers.forEach(layer => {
+        layer.popupEnabled = false;
+          });
+        console.log("Pop-ups have been disabled for the basemap.");
+        console.log("✅ Added invisible 'Video Services' FeatureLayer.");
+      }, (err) => {
+        if (isAuthError(err)) {
+          esriId.destroyCredentials();
+          signInMessage.textContent = "Your session expired. Please sign in again.";
+          signInOverlay.style.display = "flex";
+        } else {
+          console.error("WebMap failed to load:", err);
+        }
+      });
+
+      const bookmarks = new Bookmarks({
+        view: view,
+        // Automatically loads bookmarks from WebMap if defined
+        container: document.createElement("div")
+        });
+
+        bookmarks.container.style.position = "absolute";
+        bookmarks.container.style.bottom = "10px";
+        bookmarks.container.style.left = "10px";
+        bookmarks.container.style.zIndex = "100";
+        bookmarks.container.style.background = "#fff";
+        bookmarks.container.style.boxShadow = "0 0 6px rgba(0,0,0,0.2)";
+        bookmarks.container.style.border = "1px solid #ccc";
+        bookmarks.container.style.padding = "6px";
+        bookmarks.container.style.width = "220px"; // Optional: control width
+        bookmarks.container.style.maxHeight = "300px"; // 🔁 Set max height
+        bookmarks.container.style.overflowY = "auto"; // 🔁 Enable vertical scroll
+
+        document.body.appendChild(bookmarks.container);
+        console.log("✅ Bookmark widget added.");
+
+      function updateVideoList(extent) {
+        const query = videoFeatureLayer.createQuery();
+        query.geometry = extent;
+        query.spatialRelationship = "intersects";
+        query.returnGeometry = false;
+        query.outFields = ["*"];
+
+        videoFeatureLayer.queryFeatures(query).then(result => {
+          videoList.innerHTML = '<option value="">Select a video...</option>';
+          result.features.forEach(feature => {
+            const option = document.createElement("option");
+            option.value = feature.attributes.URL;
+            option.textContent = feature.attributes.service_name || "Unnamed Video";
+            videoList.appendChild(option);
+          });
+
+          console.log(`🎯 Found ${result.features.length} videos in extent.`);
+        }).catch(err => {
+          if (isAuthError(err)) {
+            // Token expired/revoked mid-session: clear it and ask again.
+            esriId.destroyCredentials();
+            signInMessage.textContent = "Your session expired. Please sign in again.";
+            signInOverlay.style.display = "flex";
+          } else {
+            console.error("Video list query failed:", err);
+          }
+        });
+      }
+
+      reactiveUtils.whenOnce(() => view.ready).then(() => {
+        updateVideoList(view.extent);
+      });
+
+      reactiveUtils.watch(() => view.extent, (extent) => {
+        updateVideoList(extent);
+      });
+
+      videoList.addEventListener("change", async (event) => {
+        const videoUrl = event.target.value;
+        console.log(videoUrl)
+
+        if (!videoUrl || !videoUrl.includes("/VideoServer")) {
+          statusMessage.textContent = "⚠️ Invalid or missing video URL.";
+          return;
+        }
+
+        // Video services are secured on the Enterprise portal — make sure a
+        // broker-issued token is registered before creating the layer.
+        if (!(await ensureEnterpriseToken())) {
+          statusMessage.textContent = "⚠️ Could not get access to the video services. Please try again.";
+          videoList.value = "";
+          return;
+        }
+
+        statusMessage.textContent = "Loading video layer...";
+        const videoLayer = new VideoLayer({url: videoUrl});
+
+        videoLayer.load().catch(err => {
+          if (isAuthError(err)) {
+            // Force a fresh broker token; re-selecting the video retries.
+            entTokenExpires = 0;
+            statusMessage.textContent = "⚠️ Video access expired — select the video again to retry.";
+          } else {
+            statusMessage.textContent = "⚠️ Failed to load video service.";
+            console.error("VideoLayer load failed:", err);
+          }
+        });
+
+        viewModel = new VideoPlayerViewModel({
+          layer: videoLayer,
+          view: view,
+          followingMode: "follow-frame"
+        });
+
+        if (videoPlayer) {
+          videoPlayer.destroy();
+          videoPlayer = null;
+          console.log("🧹 Destroyed previous VideoPlayer.");
+        }
+
+        // Remove previous video layers
+        webmap.layers.forEach(layer => {
+          if (layer.type === "video") webmap.remove(layer);
+        });
+
+        webmap.add(videoLayer);
+
+        const oldContainer = document.getElementById("videoContainer");
+        if (oldContainer) oldContainer.remove();
+
+        const newContainer = document.createElement("div");
+        newContainer.id = "videoContainer";
+        newContainer.style.flex = '1';
+        newContainer.style.backgroundColor = '#000';
+        newContainer.style.display = 'flex';
+        newContainer.style.alignItems = 'center';
+        newContainer.style.justifyContent = 'center';
+
+
+
+
+
+        const statusDiv = document.createElement("div");
+        statusDiv.id = "statusMessage";
+        statusDiv.style.padding = "4px";
+        statusDiv.style.fontSize = "14px";
+        statusDiv.style.color = "#333";
+        statusDiv.textContent = "Loading video...";
+
+        //newContainer.appendChild(statusDiv);
+        //document.body.appendChild(newContainer);
+        // Insert the new container BEFORE the controls
+        const rightPanel = document.getElementById('right-panel');
+        const controls = document.getElementById('statusMessage');
+        rightPanel.appendChild(newContainer);
+
+
+
+
+        // Create and attach video player to resizable container
+        videoPlayer = new VideoPlayer({
+          layer: videoLayer,
+          view: view,
+          container: newContainer
+        });
+
+        
+        statusDiv.textContent = "✅ Video playing.";
+      });
+
+      } // end startApp()
+      } // end run(config)
+    });
+  </script>
+</body>
+</html>

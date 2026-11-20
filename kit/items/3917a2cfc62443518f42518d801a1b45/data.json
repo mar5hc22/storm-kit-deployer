@@ -1,0 +1,1667 @@
+{
+ "operationalLayers": [
+  {
+   "id": "19a214b10dc-layer-1",
+   "title": "DOT Home Damage Assessment_results",
+   "url": "{{7fc39ab4bdad4a8eb347cfa33c20ccb5.url}}/0",
+   "visibility": true,
+   "itemId": "{{7fc39ab4bdad4a8eb347cfa33c20ccb5.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "attributeTableInfo": {
+    "attributeTableElements": [
+     {
+      "type": "field",
+      "fieldName": "CreationDate"
+     },
+     {
+      "type": "field",
+      "fieldName": "Creator"
+     },
+     {
+      "type": "field",
+      "fieldName": "EditDate"
+     },
+     {
+      "type": "field",
+      "fieldName": "Editor"
+     },
+     {
+      "type": "field",
+      "fieldName": "todays_date"
+     },
+     {
+      "type": "field",
+      "fieldName": "damage_level"
+     },
+     {
+      "type": "field",
+      "fieldName": "additional_information"
+     },
+     {
+      "type": "attachment",
+      "displayType": "auto"
+     }
+    ],
+    "orderByFields": []
+   },
+   "layerDefinition": {
+    "fieldConfigurations": [
+     {
+      "name": "CreationDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "EditDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "todays_date",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "visualVariables": [
+       {
+        "type": "sizeInfo",
+        "valueExpression": "$view.scale",
+        "stops": [
+         {
+          "size": 37.5,
+          "value": 282.124294
+         },
+         {
+          "size": 30,
+          "value": 2256.994353
+         },
+         {
+          "size": 15,
+          "value": 18055.954822
+         },
+         {
+          "size": 7.5,
+          "value": 144447.638572
+         }
+        ]
+       }
+      ],
+      "field1": "damage_level",
+      "uniqueValueGroups": [
+       {
+        "classes": [
+         {
+          "label": "Destroyed / Missing",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            255,
+            0,
+            4,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Destroyed / Missing"
+           ]
+          ]
+         },
+         {
+          "label": "Major",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            158,
+            60,
+            62,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Major"
+           ]
+          ]
+         },
+         {
+          "label": "Affected",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            151,
+            31,
+            153,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Affected"
+           ]
+          ]
+         },
+         {
+          "label": "Inaccessible",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            255,
+            181,
+            90,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Inaccessible"
+           ]
+          ]
+         },
+         {
+          "label": "Minor",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            222,
+            222,
+            55,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Minor"
+           ]
+          ]
+         },
+         {
+          "label": "No Damage",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            115,
+            240,
+            26,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "No Damage"
+           ]
+          ]
+         }
+        ]
+       }
+      ],
+      "uniqueValueInfos": [
+       {
+        "label": "Destroyed / Missing",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          255,
+          0,
+          4,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Destroyed / Missing"
+       },
+       {
+        "label": "Major",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          158,
+          60,
+          62,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Major"
+       },
+       {
+        "label": "Affected",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          151,
+          31,
+          153,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Affected"
+       },
+       {
+        "label": "Inaccessible",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          255,
+          181,
+          90,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Inaccessible"
+       },
+       {
+        "label": "Minor",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          222,
+          222,
+          55,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Minor"
+       },
+       {
+        "label": "No Damage",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          115,
+          240,
+          26,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "No Damage"
+       }
+      ]
+     }
+    }
+   },
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "attachments",
+      "description": "",
+      "displayType": "auto",
+      "title": ""
+     },
+     {
+      "type": "text",
+      "text": "<p><strong>Additional Information(Submitted on-site): </strong><span><strong>{additional_info}</strong></span><strong>&nbsp;</strong></p><p><strong>AI generated Description: </strong><span><strong>{ai_Info}</strong></span><strong>&nbsp;</strong></p>"
+     }
+    ],
+    "showAttachments": true,
+    "description": "<p><strong>Additional Information(Submitted on-site): </strong><span><strong>{additional_info}</strong></span><strong>&nbsp;</strong></p><p><strong>AI generated Description: </strong><span><strong>{ai_Info}</strong></span><strong>&nbsp;</strong></p>",
+    "fieldInfos": [
+     {
+      "fieldName": "objectid",
+      "isEditable": false,
+      "label": "ObjectID",
+      "visible": false
+     },
+     {
+      "fieldName": "CreationDate",
+      "isEditable": false,
+      "label": "CreationDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Creator",
+      "isEditable": false,
+      "label": "Creator",
+      "visible": false
+     },
+     {
+      "fieldName": "damage_level",
+      "isEditable": true,
+      "label": "Damage Level",
+      "visible": true
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "globalid",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     },
+     {
+      "fieldName": "todays_date",
+      "isEditable": true,
+      "label": "Today's Date",
+      "visible": true
+     },
+     {
+      "fieldName": "additional_info",
+      "isEditable": true,
+      "label": "Additional Information",
+      "visible": false
+     },
+     {
+      "fieldName": "ai_Info",
+      "isEditable": true,
+      "label": "AI Description",
+      "visible": false
+     },
+     {
+      "fieldName": "acquisitiondate",
+      "isEditable": true,
+      "label": "Acquisition Date",
+      "visible": false
+     }
+    ],
+    "title": "DOT Home Damage Assessment: Damage {damage_level}"
+   }
+  },
+  {
+   "id": "19a22882e44-layer-5",
+   "title": "{{event.name}} Communities 2025",
+   "url": "{{c403e5b09fff455cb3fc22489b162517.url}}/0",
+   "visibility": true,
+   "itemId": "{{c403e5b09fff455cb3fc22489b162517.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "attributeTableInfo": {
+    "attributeTableElements": [
+     {
+      "type": "field",
+      "fieldName": "community_name"
+     }
+    ],
+    "orderByFields": [
+     {
+      "field": "community_name",
+      "order": "asc"
+     }
+    ]
+   },
+   "layerDefinition": {
+    "fieldConfigurations": [
+     {
+      "name": "Drone_Data_uploaded",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short"
+      }
+     },
+     {
+      "name": "drone_footage_captued_on",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short"
+      }
+     },
+     {
+      "name": "EditDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "Imagery_Date",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short"
+      }
+     },
+     {
+      "name": "Date_Video",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "labelingInfo": [
+      {
+       "labelExpression": "[community_name]",
+       "labelExpressionInfo": {
+        "expression": "$feature[\"community_name\"]"
+       },
+       "labelPlacement": "esriServerPointLabelPlacementAboveCenter",
+       "repeatLabel": true,
+       "symbol": {
+        "type": "esriTS",
+        "color": [
+         51,
+         51,
+         51,
+         255
+        ],
+        "font": {
+         "family": "Arial",
+         "size": 9.75,
+         "style": "italic",
+         "weight": "bold"
+        },
+        "horizontalAlignment": "center",
+        "kerning": true,
+        "haloColor": [
+         255,
+         255,
+         255,
+         255
+        ],
+        "haloSize": 0.75,
+        "rotated": false,
+        "text": "",
+        "verticalAlignment": "baseline",
+        "xoffset": 0,
+        "yoffset": 0,
+        "angle": 0
+       }
+      }
+     ]
+    }
+   },
+   "showLabels": true,
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "objectid",
+      "isEditable": false,
+      "label": "ObjectID",
+      "visible": false
+     },
+     {
+      "fieldName": "notes",
+      "isEditable": true,
+      "label": "Additional Notes",
+      "visible": true
+     },
+     {
+      "fieldName": "airport_status",
+      "isEditable": true,
+      "label": "Airport Status?",
+      "visible": true
+     },
+     {
+      "fieldName": "Community_Contact",
+      "isEditable": true,
+      "label": "Community Contact",
+      "visible": true
+     },
+     {
+      "fieldName": "community_name",
+      "isEditable": true,
+      "label": "Community Name",
+      "visible": true
+     },
+     {
+      "fieldName": "Community_Needs",
+      "isEditable": true,
+      "label": "Community Needs",
+      "visible": true
+     },
+     {
+      "fieldName": "power",
+      "isEditable": true,
+      "label": "Does the community have power?",
+      "visible": true
+     },
+     {
+      "fieldName": "Drone_Data_uploaded",
+      "isEditable": true,
+      "label": "Drone Data uploaded",
+      "visible": true
+     },
+     {
+      "fieldName": "drone_footage_captued_on",
+      "isEditable": true,
+      "label": "Drone footage captured on",
+      "visible": true
+     },
+     {
+      "fieldName": "Drone_Type",
+      "isEditable": true,
+      "label": "Drone Type",
+      "visible": true
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "globalid",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     },
+     {
+      "fieldName": "Go_Pro_360",
+      "isEditable": true,
+      "label": "Go Pro 360",
+      "visible": true
+     },
+     {
+      "fieldName": "drone_footage",
+      "isEditable": true,
+      "label": "Has {{org.name}} captured drone footage?",
+      "visible": true
+     },
+     {
+      "fieldName": "dot_pf_been_onsite",
+      "isEditable": true,
+      "label": "Has {{org.name}} personnel visited the site?",
+      "visible": true
+     },
+     {
+      "fieldName": "runway_open",
+      "isEditable": true,
+      "label": "Is the runway open?",
+      "visible": true
+     },
+     {
+      "fieldName": "water_restriction",
+      "isEditable": true,
+      "label": "Is there a water restriction?",
+      "visible": true
+     },
+     {
+      "fieldName": "Local_Insight",
+      "isEditable": true,
+      "label": "Local Insight",
+      "visible": true
+     },
+     {
+      "fieldName": "more_video_imagery_needed",
+      "isEditable": true,
+      "label": "more video or imagery needed?",
+      "visible": true
+     },
+     {
+      "fieldName": "Imagery_Date",
+      "isEditable": true,
+      "label": "Orthomosaic Date",
+      "visible": true
+     },
+     {
+      "fieldName": "Orthomosaic_published_on_website",
+      "isEditable": true,
+      "label": "Orthomosaic published on website",
+      "visible": true
+     },
+     {
+      "fieldName": "Phone_Number",
+      "isEditable": true,
+      "label": "Phone Number",
+      "visible": true
+     },
+     {
+      "fieldName": "Tribe_Community",
+      "isEditable": true,
+      "label": "Tribe ",
+      "visible": true
+     },
+     {
+      "fieldName": "Date_Video",
+      "isEditable": true,
+      "label": "Video Date",
+      "visible": true
+     },
+     {
+      "fieldName": "Video_published_on_website",
+      "isEditable": true,
+      "label": "Video published on website",
+      "visible": true
+     },
+     {
+      "fieldName": "who_on_ground",
+      "isEditable": true,
+      "label": "Who is on the ground? When?",
+      "visible": true
+     }
+    ],
+    "title": "{{event.name}} Impacted Communities: {objectid}"
+   }
+  },
+  {
+   "id": "19a4bbab074-layer-7",
+   "title": "Coastal Storm Work Inspection Workflow S123",
+   "url": "{{4f3554b630434ae99f12d9afdb984c3d.url}}/0",
+   "itemId": "{{4f3554b630434ae99f12d9afdb984c3d.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "layerDefinition": {
+    "fieldConfigurations": [
+     {
+      "name": "CreationDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "inspectionDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "EditDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "esrignss_latitude",
+      "fieldFormat": {
+       "type": "number",
+       "minimumFractionDigits": 2,
+       "useGrouping": "always"
+      }
+     },
+     {
+      "name": "esrignss_longitude",
+      "fieldFormat": {
+       "type": "number",
+       "minimumFractionDigits": 2,
+       "useGrouping": "always"
+      }
+     }
+    ],
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriPMS",
+       "angle": 0,
+       "xoffset": 0,
+       "yoffset": 0,
+       "contentType": "image/png",
+       "imageData": "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",
+       "url": "{{4f3554b630434ae99f12d9afdb984c3d.url}}/0/images/RedSphere.png",
+       "height": 15,
+       "width": 15
+      }
+     }
+    }
+   },
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "OBJECTID",
+      "isEditable": false,
+      "label": "OBJECTID",
+      "visible": false
+     },
+     {
+      "fieldName": "aiDesc",
+      "isEditable": true,
+      "label": "AI Description",
+      "visible": true
+     },
+     {
+      "fieldName": "communityAddress",
+      "isEditable": true,
+      "label": "Community Addres if Known",
+      "visible": true
+     },
+     {
+      "fieldName": "CreationDate",
+      "isEditable": false,
+      "label": "CreationDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Creator",
+      "isEditable": false,
+      "label": "Creator",
+      "visible": false
+     },
+     {
+      "fieldName": "inspectionDate",
+      "isEditable": true,
+      "label": "Date Inspected",
+      "visible": true
+     },
+     {
+      "fieldName": "descOfWork",
+      "isEditable": true,
+      "label": "Description of Work",
+      "visible": true
+     },
+     {
+      "fieldName": "dotHouseNumber",
+      "isEditable": true,
+      "label": "DOT Created House Number",
+      "visible": true
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "GlobalID",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     },
+     {
+      "fieldName": "esrignss_latitude",
+      "format": {
+       "digitSeparator": true,
+       "places": 2
+      },
+      "isEditable": true,
+      "label": "Latitude",
+      "visible": true
+     },
+     {
+      "fieldName": "esrignss_longitude",
+      "format": {
+       "digitSeparator": true,
+       "places": 2
+      },
+      "isEditable": true,
+      "label": "Longitude",
+      "visible": true
+     },
+     {
+      "fieldName": "pID",
+      "isEditable": true,
+      "label": "Parent ID",
+      "visible": true
+     }
+    ],
+    "title": "Coastal Storm Work Inspection Workflow S123"
+   }
+  },
+  {
+   "id": "19a4bbf359e-layer-8",
+   "title": "combinedHouseDamageInspection",
+   "url": "{{d3076a3b729f43f48a85a2bb9ff0b62e.url}}/0",
+   "itemId": "{{d3076a3b729f43f48a85a2bb9ff0b62e.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "OBJECTID",
+      "isEditable": false,
+      "label": "OBJECTID",
+      "visible": false
+     },
+     {
+      "fieldName": "description_of_home_damage",
+      "isEditable": true,
+      "label": "description_of_home_damage",
+      "visible": true
+     },
+     {
+      "fieldName": "level_of_home_damage",
+      "isEditable": true,
+      "label": "level_of_home_damage",
+      "visible": true
+     }
+    ],
+    "title": "combinedHouseDamageInspection"
+   },
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "visualVariables": [
+       {
+        "type": "sizeInfo",
+        "valueExpression": "$view.scale",
+        "stops": [
+         {
+          "size": 11.94267515923567,
+          "value": 144447.638572
+         },
+         {
+          "size": 9.554140127388536,
+          "value": 1155581.108577
+         },
+         {
+          "size": 4.777070063694268,
+          "value": 9244648.868618
+         },
+         {
+          "size": 2.388535031847134,
+          "value": 73957190.948944
+         }
+        ]
+       }
+      ],
+      "field1": "level_of_home_damage",
+      "uniqueValueGroups": [
+       {
+        "classes": [
+         {
+          "label": "Destroyed / Missing",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            255,
+            0,
+            4,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Destroyed / Missing"
+           ],
+           [
+            "Destroyed"
+           ]
+          ]
+         },
+         {
+          "label": "Major",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            158,
+            60,
+            62,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Major"
+           ]
+          ]
+         },
+         {
+          "label": "Affected",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            151,
+            31,
+            153,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Affected"
+           ]
+          ]
+         },
+         {
+          "label": "Inaccessible",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            255,
+            181,
+            90,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Inaccessible"
+           ]
+          ]
+         },
+         {
+          "label": "Minor",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            222,
+            222,
+            55,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "Minor"
+           ]
+          ]
+         },
+         {
+          "label": "No Damage",
+          "symbol": {
+           "type": "esriSMS",
+           "color": [
+            115,
+            240,
+            26,
+            255
+           ],
+           "angle": 0,
+           "xoffset": 0,
+           "yoffset": 0,
+           "size": 7.5,
+           "style": "esriSMSCircle",
+           "outline": {
+            "type": "esriSLS",
+            "color": [
+             26,
+             26,
+             26,
+             64
+            ],
+            "width": 0.75,
+            "style": "esriSLSSolid"
+           }
+          },
+          "values": [
+           [
+            "No Damage"
+           ],
+           [
+            "Unaffected"
+           ]
+          ]
+         }
+        ]
+       }
+      ],
+      "uniqueValueInfos": [
+       {
+        "label": "Destroyed / Missing",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          255,
+          0,
+          4,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Destroyed / Missing"
+       },
+       {
+        "label": "Destroyed / Missing",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          255,
+          0,
+          4,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Destroyed"
+       },
+       {
+        "label": "Major",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          158,
+          60,
+          62,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Major"
+       },
+       {
+        "label": "Affected",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          151,
+          31,
+          153,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Affected"
+       },
+       {
+        "label": "Inaccessible",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          255,
+          181,
+          90,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Inaccessible"
+       },
+       {
+        "label": "Minor",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          222,
+          222,
+          55,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Minor"
+       },
+       {
+        "label": "No Damage",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          115,
+          240,
+          26,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "No Damage"
+       },
+       {
+        "label": "No Damage",
+        "symbol": {
+         "type": "esriSMS",
+         "color": [
+          115,
+          240,
+          26,
+          255
+         ],
+         "angle": 0,
+         "xoffset": 0,
+         "yoffset": 0,
+         "size": 7.5,
+         "style": "esriSMSCircle",
+         "outline": {
+          "type": "esriSLS",
+          "color": [
+           26,
+           26,
+           26,
+           64
+          ],
+          "width": 0.75,
+          "style": "esriSLSSolid"
+         }
+        },
+        "value": "Unaffected"
+       }
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "tables": [
+  {
+   "id": "19a22882e46-layer-6",
+   "title": "{{event.name}} Communities EDITOR - Attach image",
+   "url": "{{c403e5b09fff455cb3fc22489b162517.url}}/1",
+   "itemId": "{{c403e5b09fff455cb3fc22489b162517.itemId}}",
+   "layerDefinition": {
+    "fieldConfigurations": [
+     {
+      "name": "CreationDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "EditDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     }
+    ]
+   },
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "objectid",
+      "isEditable": false,
+      "label": "ObjectID",
+      "visible": false
+     },
+     {
+      "fieldName": "CreationDate",
+      "isEditable": false,
+      "label": "CreationDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Creator",
+      "isEditable": false,
+      "label": "Creator",
+      "visible": false
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "globalid",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     }
+    ],
+    "title": "Attach image: {objectid}"
+   }
+  }
+ ],
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "World_Imagery_2017",
+    "opacity": 1,
+    "title": "World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer"
+   }
+  ],
+  "title": "Imagery"
+ },
+ "authoringApp": "ArcGISMapViewer",
+ "authoringAppVersion": "2025.3",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "spatialReference": {
+     "latestWkid": 3857,
+     "wkid": 102100
+    },
+    "xmin": -18933685.00907782,
+    "ymin": 8041227.634981573,
+    "xmax": -17353578.760367077,
+    "ymax": 9033074.514009755
+   }
+  }
+ },
+ "spatialReference": {
+  "latestWkid": 3857,
+  "wkid": 102100
+ },
+ "timeZone": "system",
+ "version": "2.35"
+}

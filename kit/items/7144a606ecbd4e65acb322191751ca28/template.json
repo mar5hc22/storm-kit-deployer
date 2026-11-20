@@ -1,0 +1,41 @@
+{
+ "key": "7144a606ecbd4e65acb322191751ca28",
+ "type": "Web Map",
+ "title": "Add Community (form map)",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  "Survey123"
+ ],
+ "extent": [
+  [
+   -180,
+   40.4755157962949
+  ],
+  [
+   -90.82923450001154,
+   76.10981293960037
+  ]
+ ],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Collector",
+  "Data Editing",
+  "Explorer Web Map",
+  "Map",
+  "Online Map",
+  "Web Map"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

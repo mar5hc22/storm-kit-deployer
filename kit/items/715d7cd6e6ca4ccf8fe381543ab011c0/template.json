@@ -1,0 +1,27 @@
+{
+ "key": "715d7cd6e6ca4ccf8fe381543ab011c0",
+ "type": "Dashboard",
+ "title": "Team Status Dashboard (read only)",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS Dashboards",
+  "Dashboard",
+  "Operations Dashboard"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

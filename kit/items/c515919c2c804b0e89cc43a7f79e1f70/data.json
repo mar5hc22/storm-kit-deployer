@@ -1,0 +1,1356 @@
+{
+ "version": "5.0.0",
+ "authoringApp": "ArcGIS Dashboards",
+ "authoringAppVersion": "5.0.0+cebc6f69cb",
+ "maxPaginationRecords": 50000,
+ "maxChartRecords": 10000,
+ "timeZone": "system",
+ "theme": {
+  "id": "user",
+  "type": "resource"
+ },
+ "numberPrefixOverrides": [
+  {
+   "key": "yotta",
+   "symbol": "Y",
+   "enabled": true
+  },
+  {
+   "key": "zeta",
+   "symbol": "Z",
+   "enabled": true
+  },
+  {
+   "key": "exa",
+   "symbol": "E",
+   "enabled": true
+  },
+  {
+   "key": "peta",
+   "symbol": "P",
+   "enabled": true
+  },
+  {
+   "key": "tera",
+   "symbol": "T",
+   "enabled": true
+  },
+  {
+   "key": "giga",
+   "symbol": "G",
+   "enabled": true
+  },
+  {
+   "key": "mega",
+   "symbol": "M",
+   "enabled": true
+  },
+  {
+   "key": "kilo",
+   "symbol": "k",
+   "enabled": true
+  },
+  {
+   "key": "base",
+   "symbol": "",
+   "enabled": true
+  },
+  {
+   "key": "deci",
+   "symbol": "d",
+   "enabled": false
+  },
+  {
+   "key": "centi",
+   "symbol": "c",
+   "enabled": false
+  },
+  {
+   "key": "milli",
+   "symbol": "m",
+   "enabled": false
+  },
+  {
+   "key": "micro",
+   "symbol": "\u00b5",
+   "enabled": false
+  },
+  {
+   "key": "nano",
+   "symbol": "n",
+   "enabled": false
+  }
+ ],
+ "desktopView": {
+  "layout": {
+   "type": "dockingLayout",
+   "rootElement": {
+    "width": 1,
+    "height": 1,
+    "id": "f62ecb74-667b-4ee8-8344-5edef43506eb",
+    "elements": [
+     {
+      "width": 1,
+      "height": 1,
+      "tabName": "MAP",
+      "id": "ce429dc9-d013-494f-ba1a-5c3cca45847a",
+      "elements": [
+       {
+        "width": 0.2533918713061805,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5"
+       },
+       {
+        "width": 0.006793478260869725,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "cef0ffd4-9bf5-4921-998f-5bee9e534714"
+       },
+       {
+        "width": 0.5748586829951212,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "a8d283e0-45df-4db6-aa2d-4a180056b744"
+       },
+       {
+        "width": 0.16495596743782806,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "b38e3318-8b35-4cb0-9d28-d86f0e6eb11a"
+       }
+      ],
+      "type": "groupLayoutElement",
+      "orientation": "col"
+     },
+     {
+      "width": 1,
+      "height": 1,
+      "tabName": "TABLE",
+      "type": "itemLayoutElement",
+      "id": "92a928bf-8507-44e5-b5d9-cf22578c4303"
+     }
+    ],
+    "type": "tabsLayoutElement"
+   }
+  },
+  "type": "desktop",
+  "widgets": [
+   {
+    "id": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+    "name": "{{event.name}} - COMMUNITY CHECKLIST",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "events": [
+     {
+      "type": "extentChanged",
+      "actions": [
+       {
+        "targets": [
+         {
+          "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+          "by": "geometry",
+          "requiresSelection": false
+         }
+        ],
+        "type": "filter"
+       }
+      ]
+     }
+    ],
+    "type": "mapWidget",
+    "flashRepeats": 3,
+    "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+    "mapTools": [
+     {
+      "type": "basemapGalleryTool"
+     },
+     {
+      "type": "searchTool"
+     }
+    ],
+    "showMeasureTool": false,
+    "showNavigation": false,
+    "showPanRotate": false,
+    "showLocate": false,
+    "showCompass": false,
+    "showPopup": true,
+    "scalebarStyle": "none",
+    "editingEnabled": false,
+    "trackedFeatureRadius": 60,
+    "selectTool": {
+     "type": "selectTool",
+     "clickToSelect": false,
+     "advanceSketchTools": []
+    }
+   },
+   {
+    "headerTextColor": "#ffffff",
+    "headerBackgroundColor": "#1e4f8f",
+    "id": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5",
+    "name": "List (1)",
+    "title": "IMPACTED COMMUNITY LIST",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+       "layerId": "199ea5b6895-layer-26"
+      },
+      "groupByFields": [],
+      "orderByFields": [
+       "community_name ASC"
+      ],
+      "statisticDefinitions": [],
+      "maxFeatures": 500,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": true,
+      "allowSummaryDownload": false
+     }
+    ],
+    "events": [
+     {
+      "type": "selectionChanged",
+      "actions": [
+       {
+        "targets": [
+         {
+          "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+          "by": "geometry",
+          "requiresSelection": false
+         }
+        ],
+        "type": "zoom"
+       },
+       {
+        "targets": [
+         {
+          "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+          "by": "whereClause",
+          "requiresSelection": false
+         }
+        ],
+        "type": "filter"
+       }
+      ]
+     }
+    ],
+    "type": "listWidget",
+    "selectionMode": "single",
+    "iconType": "none",
+    "text": "<figure class=\"table\" style=\"float:left;\"><table style=\"border-collapse:separate;border-spacing:0;border-style:none;margin:0;\"><tbody><tr><td style=\"border-style:none;\" colspan=\"2\"><div style=\"margin-bottom:5px;\"><span style=\"color:hsl(212,80%,17%);font-size:20px;\"><span style=\"text-transform:uppercase;\"><strong>{field/community_name}&nbsp;</strong></span></span></div></td></tr><tr><td style=\"border-style:none;\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>AIRPORT STATUS</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/airport_status}&nbsp;</strong></span></p></div></td><td style=\"border-style:none;\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>RUNWAY OPEN?</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/runway_open}&nbsp;</strong></span></p></div></td></tr><tr><td style=\"border-style:none;\" colspan=\"2\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>HAS {{org.name}} VISITED THE COMMUNITY?</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/dot_pf_been_onsite}&nbsp;</strong></span></p></div></td></tr><tr><td style=\"border-style:none;\" colspan=\"2\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>WHO IS ON THE GROUND? WHEN?</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/who_on_ground}&nbsp;</strong></span></p></div></td></tr><tr><td style=\"border-style:none;\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>DOES COMMUNITY HAVE POWER?</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/power}&nbsp;</strong></span></p></div></td><td style=\"border-style:none;\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>ARE THERE WATER RESTRICTIONS?</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/water_restrictions}&nbsp;</strong></span></p></div></td></tr><tr><td style=\"border-style:none;\" colspan=\"2\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>HAS {{org.name}} CAPTURED DRONE FOOTAGE?</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/drone_footage}&nbsp;</strong></span></p></div></td></tr><tr><td style=\"border-style:none;\" colspan=\"2\"><div style=\"margin-bottom:7px;\"><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>DRONE FOOTAGE CAPTURED ON</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/drone_footage_captued_on}</strong></span></p></div></td></tr><tr><td style=\"border-style:none;\" colspan=\"2\"><div><p style=\"margin:0;\"><span style=\"color:hsl(212,80%,17%);font-size:12px;\"><strong>ADDITIONAL NOTES</strong></span></p><p style=\"margin:0;\"><span style=\"color:#5c5c5c;font-size:12px;\"><strong>{field/notes}&nbsp;</strong></span></p></div></td></tr></tbody></table></figure>",
+    "showFilter": true
+   },
+   {
+    "id": "b38e3318-8b35-4cb0-9d28-d86f0e6eb11a",
+    "name": "Map legend (1)",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "type": "legendWidget",
+    "mapWidgetId": "a8d283e0-45df-4db6-aa2d-4a180056b744"
+   },
+   {
+    "headerTextColor": "#ffffff",
+    "headerBackgroundColor": "#1e4f8f",
+    "id": "92a928bf-8507-44e5-b5d9-cf22578c4303",
+    "name": "Table (1)",
+    "title": "IMPACTED COMMUNITIES TABLE",
+    "showLastUpdate": true,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+       "layerId": "199ea5b6895-layer-26"
+      },
+      "groupByFields": [],
+      "orderByFields": [
+       "community_name ASC"
+      ],
+      "statisticDefinitions": [],
+      "maxFeatures": 1000,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": true,
+      "allowSummaryDownload": false
+     }
+    ],
+    "arcadeEnabled": true,
+    "expression": "// =======================\n// COLOR DEFINITIONS\n// =======================\n\n// Airport Status Colors\nvar colorOpen = \"#90be6d\";\nvar colorClosed = \"#f94144\";\nvar colorHelicopter = \"#4d908e\";\nvar colorPowerOutage = \"#577590\";\n\n// Yes/No Colors\nvar colorYes = \"#006e90\";\nvar colorNo = \"#f18f01\";\n\n// =======================\n// AIRPORT STATUS\n// =======================\nvar statusText = Upper($datapoint.airport_status);\nif (statusText == \"OPEN\") {\n  statusText = \"<div style='text-align:center;'><span style='background-color:\" + colorOpen + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + statusText + \"</span></div>\";\n} else if (statusText == \"CLOSED\") {\n  statusText = \"<div style='text-align:center;'><span style='background-color:\" + colorClosed + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + statusText + \"</span></div>\";\n} else if (statusText == \"OPEN FOR HELICOPTERS ONLY\") {\n  statusText = \"<div style='text-align:center;'><span style='background-color:\" + colorHelicopter + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + statusText + \"</span></div>\";\n} else if (statusText == \"OPEN WITH POWER OUTAGES\") {\n  statusText = \"<div style='text-align:center;'><span style='background-color:\" + colorPowerOutage + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + statusText + \"</span></div>\";\n}\n\n// =======================\n// RUNWAY OPEN\n// =======================\nvar runwayText = Upper($datapoint.runway_open);\nif (runwayText == \"YES\") {\n  runwayText = \"<div style='text-align:center;'><span style='background-color:\" + colorYes + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + runwayText + \"</span></div>\";\n} else if (runwayText == \"NO\") {\n  runwayText = \"<div style='text-align:center;'><span style='background-color:\" + colorNo + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + runwayText + \"</span></div>\";\n}\n\n// =======================\n// {{org.name}} STAFF VISIT\n// =======================\nvar pfStatus = Upper($datapoint.dot_pf_been_onsite);\nif (pfStatus == \"YES\") {\n  pfStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorYes + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + pfStatus + \"</span></div>\";\n} else if (pfStatus == \"NO\") {\n  pfStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorNo + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + pfStatus + \"</span></div>\";\n}\n\n// =======================\n// POWER\n// =======================\nvar powerStatus = Upper($datapoint.power);\nif (powerStatus == \"YES\") {\n  powerStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorYes + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + powerStatus + \"</span></div>\";\n} else if (powerStatus == \"NO\") {\n  powerStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorNo + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + powerStatus + \"</span></div>\";\n}\n\n// =======================\n// WATER\n// =======================\nvar waterStatus = Upper($datapoint.water_restriction);\nif (waterStatus == \"YES\") {\n  waterStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorYes + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + waterStatus + \"</span></div>\";\n} else if (waterStatus == \"NO\") {\n  waterStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorNo + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + waterStatus + \"</span></div>\";\n}\n\n// =======================\n// DRONE FOOTAGE\n// =======================\nvar droneStatus = Upper($datapoint.drone_footage);\nif (droneStatus == \"YES\") {\n  droneStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorYes + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + droneStatus + \"</span></div>\";\n} else if (droneStatus == \"NO\") {\n  droneStatus = \"<div style='text-align:center;'><span style='background-color:\" + colorNo + \";color:#fff;font-weight:bold;padding:4px 10px;border-radius:12px;display:inline-block;'>\" + droneStatus + \"</span></div>\";\n}\n\n\n\n// =======================\n// RETURN CELL CONFIG\n// =======================\nreturn {\n  cells: {\n    community_name: {\n      displayText: \"<span style='font-weight:bold;font-size:16px;text-transform:uppercase;'>\" + $datapoint.community_name + \"</span>\", \n      hoverText: $datapoint.community_name,\n      textColor: '#363535',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Community_Contact: {\n      displayText: $datapoint.Community_Contact, \n      hoverText: $datapoint.Community_Contact,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },  \n    \n    Tribe_Community: {\n      displayText: \"<span style='font-weight:bold;font-size:16px;text-transform:uppercase;'>\" + $datapoint.Tribe_Community + \"</span>\", \n      hoverText: $datapoint.Tribe_Community,\n      textColor: '#363535',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Phone_Number: {\n      displayText: $datapoint.Phone_Number, \n      hoverText: $datapoint.Phone_Number,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Community_Needs: {\n      displayText: $datapoint.Community_Needs, \n      hoverText: $datapoint.Community_Needs,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Local_Insight: {\n      displayText: $datapoint.Local_Insight, \n      hoverText: $datapoint.Local_Insight,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    airport_status: {\n      displayText: statusText,\n      hoverText: $datapoint.airport_status,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'center',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    power: {\n      displayText: powerStatus,\n      hoverText: $datapoint.power,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'center',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    water_restriction: {\n      displayText: waterStatus,\n      hoverText: $datapoint.water_restriction,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'center',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    runway_open: {\n      displayText: runwayText,\n      hoverText: $datapoint.runway_open,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'center',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n  runway_open: {\n    displayText: Text($datapoint.runway_open),\n    hoverText: $datapoint.runway_open,\n    textColor: '',\n    backgroundColor: '',\n    textAlign:'',\n    iconName: '',\n    iconAlign: '',\n    iconColor: '',\n    iconOutlineColor: '',\n  },\n\t\n\n  has_there_been_a_notam_issued: {\n\t   displayText: Text($datapoint.has_there_been_a_notam_issued),\n\t   hoverText: $datapoint.has_there_been_a_notam_issued,\n\t   textColor: '',\n\t   backgroundColor: '',\n\t   textAlign: 'left',\n\t   iconName: '',\n\t   iconAlign: '',\n\t   iconColor: '',\n\t   iconOutlineColor: ''\n\t},  \n  \n  \twater: {\n\t   displayText: Text($datapoint.water),\n\t   hoverText: $datapoint.water,\n\t   textColor: '',\n\t   backgroundColor: '',\n\t   textAlign: 'left',\n\t   iconName: '',\n\t   iconAlign: '',\n\t   iconColor: '',\n\t   iconOutlineColor: ''\n\t},\n\t\n  are_docks_or_boat_landings_usab: {\n    displayText: $datapoint.are_docks_or_boat_landings_usab,\n    hoverText: $datapoint.are_docks_or_boat_landings_usab,\n    textColor: '',\n    backgroundColor: '',\n    textAlign: 'left',\n    iconName: '',\n    iconAlign: '',\n    iconColor: '',\n    iconOutlineColor: ''\n  },\n\t\n  DOT_Const_Mangr_Phn_Nmbr: {\n      displayText: $datapoint.DOT_Const_Mangr_Phn_Nmbr, \n      hoverText: $datapoint.DOT_Const_Mangr_Phn_Nmbr,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\t\n\t  DOT_Contractor_Phone_Number: {\n      displayText: $datapoint.DOT_Contractor_Phone_Number, \n      hoverText: $datapoint.DOT_Contractor_Phone_Number,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n\t  Emergency_Contact: {\n      displayText: $datapoint.Emergency_Contact, \n      hoverText: $datapoint.Emergency_Contact,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Waste_water: {\n      displayText: $datapoint.Waste_Water,\n      hoverText: $datapoint.Waste_Water,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: '',\n    },\n\n    Potable_Water: {\n      displayText: $datapoint.Potable_Water,\n      hoverText: $datapoint.Potable_Water,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: '',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: '',\n    },\n\n    Date_updated: {\n      displayText: $datapoint.Date_updated,\n      hoverText: $datapoint.Date_updated,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor:'',\n      iconOutlineColor: ''\n    },\n\n    Barge_Landings: {\n      displayText: $datapoint.Barge_Landings,\n      hoverText: $datapoint.Barge_Landings,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Board_Road: {\n      displayText: $datapoint.Board_Road,\n      hoverText: $datapoint.Board_Road,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n    Edited_By: {\n      displayText: Text($datapoint.Edited_By), \n      hoverText: $datapoint.Edited_By,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n\t  }, \n\n    Edit_Date: {\n      displayText: Text($datapoint.Edit_Date), \n      hoverText: $datapoint.Edit_Date,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n\t  }, \n    \n    is_there_a_boil_water_notice: {\n      displayText: $datapoint.is_there_a_boil_water_notice,\n      hoverText: $datapoint.is_there_a_boil_water_notice,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName:'',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    },\n\n\t  DOT_Contractor_Phone_Number: {\n      displayText: $datapoint.DOT_Contractor_Phone_Number, \n      hoverText: $datapoint.DOT_Contractor_Phone_Number,\n      textColor: '',\n      backgroundColor: '',\n      textAlign: 'left',\n      iconName: '',\n      iconAlign: '',\n      iconColor: '',\n      iconOutlineColor: ''\n    }\n  }\n}\n",
+    "events": [
+     {
+      "type": "selectionChanged",
+      "actions": [
+       {
+        "targets": [
+         {
+          "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+          "by": "geometry",
+          "requiresSelection": false
+         }
+        ],
+        "type": "zoom"
+       }
+      ]
+     }
+    ],
+    "type": "tableWidget",
+    "dataSettings": {
+     "type": "features",
+     "valueFields": [
+      "community_name",
+      "Tribe_Community",
+      "Community_Contact",
+      "Phone_Number",
+      "Emergency_Contact",
+      "DOT_Const_Mangr_Phn_Nmbr",
+      "DOT_Contractor_Phone_Number",
+      "airport_status",
+      "runway_open",
+      "Date_updated",
+      "Board_Road",
+      "Barge_Landings",
+      "power",
+      "water_restriction",
+      "is_there_a_boil_water_notice",
+      "Waste_Water",
+      "Edited_By",
+      "Edit_Date"
+     ]
+    },
+    "tableSettings": {
+     "layout": "fit-data-stretch",
+     "scale": "medium",
+     "hoverText": true,
+     "rowStriping": true,
+     "selectionMode": "single",
+     "verticalGrid": {
+      "thickness": 1
+     },
+     "horizontalGrid": {
+      "thickness": 1
+     },
+     "headerSettings": {
+      "textColor": "#ffffff",
+      "backgroundColor": "#737272",
+      "rule": {
+       "thickness": 3
+      }
+     }
+    },
+    "columnSettings": [
+     {
+      "title": "Community Name",
+      "fieldName": "community_name",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Tribe ",
+      "fieldName": "Tribe_Community",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Community Contact",
+      "fieldName": "Community_Contact",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Phone Number",
+      "fieldName": "Phone_Number",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Emergency Contact & Phone Number ",
+      "fieldName": "Emergency_Contact",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "DOT Construction Manager & Phone Number ",
+      "fieldName": "DOT_Const_Mangr_Phn_Nmbr",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "DOT Contractor Name & Phone Number ",
+      "fieldName": "DOT_Contractor_Phone_Number",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Airport Status?",
+      "fieldName": "airport_status",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Is the runway open?",
+      "fieldName": "runway_open",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Airport Date Updated",
+      "fieldName": "Date_updated",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Board Road Complete?",
+      "fieldName": "Board_Road",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Barge Landing Usable?",
+      "fieldName": "Barge_Landings",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Does the community have power?",
+      "fieldName": "power",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Is there a water restriction?",
+      "fieldName": "water_restriction",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Potable Water",
+      "fieldName": "is_there_a_boil_water_notice",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Waste Water ",
+      "fieldName": "Waste_Water",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Edited By",
+      "fieldName": "Edited_By",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     },
+     {
+      "title": "Edit Date",
+      "fieldName": "Edit_Date",
+      "textAlign": "left",
+      "isBold": false,
+      "isItalic": false,
+      "isUnderlined": false
+     }
+    ],
+    "iconInfos": [],
+    "editingEnabled": false,
+    "editColumnPlacement": "end"
+   },
+   {
+    "id": "cef0ffd4-9bf5-4921-998f-5bee9e534714",
+    "name": "Indicator (1)",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+       "layerId": "199ea5b6895-layer-26"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "statisticType": "count",
+        "outStatisticFieldName": "COUNT_OBJECTID"
+       }
+      ],
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false
+     }
+    ],
+    "type": "indicatorWidget",
+    "defaultSettings": {
+     "backgroundColor": "#c0d3e6",
+     "topSection": {
+      "fontSize": 80,
+      "textInfo": {}
+     },
+     "middleSection": {
+      "fontSize": 160,
+      "textInfo": {
+       "text": null
+      }
+     },
+     "bottomSection": {
+      "fontSize": 80,
+      "textInfo": {}
+     }
+    },
+    "comparison": "none",
+    "valueFormat": {
+     "name": "value",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 1
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true
+    },
+    "ratioFormat": {
+     "name": "ratio",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 2
+    },
+    "valueType": "statistic",
+    "noValueState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    }
+   }
+  ],
+  "settings": {
+   "allowElementResizing": false,
+   "allowElementExpansion": false,
+   "allowReset": true
+  },
+  "header": {
+   "textColor": "#ffffff",
+   "backgroundColor": "#092a4f",
+   "type": "header",
+   "title": "{{event.NAME}} COMMUNITY STATUS ({{org.name}})",
+   "logoImageURL": "{{portal.url}}/sharing/rest/content/items/{{6050c8888d1b45dbbe586217c7cd8e04.itemId}}/data",
+   "logoSize": "large",
+   "titleTextColor": "#ffffff",
+   "backgroundImageSizing": "fit-height",
+   "normalBackgroundImagePlacement": "left",
+   "horizontalBackgroundImagePlacement": "top",
+   "showSignOutMenu": true,
+   "selectors": [
+    {
+     "id": "23f33440-3513-468d-b6d0-b0467e0c4d6c",
+     "name": "Category selector (1)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        },
+        {
+         "targets": [
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+           "by": "geometry",
+           "requiresSelection": false
+          }
+         ],
+         "type": "zoom"
+        }
+       ]
+      }
+     ],
+     "label": "COMMUNITY NAME",
+     "placeholderText": "All",
+     "showActionButtons": true,
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "community_name"
+       ],
+       "orderByFields": [
+        "community_name ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "community_name",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_COMMUNITY_NAME"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "is_in",
+      "allowNone": true,
+      "noneLabelPlacement": "first",
+      "type": "multiple"
+     },
+     "showFilter": true,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    }
+   ],
+   "subtitlePlacement": "sameLine",
+   "showMargin": false,
+   "menuContents": []
+  },
+  "sidebar": {
+   "selectors": [
+    {
+     "id": "232469b6-b9e1-4ab4-9a32-61d1bfdfe38a",
+     "name": "Category selector (2)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        },
+        {
+         "targets": [
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+           "by": "geometry",
+           "requiresSelection": false
+          }
+         ],
+         "type": "zoom"
+        }
+       ]
+      }
+     ],
+     "label": "AIRPORT STATUS",
+     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon \" role=\"button\" viewBox=\"0 0 21 21\"><path d=\"M18.238 14.14c0-.632-.814-1.265-.814-1.265L11.9 8.828V5.236c0-2.43-1.4-3.238-1.4-3.238s-1.4.809-1.4 3.238v3.592l-5.524 4.047s-.814.633-.814 1.266v.808L9.1 12.521s.167 2.717.42 3.655l-1.463 1.402s-.408.317-.408.633v.787l2.851-.77 2.85.77v-.787c0-.316-.407-.633-.407-.633l-1.463-1.402c.253-.938.42-3.655.42-3.655l6.338 2.428v-.808z\"/></svg>",
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "airport_status"
+       ],
+       "orderByFields": [
+        "airport_status ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "airport_status",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_AIRPORT_STATUS"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "single",
+      "defaultSelection": "first"
+     },
+     "showFilter": false,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "c63f9592-fae0-4176-8d92-def73c214c8c",
+     "name": "Category selector (3)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        }
+       ]
+      }
+     ],
+     "label": "IS THE RUNWAY OPEN?",
+     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon \" role=\"button\" viewBox=\"0 0 21 21\"><path d=\"M12.402 16.976H19L10.503 2.998 2 16.976h6.626l1.888-8.94z\"/></svg>",
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "runway_open"
+       ],
+       "orderByFields": [
+        "runway_open ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "runway_open",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_RUNWAY_OPEN"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "single",
+      "defaultSelection": "first"
+     },
+     "showFilter": false,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "0b4dfa8b-7d18-4f7e-ae0f-ebc53141141a",
+     "name": "Category selector (4)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        },
+        {
+         "targets": [
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+           "by": "geometry",
+           "requiresSelection": false
+          }
+         ],
+         "type": "zoom"
+        }
+       ]
+      }
+     ],
+     "label": "HAS {{org.name}} VISITED COMMUNITY?",
+     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon \" role=\"button\" viewBox=\"0 0 16 16\"><path d=\"M4.501 2a2.5 2.5 0 1 0-.004 5 2.5 2.5 0 0 0 .004-5zm0 4c-.828 0-1.502-.673-1.502-1.5S3.673 3 4.501 3a1.5 1.5 0 0 1 0 3zm1.133 6h-4.58c.218-1.688 1.692-3 3.446-3 1.04 0 1.974.467 2.615 1.206a5.42 5.42 0 0 1 .84-.552A4.44 4.44 0 0 0 4.5 8C2.186 8 .302 9.753.05 12L0 13h5.246c.1-.35.228-.685.388-1zm9.316 2c-.252-2.247-2.136-4-4.45-4s-4.198 1.753-4.45 4L6 15h9l-.05-1zm-7.895 0c.217-1.688 1.691-3 3.445-3a3.485 3.485 0 0 1 3.442 3H7.055z\"/><path d=\"M14.95 14c-.252-2.247-2.136-4-4.45-4s-4.198 1.753-4.45 4L6 15h9l-.05-1zm-7.895 0c.217-1.688 1.691-3 3.445-3a3.485 3.485 0 0 1 3.442 3H7.055zm3.446-10a2.5 2.5 0 1 0-.004 5 2.5 2.5 0 0 0 .004-5zm0 4c-.828 0-1.502-.673-1.502-1.5S9.673 5 10.501 5a1.5 1.5 0 0 1 0 3z\"/></svg>",
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "dot_pf_been_onsite"
+       ],
+       "orderByFields": [
+        "dot_pf_been_onsite ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "dot_pf_been_onsite",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_DOT_PF_BEEN_ONSITE"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "single",
+      "defaultSelection": "first"
+     },
+     "showFilter": false,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "d7b7d7e0-aa03-4601-b233-029018cc295b",
+     "name": "Category selector (5)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        },
+        {
+         "targets": [
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+           "by": "geometry",
+           "requiresSelection": false
+          }
+         ],
+         "type": "zoom"
+        }
+       ]
+      }
+     ],
+     "label": "DOES COMMUNITY HAVE POWER?",
+     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon \" role=\"button\" viewBox=\"0 0 21 21\"><path d=\"M12 16v2.24l-1.076.76h-.848l-1.055-1L10 17H9l.021-1H12zM11 1h-1v3h1V1zM2 9v1h3V9H2zm14 0v1h3V9h-3zM4.793 3.086l-.707.707 2.121 2.121.707-.707-2.121-2.121zm5.19 2.305c-2.064.228-3.739 1.903-3.957 3.958a4.449 4.449 0 0 0 1.162 3.516c.58.634.965 1.302 1.103 2.135H10v-2l-2-3h1l1.5 2.25L12 10h1l-2 3v2h1.709c.138-.833.523-1.501 1.103-2.135A4.443 4.443 0 0 0 15 9.836c0-2.64-2.3-4.746-5.016-4.445zm4.103-.184l.707.707 2.121-2.121-.707-.707-2.121 2.121z\"/></svg>",
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "power"
+       ],
+       "orderByFields": [
+        "power ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "power",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_POWER"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "single",
+      "defaultSelection": "first"
+     },
+     "showFilter": false,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "eb019a1d-eefd-4c1b-b35b-70d5b8234384",
+     "name": "Category selector (6)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        },
+        {
+         "targets": [
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+           "by": "geometry",
+           "requiresSelection": false
+          }
+         ],
+         "type": "zoom"
+        }
+       ]
+      }
+     ],
+     "label": "IS THERE A WATER RESTRICTION?",
+     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon \" role=\"button\" viewBox=\"0 0 21 21\"><path d=\"M12.477 12.782a8.293 8.293 0 0 1 1.146 3.014 3.089 3.089 0 1 1-6.174 0 7.936 7.936 0 0 1 1.123-2.967c1.132-2.352 1.964-3.831 1.964-3.831s.818 1.45 1.941 3.784zM9.84 3.998l.266 1h1.697l.6 3H17v-4zm.963 3H9.004l-1.321-3H4v4h7.352z\"/></svg>",
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "water_restriction"
+       ],
+       "orderByFields": [
+        "water_restriction ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "water_restriction",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_WATER_RESTRICTION"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "single",
+      "defaultSelection": "first"
+     },
+     "showFilter": false,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "b12a67af-52ed-4f7e-bd4d-f6b0188b93e2",
+     "name": "Category selector (7)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744",
+           "by": "geometry",
+           "requiresSelection": false
+          }
+         ],
+         "type": "zoom"
+        },
+        {
+         "targets": [
+          {
+           "targetId": "a3933c47-7cf0-4e06-8fe6-baa21ce15ee5#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "92a928bf-8507-44e5-b5d9-cf22578c4303#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "a8d283e0-45df-4db6-aa2d-4a180056b744#199ea5b6895-layer-26",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        }
+       ]
+      }
+     ],
+     "label": "HAS {{org.name}} CAPTURE DRONE FOOTAGE?",
+     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon \" role=\"button\" viewBox=\"0 0 21 21\"><path d=\"M16.111 5.998H13V4.351a1.428 1.428 0 0 0-1.22-1.353H9.215A1.423 1.423 0 0 0 8 4.351v1.647H4.889A1.687 1.687 0 0 0 3 7.888v6.848a1.328 1.328 0 0 0 1.213 1.262H16.79A1.33 1.33 0 0 0 18 14.736V7.887c0-1.319-.453-1.889-1.889-1.889zm-5.613 8A3 3 0 1 1 13.5 11a2.997 2.997 0 0 1-3.002 2.998z\"/></svg>",
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{6160d84e26a241338709282a917237ec.itemId}}",
+        "layerId": "199ea5b6895-layer-26"
+       },
+       "groupByFields": [
+        "drone_footage"
+       ],
+       "orderByFields": [
+        "drone_footage ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "drone_footage",
+         "statisticType": "count",
+         "outStatisticFieldName": "COUNT_DRONE_FOOTAGE"
+        }
+       ],
+       "maxFeatures": 50,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "single",
+      "defaultSelection": "first"
+     },
+     "showFilter": false,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    }
+   ],
+   "type": "sidebar",
+   "allowSliding": true
+  }
+ },
+ "elementMappings": {}
+}

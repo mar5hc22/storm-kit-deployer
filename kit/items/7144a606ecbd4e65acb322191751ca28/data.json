@@ -1,0 +1,83 @@
+{
+ "operationalLayers": [
+  {
+   "id": "{{c403e5b09fff455cb3fc22489b162517.itemId}}",
+   "opacity": 1,
+   "title": "{{event.name}} ADD COMMUNITY",
+   "url": "{{c403e5b09fff455cb3fc22489b162517.url}}/0",
+   "visibility": true,
+   "itemId": "{{c403e5b09fff455cb3fc22489b162517.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "refreshInterval": 1,
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "community_name",
+      "isEditable": true,
+      "label": "Community Name",
+      "tooltip": "",
+      "visible": true
+     }
+    ],
+    "title": "{{event.name}} Communities EDITOR"
+   }
+  }
+ ],
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "BingMapsHybrid",
+    "opacity": 1,
+    "title": "Layer",
+    "visibility": true,
+    "layerType": "BingMapsHybrid",
+    "portalUrl": "{{portal.url}}/sharing/rest/portals/r4A0V7UzH9fcLVvv"
+   }
+  ],
+  "title": "Bing Maps Hybrid"
+ },
+ "applicationProperties": {
+  "offline": {
+   "editableLayers": {
+    "download": "featuresAndAttachments",
+    "sync": "syncFeaturesAndAttachments"
+   },
+   "readonlyLayers": {
+    "downloadAttachments": true
+   }
+  },
+  "viewing": {}
+ },
+ "authoringApp": "ArcGISMapViewer",
+ "authoringAppVersion": "2025.2",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "spatialReference": {
+     "latestWkid": 3857,
+     "wkid": 102100
+    },
+    "xmin": -24121665.67024006,
+    "ymin": 4935285.46914167,
+    "xmax": -10111064.133684121,
+    "ymax": 13427745.059735633
+   }
+  }
+ },
+ "spatialReference": {
+  "latestWkid": 3857,
+  "wkid": 102100
+ },
+ "timeZone": "system",
+ "version": "2.34"
+}

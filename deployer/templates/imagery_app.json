@@ -1,0 +1,477 @@
+{
+ "template": "blank",
+ "exbVersion": "1.18.0",
+ "originExbVersion": "1.18.0",
+ "mainSizeMode": "LARGE",
+ "theme": "themes/default/",
+ "customTheme": {
+  "colors": {
+   "secondary": "#ffffff",
+   "light": "#f8f8f8",
+   "primary": "#005e95",
+   "success": "#35ac46",
+   "info": "#00619b",
+   "warning": "#edd317",
+   "danger": "#d83020"
+  }
+ },
+ "forBuilderAttributes": {
+  "lockLayout": false,
+  "viewPortSize": {
+   "LARGE": {
+    "width": 1440,
+    "height": 900
+   }
+  }
+ },
+ "attributes": {
+  "portalUrl": "{{portal.url}}"
+ },
+ "widgetsManifest": {},
+ "views": {},
+ "sections": {},
+ "dialogs": {},
+ "screenGroups": {},
+ "screens": {},
+ "controllerPanels": {},
+ "historyLabels": {},
+ "messageConfigs": {},
+ "dataSources": {
+  "dataSource_1": {
+   "id": "dataSource_1",
+   "type": "WEB_MAP",
+   "sourceLabel": "Imagery Comparison Map",
+   "itemId": "{{imagery_map.itemId}}",
+   "portalUrl": "{{portal.url}}",
+   "label": "Imagery Comparison Map",
+   "isHidden": false
+  }
+ },
+ "widgets": {
+  "widget_1": {
+   "uri": "widgets/common/text/",
+   "label": "Title",
+   "config": {
+    "text": "<p><strong style=\"font-size: 18px; color: #ffffff;\">{{event.name}} - Drone Imagery Comparison</strong></p>",
+    "style": {
+     "verticalAlign": "center",
+     "wrap": true,
+     "padding": "p-2"
+    }
+   },
+   "useDataSources": [],
+   "id": "widget_1",
+   "version": "1.18.0"
+  },
+  "widget_2": {
+   "uri": "widgets/common/menu/",
+   "label": "Menu",
+   "useDataSources": [],
+   "config": {
+    "type": "nav",
+    "menuStyle": "underline",
+    "vertical": false,
+    "advanced": true,
+    "standard": {
+     "textAlign": "end",
+     "gap": "20px",
+     "showText": true,
+     "showIcon": false,
+     "iconPosition": "start"
+    },
+    "variant": {
+     "size": {
+      "fontSize": "0.875rem",
+      "lineHeight": 1.5,
+      "paddingX": "1rem",
+      "paddingY": "0.25rem"
+     },
+     "gutter": "0.25rem",
+     "icon": {
+      "spacing": "0.5rem"
+     },
+     "root": {
+      "border": {
+       "width": 0
+      },
+      "borderRadius": "0rem"
+     },
+     "item": {
+      "default": {
+       "color": "var(--light-400)",
+       "bg": "transparent",
+       "border": {
+        "color": "transparent",
+        "width": "2px"
+       },
+       "borderRadius": "0rem",
+       "icon": {
+        "size": "16px"
+       },
+       "size": "16px"
+      },
+      "hover": {
+       "color": "var(--secondary)",
+       "border": {
+        "color": "transparent",
+        "width": "1px"
+       },
+       "borderRadius": "0rem",
+       "icon": {
+        "color": "var(--secondary)",
+        "size": "16px"
+       },
+       "size": "16px"
+      },
+      "active": {
+       "color": "var(--secondary)",
+       "border": {
+        "color": "var(--secondary)",
+        "width": "1px"
+       },
+       "borderRadius": "0rem",
+       "icon": {
+        "color": "var(--secondary)",
+        "size": "16px"
+       },
+       "size": "16px"
+      },
+      "disabled": {
+       "color": "#9f9f9f",
+       "shadow": "none",
+       "borderRadius": "0rem"
+      }
+     }
+    },
+    "paper": {
+     "bg": "#ffffff",
+     "color": "#050505",
+     "paddingX": 0,
+     "paddingY": 0,
+     "border": {
+      "width": 0,
+      "color": "transparent"
+     }
+    }
+   },
+   "id": "widget_2",
+   "version": "1.18.0"
+  },
+  "widget_3": {
+   "uri": "widgets/arcgis/arcgis-map/",
+   "label": "Imagery map",
+   "config": {
+    "toolConfig": {
+     "canZoom": true,
+     "canHome": true,
+     "canSearch": false,
+     "canNavigation": false
+    },
+    "isUseCustomMapState": false,
+    "initialMapState": null,
+    "initialMapDataSourceID": "dataSource_1"
+   },
+   "layouts": {
+    "MapFixedLayout": {
+     "LARGE": "layout_2"
+    }
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_1",
+     "mainDataSourceId": "dataSource_1"
+    }
+   ],
+   "enableDataAction": false,
+   "id": "widget_3",
+   "version": "1.18.0"
+  },
+  "widget_4": {
+   "uri": "widgets/common/search/",
+   "label": "Find a place",
+   "config": {
+    "searchResultView": "Result_Panel",
+    "arrangementStyle": "Style1",
+    "maxSuggestions": 6,
+    "recentSearchesMaxNumber": 6,
+    "resultMaxNumber": 6,
+    "datasourceConfig": [],
+    "enableFiltering": true,
+    "isAutoSelectFirstResult": true,
+    "hint": "Search an address or place"
+   },
+   "useMapWidgetIds": [
+    "widget_3"
+   ],
+   "id": "widget_4",
+   "version": "1.18.0"
+  },
+  "widget_5": {
+   "uri": "widgets/arcgis/map-layers/",
+   "label": "Layers",
+   "config": {
+    "useMapWidget": true,
+    "goto": true,
+    "label": true,
+    "popup": true,
+    "opacity": true,
+    "useTickBoxes": true,
+    "enableLegend": false,
+    "reorderLayers": false,
+    "showTables": false
+   },
+   "useMapWidgetIds": [
+    "widget_3"
+   ],
+   "id": "widget_5",
+   "version": "1.18.0"
+  },
+  "widget_6": {
+   "uri": "widgets/arcgis/swipe/",
+   "label": "Compare before and after",
+   "config": {
+    "swipeStyle": "SIMPLE_HORIZONTAL",
+    "swipeMode": "SWIPE_BETWEEN_LAYERS_OF_ONE_MAP",
+    "leadingLayersAlias": "After",
+    "trailingLayersAlias": "Before",
+    "swipeMapViewList": {
+     "widget_3-dataSource_1": {
+      "leadingLayersId": [
+       "widget_3-dataSource_1-after_imagery"
+      ],
+      "trailingLayersId": [
+       "widget_3-dataSource_1-before_imagery"
+      ]
+     }
+    },
+    "styleConfig": {
+     "dividerColor": "#ffffff"
+    }
+   },
+   "useMapWidgetIds": [
+    "widget_3"
+   ],
+   "id": "widget_6",
+   "version": "1.18.0"
+  }
+ },
+ "layouts": {
+  "layout_1": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "bbox": {
+      "left": "0.00%",
+      "top": "0.00%",
+      "width": "50.00%",
+      "height": "100.00%",
+      "right": "50.00%",
+      "bottom": "0.00%"
+     },
+     "widgetId": "widget_1",
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "height": "STRETCH",
+       "width": "STRETCH"
+      },
+      "vCenter": false,
+      "hCenter": false
+     },
+     "isPending": false
+    },
+    "1": {
+     "type": "WIDGET",
+     "bbox": {
+      "left": "50.00%",
+      "top": "0.00%",
+      "width": "50.00%",
+      "height": "100.00%",
+      "right": "0.00%",
+      "bottom": "0.00%"
+     },
+     "widgetId": "widget_2",
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "height": "STRETCH",
+       "width": "STRETCH"
+      },
+      "vCenter": false,
+      "hCenter": false
+     },
+     "isPending": false
+    }
+   }
+  },
+  "layout_2": {
+   "type": "FIXED",
+   "label": "Map FixedLayout",
+   "order": [
+    "0",
+    "1"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "bbox": {
+      "left": "58.00%",
+      "top": "2.00%",
+      "width": "40.00%",
+      "height": "8.00%",
+      "right": "2.00%",
+      "bottom": "90.00%"
+     },
+     "widgetId": "widget_4",
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false
+      },
+      "vCenter": false,
+      "hCenter": false
+     },
+     "isPending": false
+    },
+    "1": {
+     "type": "WIDGET",
+     "bbox": {
+      "left": "1.00%",
+      "top": "60.00%",
+      "width": "22.00%",
+      "height": "38.00%",
+      "right": "77.00%",
+      "bottom": "2.00%"
+     },
+     "widgetId": "widget_5",
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false
+      },
+      "vCenter": false,
+      "hCenter": false
+     },
+     "isPending": false
+    }
+   }
+  },
+  "layout_3": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "bbox": {
+      "left": "0.00%",
+      "top": "0.00%",
+      "width": "100.00%",
+      "height": "100.00%",
+      "right": "0.00%",
+      "bottom": "0.00%"
+     },
+     "widgetId": "widget_3",
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "height": "STRETCH",
+       "width": "STRETCH"
+      },
+      "vCenter": false,
+      "hCenter": false
+     },
+     "isPending": false
+    },
+    "1": {
+     "type": "WIDGET",
+     "bbox": {
+      "left": "1.00%",
+      "top": "12.00%",
+      "width": "22.00%",
+      "height": "30.00%",
+      "right": "77.00%",
+      "bottom": "58.00%"
+     },
+     "widgetId": "widget_6",
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "height": "STRETCH",
+       "width": "STRETCH"
+      },
+      "vCenter": false,
+      "hCenter": false
+     },
+     "isPending": false
+    }
+   }
+  },
+  "layout_4": {
+   "type": "FIXED",
+   "order": [],
+   "content": {}
+  }
+ },
+ "pages": {
+  "page_1": {
+   "id": "page_1",
+   "mode": "FIT_WINDOW",
+   "type": "NORMAL",
+   "layout": {
+    "LARGE": "layout_3"
+   },
+   "isDefault": true,
+   "isVisible": true,
+   "label": "Compare",
+   "header": true,
+   "footer": false
+  }
+ },
+ "pageStructure": [
+  {
+   "page_1": []
+  }
+ ],
+ "header": {
+  "layout": {
+   "LARGE": "layout_1"
+  },
+  "height": {
+   "LARGE": "56px"
+  },
+  "backgroundColor": "#005e95"
+ },
+ "footer": {
+  "layout": {
+   "LARGE": "layout_4"
+  },
+  "height": {
+   "LARGE": 0
+  },
+  "backgroundColor": "var(--light)"
+ }
+}

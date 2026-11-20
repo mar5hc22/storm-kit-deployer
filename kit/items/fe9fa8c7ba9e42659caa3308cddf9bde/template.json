@@ -1,0 +1,42 @@
+{
+ "key": "fe9fa8c7ba9e42659caa3308cddf9bde",
+ "type": "Form",
+ "title": "Add Community",
+ "snippet": "",
+ "description": "",
+ "tags": [],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": {
+  "connectVersion": "3.23.48"
+ },
+ "typeKeywords": [
+  "Form",
+  "Survey123",
+  "Survey123 Connect",
+  "xForm"
+ ],
+ "data": {
+  "file": "data.zip",
+  "name": "form.zip",
+  "form": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": [
+  {
+   "type": "Survey2Service",
+   "to": "c403e5b09fff455cb3fc22489b162517"
+  },
+  {
+   "type": "Survey2Data",
+   "to": "c403e5b09fff455cb3fc22489b162517"
+  },
+  {
+   "type": "Survey2Data",
+   "to": "7144a606ecbd4e65acb322191751ca28"
+  }
+ ]
+}

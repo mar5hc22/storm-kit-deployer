@@ -1,0 +1,540 @@
+{
+ "key": "4003a8031af248ad9c6a694b65e97919",
+ "type": "Feature Service",
+ "title": "Home Damage Assessment",
+ "snippet": null,
+ "description": null,
+ "tags": [
+  "Survey123"
+ ],
+ "extent": [
+  [
+   -180,
+   -90
+  ],
+  [
+   180,
+   90
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [
+  "{{29920d92b407461f8ba96a8d4089bad0.itemId}}",
+  "OwnerView",
+  "Source",
+  "Survey123",
+  "Survey123 Hub"
+ ],
+ "service": {
+  "name": "HomeDamageAssessment",
+  "is_view": false,
+  "create": {
+   "serviceDescription": "Feature Service for survey {{29920d92b407461f8ba96a8d4089bad0.itemId}}",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 2000,
+   "capabilities": "Create,Delete,Query,Update,Editing,Extract,Sync",
+   "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+   },
+   "initialExtent": {
+    "xmin": -180,
+    "ymin": -90,
+    "xmax": 180,
+    "ymax": 90,
+    "spatialReference": {
+     "wkid": 4326,
+     "latestWkid": 4326
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriDecimalDegrees",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": true,
+    "enableOwnershipAccessControl": true,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": true,
+    "allowOthersToDelete": true,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "layers": [
+   {
+    "id": 0,
+    "name": "survey",
+    "type": "Feature Layer",
+    "description": "",
+    "copyrightText": "",
+    "defaultVisibility": true,
+    "relationships": [],
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "extent": {
+     "xmin": -180,
+     "ymin": -90,
+     "xmax": 180,
+     "ymax": 90,
+     "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+     }
+    },
+    "drawingInfo": {
+     "labelingInfo": null,
+     "renderer": {
+      "label": "Survey Point",
+      "symbol": {
+       "angle": 0,
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "outline": {
+        "color": [
+         255,
+         255,
+         0,
+         255
+        ],
+        "width": 1
+       },
+       "size": 8,
+       "style": "esriSMSCircle",
+       "type": "esriSMS",
+       "xoffset": 0,
+       "yoffset": 0
+      },
+      "type": "simple"
+     },
+     "transparency": 0
+    },
+    "allowGeometryUpdates": true,
+    "hasAttachments": true,
+    "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+    "hasM": false,
+    "hasZ": false,
+    "objectIdField": "objectid",
+    "globalIdField": "globalid",
+    "displayField": "",
+    "typeIdField": "",
+    "fields": [
+     {
+      "name": "objectid",
+      "type": "esriFieldTypeOID",
+      "alias": "ObjectID",
+      "sqlType": "sqlTypeOther",
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "globalid",
+      "type": "esriFieldTypeGlobalID",
+      "alias": "GlobalID",
+      "sqlType": "sqlTypeOther",
+      "length": 38,
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "CreationDate",
+      "type": "esriFieldTypeDate",
+      "alias": "CreationDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Creator",
+      "type": "esriFieldTypeString",
+      "alias": "Creator",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "EditDate",
+      "type": "esriFieldTypeDate",
+      "alias": "EditDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Editor",
+      "type": "esriFieldTypeString",
+      "alias": "Editor",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "todays_date",
+      "type": "esriFieldTypeDate",
+      "alias": "Today's Date",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "damage_level",
+      "type": "esriFieldTypeString",
+      "alias": "Damage Level",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_damage_level",
+       "codedValues": [
+        {
+         "name": "No Damage",
+         "code": "No Damage"
+        },
+        {
+         "name": "Inaccessible",
+         "code": "Inaccessible"
+        },
+        {
+         "name": "Affected",
+         "code": "Affected"
+        },
+        {
+         "name": "Minor",
+         "code": "Minor"
+        },
+        {
+         "name": "Major",
+         "code": "Major"
+        },
+        {
+         "name": "Destroyed / Missing",
+         "code": "Destroyed / Missing"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "additional_information",
+      "type": "esriFieldTypeString",
+      "alias": "Additional Information",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "additional_info",
+      "type": "esriFieldTypeString",
+      "alias": "Additional Information",
+      "sqlType": "sqlTypeOther",
+      "length": 5000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "ai_Info",
+      "type": "esriFieldTypeString",
+      "alias": "AI Description",
+      "sqlType": "sqlTypeOther",
+      "length": 5000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "acquisitiondate",
+      "type": "esriFieldTypeDate",
+      "alias": "Acquisition Date",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "cameraheight",
+      "type": "esriFieldTypeDouble",
+      "alias": "Camera Height Above Ground",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "cameraheading",
+      "type": "esriFieldTypeDouble",
+      "alias": "Camera Heading (True North)",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "camerapitch",
+      "type": "esriFieldTypeDouble",
+      "alias": "Camera Pitch",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "cameraroll",
+      "type": "esriFieldTypeDouble",
+      "alias": "Camera Roll",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "fardistance",
+      "type": "esriFieldTypeDouble",
+      "alias": "Far Distance",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "horizontalfieldofview",
+      "type": "esriFieldTypeDouble",
+      "alias": "Horizontal Field Of View",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "neardistance",
+      "type": "esriFieldTypeDouble",
+      "alias": "Near Distance",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "verticalfieldofview",
+      "type": "esriFieldTypeDouble",
+      "alias": "Vertical Field Of View",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "imagepath",
+      "type": "esriFieldTypeString",
+      "alias": "Image Path",
+      "sqlType": "sqlTypeOther",
+      "length": 5000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "houseNumber",
+      "type": "esriFieldTypeString",
+      "alias": "DOT House Number",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "community",
+      "type": "esriFieldTypeString",
+      "alias": "Community",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "distance_ft",
+      "type": "esriFieldTypeDouble",
+      "alias": "Distance from house",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "bearing_deg",
+      "type": "esriFieldTypeDouble",
+      "alias": "Bearing to the closet house",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     }
+    ],
+    "types": [],
+    "templates": [
+     {
+      "name": "New Feature",
+      "description": "",
+      "drawingTool": "esriFeatureEditToolNone",
+      "prototype": {
+       "attributes": {
+        "todays_date": null,
+        "damage_level": null,
+        "additional_information": null,
+        "additional_info": null,
+        "ai_Info": null,
+        "acquisitiondate": null,
+        "cameraheight": null,
+        "cameraheading": null,
+        "camerapitch": null,
+        "cameraroll": null,
+        "fardistance": null,
+        "horizontalfieldofview": null,
+        "neardistance": null,
+        "verticalfieldofview": null,
+        "imagepath": null,
+        "houseNumber": null,
+        "community": null,
+        "distance_ft": null,
+        "bearing_deg": null
+       }
+      }
+     }
+    ],
+    "capabilities": "Create,Delete,Query,Update,Editing,Extract,Sync",
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "hasStaticData": false,
+    "editFieldsInfo": {
+     "creationDateField": "CreationDate",
+     "creatorField": "Creator",
+     "editDateField": "EditDate",
+     "editorField": "Editor"
+    },
+    "ownershipBasedAccessControlForFeatures": {
+     "allowOthersToQuery": true,
+     "allowOthersToDelete": true,
+     "allowOthersToUpdate": true,
+     "allowAnonymousToQuery": true,
+     "allowAnonymousToUpdate": false,
+     "allowAnonymousToDelete": false
+    },
+    "dateFieldsTimeReference": {
+     "timeZone": "UTC",
+     "timeZoneIANA": "Etc/UTC",
+     "respectsDaylightSaving": false
+    },
+    "preferredTimeReference": null,
+    "propagateVisibleFields": true,
+    "attachmentProperties": [
+     {
+      "name": "id",
+      "fieldName": "ATTACHMENTID",
+      "isEnabled": true
+     },
+     {
+      "name": "globalId",
+      "fieldName": "AttachmentGlobalID",
+      "isEnabled": true
+     },
+     {
+      "name": "name",
+      "fieldName": "ATT_NAME",
+      "isEnabled": true
+     },
+     {
+      "name": "size",
+      "fieldName": "DATA_SIZE",
+      "isEnabled": true
+     },
+     {
+      "name": "contentType",
+      "fieldName": "CONTENT_TYPE",
+      "isEnabled": true
+     },
+     {
+      "name": "keywords",
+      "fieldName": "Keywords",
+      "isEnabled": true
+     },
+     {
+      "name": "exifInfo",
+      "fieldName": "ExifInfo",
+      "isEnabled": true
+     }
+    ],
+    "adminLayerInfo": {
+     "geometryField": {
+      "name": "Shape"
+     }
+    }
+   }
+  ],
+  "tables": []
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

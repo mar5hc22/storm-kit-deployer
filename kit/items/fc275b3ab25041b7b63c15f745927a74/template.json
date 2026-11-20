@@ -1,0 +1,24 @@
+{
+ "key": "fc275b3ab25041b7b63c15f745927a74",
+ "type": "Image",
+ "title": "Team Status Dashboard instructions",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "Data",
+  "Image",
+  "png"
+ ],
+ "data": {
+  "file": "data.bin",
+  "name": "dashboardInstructionsRO.png"
+ },
+ "resources": [],
+ "relationships": []
+}

@@ -1,0 +1,29 @@
+{
+ "key": "c515919c2c804b0e89cc43a7f79e1f70",
+ "type": "Dashboard",
+ "title": "Community Status Dashboard",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS Dashboards",
+  "Dashboard",
+  "Operations Dashboard"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [
+  "themes/user.json"
+ ],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

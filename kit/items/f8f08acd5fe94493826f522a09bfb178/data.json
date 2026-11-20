@@ -1,0 +1,958 @@
+{
+ "version": "4.34.0",
+ "authoringApp": "ArcGIS Dashboards",
+ "authoringAppVersion": "4.34.0+4e5d6c5bb9",
+ "maxPaginationRecords": 50000,
+ "maxChartRecords": 10000,
+ "timeZone": "system",
+ "theme": {
+  "id": "dark",
+  "type": "defined"
+ },
+ "numberPrefixOverrides": [
+  {
+   "key": "yotta",
+   "symbol": "Y",
+   "enabled": true
+  },
+  {
+   "key": "zeta",
+   "symbol": "Z",
+   "enabled": true
+  },
+  {
+   "key": "exa",
+   "symbol": "E",
+   "enabled": true
+  },
+  {
+   "key": "peta",
+   "symbol": "P",
+   "enabled": true
+  },
+  {
+   "key": "tera",
+   "symbol": "T",
+   "enabled": true
+  },
+  {
+   "key": "giga",
+   "symbol": "G",
+   "enabled": true
+  },
+  {
+   "key": "mega",
+   "symbol": "M",
+   "enabled": true
+  },
+  {
+   "key": "kilo",
+   "symbol": "k",
+   "enabled": true
+  },
+  {
+   "key": "base",
+   "symbol": "",
+   "enabled": true
+  },
+  {
+   "key": "deci",
+   "symbol": "d",
+   "enabled": false
+  },
+  {
+   "key": "centi",
+   "symbol": "c",
+   "enabled": false
+  },
+  {
+   "key": "milli",
+   "symbol": "m",
+   "enabled": false
+  },
+  {
+   "key": "micro",
+   "symbol": "\u00b5",
+   "enabled": false
+  },
+  {
+   "key": "nano",
+   "symbol": "n",
+   "enabled": false
+  }
+ ],
+ "desktopView": {
+  "layout": {
+   "type": "dockingLayout",
+   "rootElement": {
+    "width": 1,
+    "height": 1,
+    "id": "85c7b693-da99-4857-aa52-2d1e7b8a4b23",
+    "elements": [
+     {
+      "width": 1,
+      "height": 0.6445358401880138,
+      "id": "09278547-98e8-4727-a243-7368b61d6703",
+      "elements": [
+       {
+        "width": 0.25634057971014496,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "c6bd358c-380e-4acd-859e-296e56c560ee"
+       },
+       {
+        "width": 0.33333333333333337,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "808580c5-ef67-4529-93e6-77595a0b73c0"
+       },
+       {
+        "width": 0.4103260869565211,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "5e3f3089-3566-4d54-b122-38f675b099f9"
+       }
+      ],
+      "type": "stackLayoutElement",
+      "orientation": "col"
+     },
+     {
+      "width": 1,
+      "height": 0.3554641598119859,
+      "id": "a52e59bc-bb54-4394-a8bf-b95cae824b25",
+      "elements": [
+       {
+        "width": 0.453804347826087,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "aff5b169-51cb-41ba-9f11-88afc84e2da1"
+       },
+       {
+        "width": 0.5461956521739131,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "715cabe7-5402-49df-b076-aca01b86af7b"
+       }
+      ],
+      "type": "stackLayoutElement",
+      "orientation": "col"
+     }
+    ],
+    "type": "stackLayoutElement",
+    "orientation": "row"
+   }
+  },
+  "type": "desktop",
+  "widgets": [
+   {
+    "id": "5e3f3089-3566-4d54-b122-38f675b099f9",
+    "name": "AKDOT Home Damage Assessment map for Dashboard",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "events": [
+     {
+      "type": "extentChanged",
+      "actions": [
+       {
+        "targets": [
+         {
+          "targetId": "715cabe7-5402-49df-b076-aca01b86af7b#main",
+          "by": "geometry",
+          "requiresSelection": false
+         },
+         {
+          "targetId": "c6bd358c-380e-4acd-859e-296e56c560ee#main",
+          "by": "geometry",
+          "requiresSelection": false
+         },
+         {
+          "targetId": "808580c5-ef67-4529-93e6-77595a0b73c0#main",
+          "by": "geometry",
+          "requiresSelection": false
+         },
+         {
+          "targetId": "aff5b169-51cb-41ba-9f11-88afc84e2da1#main",
+          "by": "geometry",
+          "requiresSelection": false
+         }
+        ],
+        "type": "filter"
+       }
+      ]
+     }
+    ],
+    "type": "mapWidget",
+    "pointZoomScale": 20000,
+    "flashRepeats": 3,
+    "itemId": "{{3917a2cfc62443518f42518d801a1b45.itemId}}",
+    "mapTools": [
+     {
+      "type": "legendTool"
+     },
+     {
+      "type": "searchTool"
+     },
+     {
+      "type": "basemapGalleryTool"
+     }
+    ],
+    "showMeasureTool": true,
+    "showNavigation": true,
+    "showPanRotate": false,
+    "showLocate": false,
+    "showCompass": false,
+    "showPopup": true,
+    "scalebarStyle": "ruler",
+    "editingEnabled": false,
+    "trackedFeatureRadius": 60,
+    "selectTool": {
+     "type": "selectTool",
+     "clickToSelect": false,
+     "advanceSketchTools": []
+    }
+   },
+   {
+    "id": "c6bd358c-380e-4acd-859e-296e56c560ee",
+    "name": "Total Houses",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{3917a2cfc62443518f42518d801a1b45.itemId}}",
+       "layerId": "19a4bbf359e-layer-8"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "OBJECTID",
+        "statisticType": "count",
+        "outStatisticFieldName": "COUNT_OBJECTID"
+       }
+      ],
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false
+     }
+    ],
+    "type": "indicatorWidget",
+    "defaultSettings": {
+     "topSection": {
+      "fontSize": 80,
+      "textInfo": {
+       "text": "Total Houses that have been inspected"
+      }
+     },
+     "middleSection": {
+      "fontSize": 160,
+      "textInfo": {
+       "text": "{calculated/value}"
+      }
+     },
+     "bottomSection": {
+      "fontSize": 80,
+      "textInfo": {}
+     }
+    },
+    "comparison": "none",
+    "valueFormat": {
+     "name": "value",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 1
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true
+    },
+    "ratioFormat": {
+     "name": "ratio",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 2
+    },
+    "valueType": "statistic",
+    "noValueState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    }
+   },
+   {
+    "id": "715cabe7-5402-49df-b076-aca01b86af7b",
+    "name": "Serial chart (1)",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{3917a2cfc62443518f42518d801a1b45.itemId}}",
+       "layerId": "19a4bbf359e-layer-8"
+      },
+      "groupByFields": [
+       "level_of_home_damage"
+      ],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "OBJECTID",
+        "statisticType": "count",
+        "outStatisticFieldName": "COUNT_OBJECTID"
+       }
+      ],
+      "maxFeatures": 1000,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false
+     }
+    ],
+    "actionMode": "monoSelection",
+    "categoryType": "groupByValues",
+    "type": "serialChartWidget",
+    "valueFormat": {
+     "name": "value",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 1
+    },
+    "labelFormat": {
+     "name": "label",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 1
+    },
+    "category": {
+     "labelOverrides": [],
+     "nullLabel": "null",
+     "blankLabel": "blank"
+    },
+    "parseDates": false,
+    "minPeriod": "MM",
+    "categoryAxisLabelsBehavior": "hide",
+    "chartConfig": {
+     "version": "24.4.0",
+     "type": "chart",
+     "orderOptions": {},
+     "colorMatch": true,
+     "chartRenderer": {
+      "type": "uniqueValue",
+      "field1": "level_of_home_damage",
+      "uniqueValueInfos": [
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          151,
+          31,
+          153,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           151,
+           31,
+           153,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Affected"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          0,
+          4,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           0,
+           4,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Destroyed"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          0,
+          4,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           0,
+           4,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Destroyed / Missing"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          255,
+          181,
+          90,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           255,
+           181,
+           90,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Inaccessible"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          158,
+          60,
+          62,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           158,
+           60,
+           62,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Major"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          222,
+          222,
+          55,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           222,
+           222,
+           55,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Minor"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          115,
+          240,
+          26,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           115,
+           240,
+           26,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "No Damage"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          115,
+          240,
+          26,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           115,
+           240,
+           26,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": "Unaffected"
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          214,
+          214,
+          214,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           214,
+           214,
+           214,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": null
+       },
+       {
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          214,
+          214,
+          214,
+          255
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           214,
+           214,
+           214,
+           255
+          ],
+          "width": 1
+         }
+        },
+        "value": ""
+       }
+      ]
+     },
+     "axes": [
+      {
+       "type": "chartAxis",
+       "visible": true,
+       "title": {
+        "type": "chartText",
+        "visible": true,
+        "content": {
+         "type": "esriTS",
+         "angle": 0,
+         "font": {
+          "family": "inherit",
+          "style": "normal",
+          "weight": "bold"
+         },
+         "text": "Damage Level"
+        }
+       },
+       "valueFormat": {
+        "type": "category",
+        "characterLimit": 11
+       },
+       "lineSymbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "width": 1
+       },
+       "labels": {
+        "type": "chartText",
+        "visible": true,
+        "content": {
+         "type": "esriTS",
+         "angle": 0,
+         "font": {
+          "family": "inherit",
+          "style": "normal",
+          "weight": "normal"
+         }
+        }
+       },
+       "grid": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "width": 1
+       },
+       "guides": [],
+       "scrollbar": {
+        "width": 15,
+        "gripSize": 22
+       }
+      },
+      {
+       "type": "chartAxis",
+       "visible": true,
+       "title": {
+        "type": "chartText",
+        "visible": true,
+        "content": {
+         "type": "esriTS",
+         "angle": 270,
+         "font": {
+          "family": "inherit",
+          "style": "normal",
+          "weight": "bold"
+         }
+        }
+       },
+       "valueFormat": {
+        "type": "number",
+        "intlOptions": {
+         "style": "decimal",
+         "notation": "standard",
+         "minimumFractionDigits": 0,
+         "maximumFractionDigits": 1
+        }
+       },
+       "lineSymbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "width": 1
+       },
+       "labels": {
+        "type": "chartText",
+        "visible": true,
+        "content": {
+         "type": "esriTS",
+         "angle": 0,
+         "font": {
+          "family": "inherit",
+          "style": "normal",
+          "weight": "normal"
+         }
+        }
+       },
+       "grid": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "width": 1
+       },
+       "guides": [],
+       "buffer": true
+      }
+     ],
+     "series": [
+      {
+       "type": "barSeries",
+       "id": "COUNT_OBJECTID",
+       "name": "groupByValues",
+       "x": "level_of_home_damage",
+       "dataLabels": {
+        "type": "chartText",
+        "visible": false,
+        "content": {
+         "type": "esriTS",
+         "angle": 0,
+         "font": {
+          "family": "inherit",
+          "style": "normal",
+          "weight": "normal"
+         }
+        }
+       },
+       "dataTooltipVisible": true,
+       "dataTooltipReverseColor": true,
+       "y": "COUNT_OBJECTID",
+       "fillSymbol": {
+        "type": "esriSFS",
+        "style": "esriSFSSolid",
+        "color": [
+         214,
+         214,
+         214,
+         255
+        ],
+        "outline": {
+         "type": "esriSLS",
+         "style": "esriSLSSolid",
+         "color": [
+          214,
+          214,
+          214,
+          255
+         ],
+         "width": 1
+        }
+       }
+      }
+     ],
+     "legend": {
+      "type": "chartLegend",
+      "visible": false,
+      "body": {
+       "type": "esriTS",
+       "angle": 0,
+       "font": {
+        "family": "inherit",
+        "style": "normal",
+        "weight": "normal"
+       }
+      },
+      "position": "bottom"
+     },
+     "horizontalAxisLabelsBehavior": "hide",
+     "cursorCrosshair": {
+      "type": "cursorCrosshair",
+      "verticalLineVisible": false,
+      "horizontalLineVisible": false
+     },
+     "stackedType": "sideBySide"
+    }
+   },
+   {
+    "id": "808580c5-ef67-4529-93e6-77595a0b73c0",
+    "name": "Details (1)",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{3917a2cfc62443518f42518d801a1b45.itemId}}",
+       "layerId": "19a214b10dc-layer-1"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [],
+      "maxFeatures": 1000,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false
+     }
+    ],
+    "type": "detailsWidget",
+    "showTitle": true,
+    "showContents": true,
+    "showMedia": true,
+    "showAttachments": true,
+    "mapWidgetId": "5e3f3089-3566-4d54-b122-38f675b099f9"
+   },
+   {
+    "id": "aff5b169-51cb-41ba-9f11-88afc84e2da1",
+    "name": "List (1)",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showTopCaption": true,
+     "showBottomCaption": true
+    },
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{3917a2cfc62443518f42518d801a1b45.itemId}}",
+       "layerId": "19a4bbf359e-layer-8"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [],
+      "maxFeatures": 25,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false
+     }
+    ],
+    "type": "listWidget",
+    "selectionMode": "single",
+    "iconType": "symbol",
+    "text": "<p><strong>Damage Level: {field/level_of_home_damage}</strong></p><p>&nbsp;</p><p><strong>Additional Info:</strong> {field/description_of_home_damage}</p>",
+    "showFilter": false
+   }
+  ],
+  "settings": {
+   "allowElementResizing": false,
+   "allowElementExpansion": false,
+   "allowReset": false
+  },
+  "header": {
+   "type": "header",
+   "title": "{item/title}",
+   "logoSize": "small",
+   "backgroundImageSizing": "fit-height",
+   "normalBackgroundImagePlacement": "left",
+   "horizontalBackgroundImagePlacement": "top",
+   "showSignOutMenu": true,
+   "selectors": [
+    {
+     "id": "e7fe774f-174f-4fc6-bc7d-fc43e84921e0",
+     "name": "Date selector (1)",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showTopCaption": true,
+      "showBottomCaption": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "808580c5-ef67-4529-93e6-77595a0b73c0#main",
+           "by": "whereClause",
+           "requiresSelection": false,
+           "fieldMap": [
+            {
+             "sourceName": "filterField",
+             "targetName": "CreationDate"
+            }
+           ]
+          }
+         ],
+         "type": "filter"
+        }
+       ]
+      }
+     ],
+     "showActionButtons": true,
+     "datasets": [],
+     "type": "dateSelectorWidget",
+     "optionType": "datePicker",
+     "datePickerOption": {
+      "type": "datePicker",
+      "displayType": "calendar",
+      "selectionType": "single",
+      "unit": "minute",
+      "operator": "is_on",
+      "minDefaultType": "none",
+      "maxDefaultType": "none",
+      "monthFormat": "numeric"
+     },
+     "presentationMode": "dropdown"
+    }
+   ],
+   "subtitlePlacement": "sameLine",
+   "showMargin": true,
+   "menuContents": []
+  }
+ },
+ "elementMappings": {}
+}

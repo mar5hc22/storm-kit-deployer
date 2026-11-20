@@ -1,0 +1,41 @@
+{
+ "key": "f36c81b0d4b34d3fbb1470b3baee03d3",
+ "type": "Web Map",
+ "title": "Community Status Editor Map",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [
+  [
+   -167.18210616083337,
+   61.29511184797502
+  ],
+  [
+   -155.64646162958644,
+   65.55260877641136
+  ]
+ ],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Collector",
+  "Data Editing",
+  "Explorer Web Map",
+  "Map",
+  "Online Map",
+  "Web Map"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

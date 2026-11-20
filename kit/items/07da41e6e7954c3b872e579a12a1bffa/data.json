@@ -1,0 +1,214 @@
+{
+ "operationalLayers": [
+  {
+   "id": "19f48dd2861-layer-1",
+   "title": "{{org.name}} Team Update_results",
+   "url": "{{a724ca755df04d8b93a702636a4d27d7.url}}/0",
+   "itemId": "{{a724ca755df04d8b93a702636a4d27d7.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "layerDefinition": {
+    "fieldConfigurations": [
+     {
+      "name": "CreationDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "EditDate",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     },
+     {
+      "name": "todays_date_and_time",
+      "fieldFormat": {
+       "type": "date-time",
+       "dateStyle": "short",
+       "hour12": "always",
+       "timeStyle": "short"
+      }
+     }
+    ]
+   },
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "objectid",
+      "isEditable": false,
+      "label": "ObjectID",
+      "visible": false
+     },
+     {
+      "fieldName": "approved_yes_no",
+      "isEditable": true,
+      "label": "Approved",
+      "visible": true
+     },
+     {
+      "fieldName": "contact_information_primary_bac",
+      "isEditable": true,
+      "label": "Contact Information",
+      "visible": true
+     },
+     {
+      "fieldName": "CreationDate",
+      "isEditable": false,
+      "label": "CreationDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Creator",
+      "isEditable": false,
+      "label": "Creator",
+      "visible": false
+     },
+     {
+      "fieldName": "current_location",
+      "isEditable": true,
+      "label": "Current Location Description",
+      "visible": true
+     },
+     {
+      "fieldName": "decisions_needed_form_ops_secti",
+      "isEditable": true,
+      "label": "Decision Needs from Ops Section Chief / Command",
+      "visible": true
+     },
+     {
+      "fieldName": "EditDate",
+      "isEditable": false,
+      "label": "EditDate",
+      "visible": false
+     },
+     {
+      "fieldName": "Editor",
+      "isEditable": false,
+      "label": "Editor",
+      "visible": false
+     },
+     {
+      "fieldName": "equipment_list",
+      "isEditable": true,
+      "label": "Equipment List",
+      "visible": true
+     },
+     {
+      "fieldName": "globalid",
+      "isEditable": false,
+      "label": "GlobalID",
+      "visible": false
+     },
+     {
+      "fieldName": "team_member_list",
+      "isEditable": true,
+      "label": "List your Team Members",
+      "visible": true
+     },
+     {
+      "fieldName": "next_locationdeparture_and_ariv",
+      "isEditable": true,
+      "label": "Next Location - Departure and Arival Times",
+      "visible": true
+     },
+     {
+      "fieldName": "resource_needs_requests",
+      "isEditable": true,
+      "label": "Resource Needs / Requests",
+      "visible": true
+     },
+     {
+      "fieldName": "team_leader",
+      "isEditable": true,
+      "label": "Team Leader",
+      "visible": true
+     },
+     {
+      "fieldName": "team_number",
+      "isEditable": true,
+      "label": "Team Number",
+      "visible": true
+     },
+     {
+      "fieldName": "todays_date_and_time",
+      "isEditable": true,
+      "label": "Today's Date and Time",
+      "visible": true
+     }
+    ],
+    "title": "{{org.name}} Team Update_results"
+   }
+  }
+ ],
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "World_Imagery_2017",
+    "opacity": 1,
+    "title": "World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "visibility": true,
+    "layerType": "ArcGISTiledMapServiceLayer"
+   }
+  ],
+  "title": "Imagery"
+ },
+ "authoringApp": "ArcGISMapViewer",
+ "authoringAppVersion": "2026.2",
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "spatialReference": {
+     "latestWkid": 3857,
+     "wkid": 102100,
+     "falseM": -100000,
+     "falseX": -20037700,
+     "falseY": -30241100,
+     "falseZ": -100000,
+     "mTolerance": 0.001,
+     "mUnits": 10000,
+     "xyTolerance": 0.001,
+     "xyUnits": 10000,
+     "zTolerance": 0.001,
+     "zUnits": 10000
+    },
+    "xmin": -18272092.76963366,
+    "ymin": 8182330.430695094,
+    "xmax": -17179960.509495348,
+    "ymax": 9193745.188964278
+   }
+  }
+ },
+ "spatialReference": {
+  "latestWkid": 3857,
+  "wkid": 102100,
+  "falseM": -100000,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "falseZ": -100000,
+  "mTolerance": 0.001,
+  "mUnits": 10000,
+  "xyTolerance": 0.001,
+  "xyUnits": 10000,
+  "zTolerance": 0.001,
+  "zUnits": 10000
+ },
+ "timeZone": "system",
+ "version": "2.37"
+}

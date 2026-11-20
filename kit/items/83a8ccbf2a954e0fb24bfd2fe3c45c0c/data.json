@@ -1,0 +1,155 @@
+{
+ "applicationProperties": {
+  "offline": {
+   "editableLayers": {
+    "download": "featuresAndAttachments",
+    "sync": "syncFeaturesAndAttachments"
+   },
+   "readonlyLayers": {
+    "downloadAttachments": true
+   }
+  },
+  "viewing": {
+   "basemapGallery": {
+    "enabled": true
+   },
+   "measure": {
+    "enabled": true
+   },
+   "routing": {
+    "enabled": true
+   }
+  }
+ },
+ "authoringApp": "Survey123Connect",
+ "authoringAppVersion": "3.23.48",
+ "baseMap": {
+  "baseMapLayers": [
+   {
+    "id": "VectorTile_3324",
+    "itemId": "de26a3cf4cc9451298ea173c4b324736",
+    "layerType": "VectorTileLayer",
+    "opacity": 1,
+    "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/de26a3cf4cc9451298ea173c4b324736/resources/styles/root.json",
+    "title": "World Street Map",
+    "type": "VectorTileLayer",
+    "visibility": true
+   }
+  ],
+  "title": "Streets"
+ },
+ "operationalLayers": [
+  {
+   "id": "{{09f10e86c1f944f892d15a82ec7013cb.itemId}}",
+   "itemId": "{{09f10e86c1f944f892d15a82ec7013cb.itemId}}",
+   "layerType": "ArcGISFeatureLayer",
+   "opacity": 1,
+   "popupInfo": {
+    "description": null,
+    "fieldInfos": [
+     {
+      "fieldName": "airport_status",
+      "label": "Airport Status?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "runway_open",
+      "label": "Is the runway open?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "dot_pf_been_onsite",
+      "label": "Has {{org.name}} personnel visited the community?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "who_on_ground",
+      "label": "Who is on the ground? When?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textarea"
+     },
+     {
+      "fieldName": "power",
+      "label": "Does the community have power?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "are_there_electrical_outages",
+      "label": "Electrical outages?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "water_restriction",
+      "label": "Is there a water restriction?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "drone_footage",
+      "label": "Has {{org.name}} captured drone footage?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textbox"
+     },
+     {
+      "fieldName": "drone_footage_details",
+      "label": "Who captured the drone footage? When?",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textarea"
+     },
+     {
+      "fieldName": "notes",
+      "label": "Additional Notes",
+      "isEditable": true,
+      "tooltip": "",
+      "visible": true,
+      "format": null,
+      "stringFieldOption": "textarea"
+     }
+    ],
+    "mediaInfos": [],
+    "showAttachments": true,
+    "title": "Impacted Community Checklist"
+   },
+   "title": "{{event.name}} Impacted Community Checklist",
+   "url": "{{09f10e86c1f944f892d15a82ec7013cb.url}}/0",
+   "visibility": true,
+   "refreshInterval": 1
+  }
+ ],
+ "spatialReference": {
+  "wkid": 102100
+ },
+ "version": "2.17"
+}

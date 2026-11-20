@@ -1,0 +1,27 @@
+{
+ "key": "f8f08acd5fe94493826f522a09bfb178",
+ "type": "Dashboard",
+ "title": "Home Damage Assessment Dashboard",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS Dashboards",
+  "Dashboard",
+  "Operations Dashboard"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

@@ -1,0 +1,64 @@
+{
+ "operationalLayers": [
+  {
+   "id": "video_lines",
+   "title": "Video flight lines",
+   "layerType": "ArcGISFeatureLayer",
+   "url": "{{video_lines_view.url}}/0",
+   "itemId": "{{video_lines_view.itemId}}",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        255,
+        170,
+        0,
+        255
+       ],
+       "width": 3
+      }
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{service_name}",
+    "fieldInfos": [
+     {
+      "fieldName": "service_name",
+      "label": "Video service",
+      "visible": true
+     },
+     {
+      "fieldName": "URL",
+      "label": "Service URL",
+      "visible": true
+     }
+    ]
+   }
+  }
+ ],
+ "baseMap": {
+  "title": "Imagery",
+  "baseMapLayers": [
+   {
+    "id": "World_Imagery",
+    "layerType": "ArcGISTiledMapServiceLayer",
+    "title": "World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "version": "2.30",
+ "authoringApp": "StormResponseKit",
+ "authoringAppVersion": "0.1"
+}

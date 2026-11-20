@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storm Response Kit deployer</title>
+<style>
+  :root {
+    --bg: #f5f4f0; --panel: #ffffff; --text: #1d1f23; --muted: #646a73; --line: #dcd9d1; --hover: #f0eee8;
+    --accent: #005e95; --accent-text: #ffffff; --ok: #1c7447; --warn: #a65f00; --bad: #a2382a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --panel: #1d2025; --text: #e9e7e2; --muted: #a2a7af; --line: #33373e; --hover: #262a30;
+      --accent: #6fb1f2; --accent-text: #10202e; --ok: #57c78e; --warn: #f0a53c; --bad: #f08573;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  button, input, select { font: inherit; color: inherit; }
+  header { background: var(--panel); border-bottom: 1px solid var(--line); padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; }
+  h1 { font-size: 19px; margin: 0; font-weight: 600; }
+  h2 { font-size: 16px; margin: 0 0 4px; font-weight: 600; }
+  .who { margin-left: auto; color: var(--muted); font-size: 13px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  main { max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin: 0 0 16px; }
+  .step { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+  p { margin: 6px 0; }
+  .muted { color: var(--muted); }
+  .small { font-size: 13px; }
+  label.row { display: flex; gap: 10px; align-items: flex-start; padding: 9px 8px; border-radius: 8px; cursor: pointer; }
+  label.row:hover { background: var(--hover); }
+  label.row.off { opacity: .5; cursor: default; }
+  label.row input { margin-top: 4px; flex: none; width: 16px; height: 16px; accent-color: var(--accent); }
+  .name { font-weight: 600; }
+  .tag { font-size: 11px; border: 1px solid var(--line); border-radius: 999px; padding: 0 7px; color: var(--muted); margin-left: 6px; white-space: nowrap; font-weight: 400; }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; margin-top: 8px; }
+  @media (max-width: 640px) { .fields { grid-template-columns: 1fr; } }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 3px; }
+  input[type=text], input[type=url] { width: 100%; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); }
+  input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .option { margin: 2px 0 8px 34px; }
+  .option .hint { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+  button.primary { background: var(--accent); color: var(--accent-text); border: 0; border-radius: 7px; padding: 8px 16px; font-weight: 600; cursor: pointer; }
+  button.plain { background: transparent; border: 1px solid var(--line); border-radius: 7px; padding: 7px 14px; cursor: pointer; }
+  button.link { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; text-decoration: underline; }
+  button:disabled { opacity: .5; cursor: default; }
+  .msg { margin: 10px 0 0; padding: 8px 10px; border-radius: 6px; border-left: 3px solid var(--c); background: color-mix(in srgb, var(--c) 10%, transparent); }
+  .msg.bad { --c: var(--bad); } .msg.ok { --c: var(--ok); } .msg.warn { --c: var(--warn); } .msg.info { --c: var(--accent); }
+  table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+  td, th { text-align: left; padding: 5px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; border-top: 0; }
+  td.type { color: var(--muted); white-space: nowrap; width: 1%; }
+  a { color: var(--accent); }
+  .log { font: 13px/1.5 ui-monospace, "Cascadia Mono", Consolas, monospace; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; max-height: 300px; overflow: auto; white-space: pre-wrap; margin-top: 8px; }
+  .log .w { color: var(--warn); } .log .e { color: var(--bad); }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: var(--muted); }
+  ul { margin: 6px 0; padding-left: 20px; }
+  .spin { display: inline-block; width: 13px; height: 13px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: -2px; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Storm Response Kit deployer</h1>
+  <span class="muted small" id="kitline"></span>
+  <span class="who" id="who" hidden><span id="whoname"></span><button class="link" id="signout">Sign out</button></span>
+</header>
+<main>
+
+<section id="signin" hidden>
+  <div class="card">
+    <h2>Sign in to the organization you want the tools in</h2>
+    <p class="muted">This page uses the sign-in ArcGIS Pro already holds, so it never asks for a password. If your organization is not listed as signed in, open ArcGIS Pro, sign in to it there, then reload.</p>
+    <div id="portals"><p class="muted"><span class="spin"></span>Asking ArcGIS Pro which organizations it knows. This takes about 15 seconds.</p></div>
+    <div class="actions"><button class="primary" id="signinbtn" disabled>Sign in</button><button class="link" id="refreshbtn">Ask ArcGIS Pro again</button><span class="muted small" id="signinwait" hidden><span class="spin"></span><span id="signinwaittext"></span></span></div>
+    <div id="signinmsg"></div>
+  </div>
+</section>
+
+<section id="app" hidden>
+  <div class="card">
+    <div class="step">Step 1</div>
+    <h2>Name the event</h2>
+    <p class="muted">The name goes in front of every title and names the folder everything is created in.</p>
+    <div class="fields">
+      <div class="field"><label for="event">Event name</label><input type="text" id="event" maxlength="59" placeholder="Spring Flood 2027" autocomplete="off"></div>
+      <div class="field"><label for="orgname">Your organization, as it should read in titles</label><input type="text" id="orgname" maxlength="59" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="step">Step 2</div>
+    <h2>Choose the tools</h2>
+    <p class="muted">Each tool brings the layers, maps, surveys and apps it needs. Layers come empty: none of the last event's records are copied.</p>
+    <div id="tools"></div>
+    <div class="actions"><button class="link" id="all">Select all</button><button class="link" id="none">Clear</button></div>
+    <details>
+      <summary>What the kit leaves out, and what stays linked</summary>
+      <p class="small"><strong>Left out</strong> of every map and app:</p><ul class="small" id="leftout"></ul>
+      <p class="small"><strong>Still linked</strong>, pointing at the public service it came from:</p><ul class="small" id="linked"></ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <div class="step">Step 3</div>
+    <h2>Who can see it</h2>
+    <label class="row"><input type="radio" name="share" value="private" checked><span><span class="name">Only me, for now</span><br><span class="muted small">Everything stays private until you share it. Best for a first look.</span></span></label>
+    <label class="row"><input type="radio" name="share" value="org"><span><span class="name">My organization</span><br><span class="muted small">Every signed-in member of your organization can open the tools and submit the surveys.</span></span></label>
+  </div>
+
+  <div class="card">
+    <div class="step">Step 4</div>
+    <h2>Review and deploy</h2>
+    <p class="muted" id="target"></p>
+    <div class="actions"><button class="primary" id="planbtn">Review what will be created</button><span class="muted small" id="planwait" hidden><span class="spin"></span>Working out the list</span></div>
+    <div id="formmsg"></div>
+    <div id="plan" hidden>
+      <table><thead><tr><th>Type</th><th>Title</th></tr></thead><tbody id="planrows"></tbody></table>
+      <div class="actions"><button class="primary" id="deploybtn"></button><button class="plain" id="changebtn">Change the selection</button></div>
+    </div>
+  </div>
+
+  <div class="card" id="progress" hidden>
+    <h2 id="progresstitle"></h2>
+    <div class="log" id="log" aria-live="polite"></div>
+    <div id="result"></div>
+  </div>
+
+  <div class="card" id="runs" hidden>
+    <h2>Earlier deployments into this organization</h2>
+    <table><thead><tr><th>Event</th><th>When</th><th>Items</th><th>Where</th></tr></thead><tbody id="runrows"></tbody></table>
+    <p class="muted small">To take a deployment out again, run <code>deployer\deploy.py --remove</code> with its run file (see the README).</p>
+  </div>
+</section>
+
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const el = (tag, props = {}, ...kids) => {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(props)) {
+    if (k === 'class') node.className = v; else if (k === 'text') node.textContent = v; else if (k in node) node[k] = v; else node.setAttribute(k, v);
+  }
+  for (const kid of kids) if (kid != null) node.append(kid);
+  return node;
+};
+async function api(path, body) {
+  const options = body === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Kit': '1' }, body: JSON.stringify(body) };
+  const resp = await fetch(path, options);
+  let data = {};
+  try { data = await resp.json(); } catch (e) { /* not json */ }
+  if (!resp.ok) throw new Error(data.error || ('The page could not reach its helper (HTTP ' + resp.status + ').'));
+  return data;
+}
+function message(box, kind, text) {
+  box.replaceChildren(text ? el('div', { class: 'msg ' + kind, text }) : '');
+}
+let state = null;
+
+async function load() {
+  state = await api('/api/state');
+  $('signin').hidden = state.signed_in;
+  $('app').hidden = !state.signed_in;
+  $('who').hidden = !state.signed_in;
+  if (state.signed_in) showApp(); else showSignIn();
+}
+
+async function showSignIn(refresh) {
+  $('kitline').textContent = '';
+  $('signinbtn').disabled = true;
+  if (refresh) $('portals').replaceChildren(el('p', { class: 'muted' }, el('span', { class: 'spin' }), 'Asking ArcGIS Pro which organizations it knows. This takes about 15 seconds.'));
+  let found;
+  try { found = await api('/api/portals' + (refresh ? '?refresh=1' : '')); } catch (err) {
+    $('portals').replaceChildren(el('div', { class: 'msg bad', text: err.message }));
+    return;
+  }
+  const list = el('div');
+  const usable = found.portals.filter((p) => p.signed_in && !p.is_kit_source);
+  for (const portal of found.portals) {
+    const ok = portal.signed_in && !portal.is_kit_source;
+    const input = el('input', { type: 'radio', name: 'portal', value: portal.url, disabled: !ok, checked: ok && usable.length === 1 });
+    input.addEventListener('change', () => { $('signinbtn').disabled = false; message($('signinmsg'), '', ''); });
+    const why = portal.is_kit_source ? 'The kit was built from this organization, so the tools cannot be deployed back into it.'
+      : !portal.signed_in ? 'ArcGIS Pro is not signed in here. Sign in to it in ArcGIS Pro, then press "Ask ArcGIS Pro again".' : '';
+    const tag = portal.is_kit_source ? "the kit's source" : portal.signed_in ? 'signed in' + (portal.role ? ' as ' + portal.role.replace('org_', '') : '') : 'not signed in';
+    list.append(el('label', { class: 'row' + (ok ? '' : ' off') }, input,
+      el('span', {}, el('span', { class: 'name', text: portal.organization || portal.url }),
+        el('span', { class: 'tag', text: tag }),
+        el('br'), el('span', { class: 'muted small', text: portal.url }),
+        why ? el('br') : null, why ? el('span', { class: 'muted small', text: why }) : null)));
+  }
+  $('portals').replaceChildren(list);
+  $('signinbtn').disabled = usable.length !== 1;
+  if (!usable.length) message($('signinmsg'), 'warn', 'ArcGIS Pro is not signed in to any organization the tools can go into. Sign in to one in ArcGIS Pro, then press "Ask ArcGIS Pro again".');
+}
+$('refreshbtn').addEventListener('click', () => { message($('signinmsg'), '', ''); showSignIn(true); });
+
+$('signinbtn').addEventListener('click', async () => {
+  const picked = document.querySelector('input[name=portal]:checked');
+  if (!picked) { message($('signinmsg'), 'warn', 'Choose an organization first.'); return; }
+  $('signinbtn').disabled = true; $('signinwait').hidden = false; message($('signinmsg'), '', '');
+  const started = Date.now();
+  const tick = () => { $('signinwaittext').textContent = 'Checking who you are there. This usually takes 10 to 20 seconds (' + Math.round((Date.now() - started) / 1000) + ' s so far).'; };
+  tick();
+  const timer = setInterval(tick, 1000);
+  try { await api('/api/signin', { portal: picked.value }); await load(); }
+  catch (err) { message($('signinmsg'), 'bad', err.message); }
+  finally { clearInterval(timer); $('signinbtn').disabled = false; $('signinwait').hidden = true; }
+});
+$('signout').addEventListener('click', async () => { await api('/api/signout', {}); location.reload(); });
+
+function showApp() {
+  const who = state.who, kit = state.kit;
+  $('whoname').textContent = (who.full_name || who.username) + ' in ' + who.org_name;
+  $('kitline').textContent = kit.name ? kit.name + ', built ' + (kit.built || '').slice(0, 10) : '';
+  if (!$('orgname').value) $('orgname').value = who.org_name || '';
+  $('target').textContent = 'Everything is created in ' + who.org_name + ' (' + who.org_url.replace('https://', '') + ') as ' + who.username + ', in one new folder.';
+  const box = $('tools');
+  if (!box.childElementCount) {
+    for (const tool of kit.tools) {
+      const input = el('input', { type: 'checkbox', value: tool.key, checked: true });
+      input.addEventListener('change', syncOptions);
+      const label = el('label', { class: 'row' }, input, el('span', {},
+        el('span', { class: 'name', text: tool.name }), el('span', { class: 'tag', text: tool.count + ' items' }),
+        tool.generated ? el('span', { class: 'tag', text: 'built new' }) : null,
+        el('br'), el('span', { class: 'muted small', text: tool.about })));
+      box.append(label);
+      for (const [name, option] of Object.entries(kit.options || {})) {
+        if (option.tool !== tool.key) continue;
+        box.append(el('div', { class: 'option field', 'data-tool': tool.key },
+          el('label', { for: 'opt-' + name, text: option.label }),
+          el('input', { type: 'url', id: 'opt-' + name, 'data-option': name, placeholder: 'https://', autocomplete: 'off' }),
+          el('div', { class: 'hint', text: option.hint })));
+      }
+    }
+    $('leftout').replaceChildren(...kit.left_out.map((t) => el('li', { text: t })));
+    $('linked').replaceChildren(...kit.linked.map((t) => el('li', { text: t })));
+  }
+  syncOptions();
+  loadRuns();
+}
+function syncOptions() {
+  const on = new Set(selected());
+  for (const node of document.querySelectorAll('.option')) node.hidden = !on.has(node.dataset.tool);
+  hidePlan();
+}
+const selected = () => [...document.querySelectorAll('#tools input[type=checkbox]:checked')].map((i) => i.value);
+function setAll(value) { for (const i of document.querySelectorAll('#tools input[type=checkbox]')) i.checked = value; syncOptions(); }
+$('all').addEventListener('click', () => setAll(true));
+$('none').addEventListener('click', () => setAll(false));
+for (const id of ['event', 'orgname']) $(id).addEventListener('input', hidePlan);
+for (const r of document.querySelectorAll('input[name=share]')) r.addEventListener('change', hidePlan);
+function hidePlan() { $('plan').hidden = true; }
+
+function request() {
+  const options = {};
+  for (const input of document.querySelectorAll('[data-option]')) if (!input.closest('.option').hidden && input.value.trim()) options[input.dataset.option] = input.value.trim();
+  return { event: $('event').value.trim(), org_name: $('orgname').value.trim(), tools: selected(), share: document.querySelector('input[name=share]:checked').value, options };
+}
+async function waitFor(jobId, onLines) {
+  for (;;) {
+    const job = await api('/api/job?id=' + jobId);
+    if (onLines) onLines(job.lines);
+    if (job.done) return job;
+    await new Promise((r) => setTimeout(r, 1200));
+  }
+}
+
+$('planbtn').addEventListener('click', async () => {
+  message($('formmsg'), '', ''); hidePlan();
+  $('planbtn').disabled = true; $('planwait').hidden = false;
+  try {
+    const { job: jobId } = await api('/api/plan', request());
+    const job = await waitFor(jobId);
+    if (!job.plan_rows) throw new Error((job.lines.find((l) => l.startsWith('ERROR: ')) || 'ERROR: The list could not be worked out.').slice(7));
+    $('planrows').replaceChildren(...job.plan_rows.rows.map((row) => el('tr', {}, el('td', { class: 'type', text: row.type }), el('td', { text: row.title }))));
+    $('deploybtn').textContent = 'Create these ' + job.plan_rows.rows.length + ' items in ' + state.who.org_name;
+    $('plan').hidden = false;
+  } catch (err) { message($('formmsg'), 'bad', err.message); }
+  finally { $('planbtn').disabled = false; $('planwait').hidden = true; }
+});
+$('changebtn').addEventListener('click', hidePlan);
+
+function lineNode(line) {
+  const cls = line.startsWith('ERROR') || line.startsWith('PROBLEM') ? 'e' : line.startsWith('WARNING') ? 'w' : '';
+  return el('div', { class: cls, text: line });
+}
+$('deploybtn').addEventListener('click', async () => {
+  const req = request();
+  $('deploybtn').disabled = true; $('planbtn').disabled = true;
+  $('progress').hidden = false; $('result').replaceChildren();
+  $('progresstitle').replaceChildren(el('span', { class: 'spin' }), 'Deploying ' + req.event + '. This takes a few minutes.');
+  $('log').replaceChildren();
+  $('progress').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  let shown = 0;
+  try {
+    const { job: jobId } = await api('/api/deploy', req);
+    const job = await waitFor(jobId, (lines) => {
+      for (; shown < lines.length; shown++) $('log').append(lineNode(lines[shown]));
+      $('log').scrollTop = $('log').scrollHeight;
+    });
+    showResult(job);
+  } catch (err) {
+    $('progresstitle').textContent = 'The deployment did not start';
+    message($('result'), 'bad', err.message);
+  } finally { $('deploybtn').disabled = false; $('planbtn').disabled = false; hidePlan(); loadRuns(); }
+});
+
+function showResult(job) {
+  const run = job.run, box = $('result');
+  if (!run) {
+    $('progresstitle').textContent = 'The deployment stopped';
+    message(box, 'bad', (job.lines.find((l) => l.startsWith('ERROR: ')) || 'ERROR: It stopped before anything was recorded.').slice(7));
+    return;
+  }
+  const failed = job.exit !== 0 && !run.finished;
+  $('progresstitle').textContent = failed ? 'The deployment stopped part way' : 'Deployed ' + run.items.length + ' items into ' + run.org_name;
+  const parts = [];
+  if (failed) parts.push(el('div', { class: 'msg bad', text: (job.lines.find((l) => l.startsWith('ERROR: ')) || 'ERROR: It stopped.').slice(7) + ' What was created is listed below and recorded, so it can be removed.' }));
+  else if (run.problems.length) parts.push(el('div', { class: 'msg warn', text: 'Created, but the checks found ' + run.problems.length + ' thing(s) to look at: ' + run.problems.join(' | ') }));
+  else parts.push(el('div', { class: 'msg ok', text: 'Everything was created and read back without problems. Folder: ' + run.folder.title + '.' }));
+  for (const warning of run.warnings || []) parts.push(el('div', { class: 'msg warn', text: warning }));
+  const apps = ['Hub Site Application', 'Web Experience', 'Dashboard', 'Form', 'Notebook'];
+  const table = (items) => el('table', {}, el('tbody', {}, ...items.map((item) => el('tr', {},
+    el('td', { class: 'type', text: item.type === 'Hub Site Application' ? 'Hub site' : item.type }),
+    el('td', {}, item.open ? el('a', { href: item.open, target: '_blank', rel: 'noopener', text: item.title }) : el('span', { text: item.title })),
+    el('td', { class: 'type' }, el('a', { href: item.page, target: '_blank', rel: 'noopener', text: 'item page' }))))));
+  const first = run.items.filter((i) => apps.includes(i.type)).sort((a, b) => apps.indexOf(a.type) - apps.indexOf(b.type));
+  const rest = run.items.filter((i) => !apps.includes(i.type));
+  if (first.length) parts.push(el('p', {}, el('strong', { text: 'Open the tools' })), table(first));
+  if (rest.length) parts.push(el('details', {}, el('summary', { text: rest.length + ' layers, views, maps and files behind them' }), table(rest)));
+  box.replaceChildren(...parts);
+}
+
+async function loadRuns() {
+  try {
+    const { runs } = await api('/api/runs');
+    $('runs').hidden = !runs.length;
+    $('runrows').replaceChildren(...runs.map((run) => el('tr', {},
+      el('td', { text: run.event + (run.finished ? '' : ' (stopped part way)') }),
+      el('td', { class: 'type', text: new Date(run.started).toLocaleString() }),
+      el('td', { class: 'type', text: run.count + (run.problems ? ', ' + run.problems + ' to check' : '') }),
+      el('td', {}, run.site ? el('a', { href: run.site, target: '_blank', rel: 'noopener', text: 'Hub site' }) : el('span', { class: 'muted', text: 'Folder ' + run.folder })))));
+  } catch (err) { /* the list is a convenience */ }
+}
+
+load().catch((err) => { $('signin').hidden = false; $('portals').replaceChildren(el('div', { class: 'msg bad', text: 'The page could not load: ' + err.message })); });
+</script>
+</body>
+</html>

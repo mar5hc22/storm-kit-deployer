@@ -1,0 +1,29 @@
+{
+ "key": "996e9c61e50947469234afc98f4ebfa9",
+ "type": "Dashboard",
+ "title": "Community Status Editor Table",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS Dashboards",
+  "Dashboard",
+  "Operations Dashboard"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [
+  "themes/user.json"
+ ],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

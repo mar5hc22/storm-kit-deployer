@@ -1,0 +1,94 @@
+{
+ "key": "3b6f36b1be4e406e9419c4d34ff4a914",
+ "type": "Feature Service",
+ "title": "Video Lines (public view)",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [
+  [
+   -166.26579298929582,
+   59.700133614102434
+  ],
+  [
+   -161.214986965626,
+   67.72963697916347
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [],
+ "service": {
+  "name": "VideoLine_public",
+  "is_view": true,
+  "create": {
+   "serviceDescription": "",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 1000,
+   "capabilities": "Query",
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   },
+   "initialExtent": {
+    "xmin": -18508623.411908247,
+    "ymin": 8333276.422452965,
+    "xmax": -17946370.257257722,
+    "ymax": 10367120.484954476,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriMeters",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "source": "{{b2f8f0b331734c5b8c189b41f3a5757e.itemId}}",
+  "view_layers": [
+   {
+    "id": 0,
+    "name": "VideoLine",
+    "is_table": false,
+    "source_layer_id": 0,
+    "hidden_fields": [],
+    "definition_query": null,
+    "update": {
+     "drawingInfo": {
+      "renderer": {
+       "type": "simple",
+       "symbol": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         165,
+         83,
+         183,
+         255
+        ],
+        "width": 1
+       }
+      },
+      "transparency": 0,
+      "labelingInfo": null
+     },
+     "minScale": 0,
+     "maxScale": 0,
+     "capabilities": "Query"
+    }
+   }
+  ]
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

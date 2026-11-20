@@ -1,0 +1,83 @@
+{
+ "layers": [
+  {
+   "id": 1,
+   "popupInfo": {
+    "popupElements": [
+     {
+      "type": "fields"
+     },
+     {
+      "type": "attachments",
+      "displayType": "auto"
+     }
+    ],
+    "showAttachments": true,
+    "fieldInfos": [
+     {
+      "fieldName": "OBJECTID",
+      "isEditable": false,
+      "label": "OBJECTID",
+      "visible": false
+     },
+     {
+      "fieldName": "service_url",
+      "isEditable": true,
+      "label": "service_url",
+      "visible": true
+     },
+     {
+      "fieldName": "Shape__Area",
+      "format": {
+       "digitSeparator": true,
+       "places": 2
+      },
+      "isEditable": false,
+      "label": "Shape__Area",
+      "visible": true
+     },
+     {
+      "fieldName": "Shape__Length",
+      "format": {
+       "digitSeparator": true,
+       "places": 2
+      },
+      "isEditable": false,
+      "label": "Shape__Length",
+      "visible": true
+     }
+    ],
+    "title": "VideoServices read Only"
+   },
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSFS",
+       "color": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "color": [
+         0,
+         0,
+         0,
+         255
+        ],
+        "width": 0.75,
+        "style": "esriSLSSolid"
+       },
+       "style": "esriSFSSolid"
+      }
+     }
+    }
+   }
+  }
+ ],
+ "tables": []
+}

@@ -1,0 +1,138 @@
+{
+ "key": "b2b7c43225154bed9bc9ada85b8b4896",
+ "type": "Feature Service",
+ "title": "Impacted Communities (status view)",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [
+  [
+   -180,
+   -90
+  ],
+  [
+   180,
+   90
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [
+  "72b2d64e3cd74b8b84fc6022e791dc52",
+  "FieldworkerView",
+  "Form",
+  "Survey123",
+  "Survey123 Connect",
+  "xForm"
+ ],
+ "service": {
+  "name": "ImpactedCommunities_status",
+  "is_view": true,
+  "create": {
+   "serviceDescription": "",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 1000,
+   "capabilities": "Create,Delete,Query,Update,Editing,Extract",
+   "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+   },
+   "initialExtent": {
+    "xmin": -180,
+    "ymin": -90,
+    "xmax": 180,
+    "ymax": 90,
+    "spatialReference": {
+     "wkid": 4326,
+     "latestWkid": 4326
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriDecimalDegrees",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": true,
+    "enableOwnershipAccessControl": true,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": true,
+    "allowOthersToDelete": true,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "source": "{{09f10e86c1f944f892d15a82ec7013cb.itemId}}",
+  "view_layers": [
+   {
+    "id": 0,
+    "name": "Communities",
+    "is_table": false,
+    "source_layer_id": 0,
+    "hidden_fields": [],
+    "definition_query": null,
+    "update": {
+     "drawingInfo": {
+      "labelingInfo": null,
+      "renderer": {
+       "description": "Survey Data Locations",
+       "label": "Typhoon Halong Impacted Communities",
+       "symbol": {
+        "angle": 0,
+        "color": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "outline": {
+         "color": [
+          255,
+          255,
+          0,
+          255
+         ],
+         "width": 1
+        },
+        "size": 8,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0,
+        "yoffset": 0
+       },
+       "type": "simple"
+      },
+      "transparency": 0
+     },
+     "displayField": "objectid",
+     "minScale": 0,
+     "maxScale": 0,
+     "capabilities": "Create,Delete,Query,Update,Editing,Extract"
+    }
+   },
+   {
+    "id": 1,
+    "name": "attach_image",
+    "is_table": true,
+    "source_layer_id": 1,
+    "hidden_fields": [],
+    "definition_query": null,
+    "update": {
+     "displayField": "objectid",
+     "capabilities": "Create,Delete,Query,Update,Editing,Extract"
+    }
+   }
+  ]
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

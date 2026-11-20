@@ -1,0 +1,439 @@
+{
+ "key": "cdf503732eb14812adbcedb6d9937050",
+ "type": "Feature Service",
+ "title": "Team Update",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [
+  [
+   -180,
+   -90
+  ],
+  [
+   180,
+   90
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [
+  "{{1e8c409fb72948feb6ecd51d431c4797.itemId}}",
+  "OwnerView",
+  "Source",
+  "Survey123",
+  "Survey123 Hub"
+ ],
+ "service": {
+  "name": "TeamUpdate",
+  "is_view": false,
+  "create": {
+   "serviceDescription": "Feature Service for survey {{1e8c409fb72948feb6ecd51d431c4797.itemId}}",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 2000,
+   "capabilities": "Create,Delete,Query,Update,Editing,Extract,Sync",
+   "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+   },
+   "initialExtent": {
+    "xmin": -180,
+    "ymin": -90,
+    "xmax": 180,
+    "ymax": 90,
+    "spatialReference": {
+     "wkid": 4326,
+     "latestWkid": 4326
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriDecimalDegrees",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": true,
+    "enableOwnershipAccessControl": true,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": true,
+    "allowOthersToDelete": true,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "layers": [
+   {
+    "id": 0,
+    "name": "survey",
+    "type": "Feature Layer",
+    "description": "",
+    "copyrightText": "",
+    "defaultVisibility": true,
+    "relationships": [],
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "extent": {
+     "xmin": -180,
+     "ymin": -90,
+     "xmax": 180,
+     "ymax": 90,
+     "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+     }
+    },
+    "drawingInfo": {
+     "labelingInfo": null,
+     "renderer": {
+      "label": "Survey Point",
+      "symbol": {
+       "angle": 0,
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "outline": {
+        "color": [
+         255,
+         255,
+         0,
+         255
+        ],
+        "width": 1
+       },
+       "size": 8,
+       "style": "esriSMSCircle",
+       "type": "esriSMS",
+       "xoffset": 0,
+       "yoffset": 0
+      },
+      "type": "simple"
+     },
+     "transparency": 0
+    },
+    "allowGeometryUpdates": true,
+    "hasAttachments": true,
+    "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+    "hasM": false,
+    "hasZ": false,
+    "objectIdField": "objectid",
+    "globalIdField": "globalid",
+    "displayField": "",
+    "typeIdField": "",
+    "fields": [
+     {
+      "name": "objectid",
+      "type": "esriFieldTypeOID",
+      "alias": "ObjectID",
+      "sqlType": "sqlTypeOther",
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "globalid",
+      "type": "esriFieldTypeGlobalID",
+      "alias": "GlobalID",
+      "sqlType": "sqlTypeOther",
+      "length": 38,
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "CreationDate",
+      "type": "esriFieldTypeDate",
+      "alias": "CreationDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Creator",
+      "type": "esriFieldTypeString",
+      "alias": "Creator",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "EditDate",
+      "type": "esriFieldTypeDate",
+      "alias": "EditDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Editor",
+      "type": "esriFieldTypeString",
+      "alias": "Editor",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "team_number",
+      "type": "esriFieldTypeString",
+      "alias": "Team Number",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "team_leader",
+      "type": "esriFieldTypeString",
+      "alias": "Team Leader",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "contact_information_primary_bac",
+      "type": "esriFieldTypeString",
+      "alias": "Contact Information",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "team_member_list",
+      "type": "esriFieldTypeString",
+      "alias": "List your Team Members",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "current_location",
+      "type": "esriFieldTypeString",
+      "alias": "Current Location Description",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "next_locationdeparture_and_ariv",
+      "type": "esriFieldTypeString",
+      "alias": "Next Location - Departure and Arival Times",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "equipment_list",
+      "type": "esriFieldTypeString",
+      "alias": "Equipment List",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "resource_needs_requests",
+      "type": "esriFieldTypeString",
+      "alias": "Resource Needs / Requests",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "decisions_needed_form_ops_secti",
+      "type": "esriFieldTypeString",
+      "alias": "Decision Needs from Ops Section Chief / Command",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "todays_date_and_time",
+      "type": "esriFieldTypeDate",
+      "alias": "Today's Date and Time",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "approved_yes_no",
+      "type": "esriFieldTypeString",
+      "alias": "Approved",
+      "sqlType": "sqlTypeOther",
+      "length": 10,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "survey_approved_yes_no_0932fae9-4239-4719-984a-b70a5a41dbff",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "Yes"
+        },
+        {
+         "name": "No",
+         "code": "No"
+        },
+        {
+         "name": "Pending",
+         "code": "Pending"
+        }
+       ]
+      },
+      "defaultValue": "No"
+     }
+    ],
+    "types": [],
+    "templates": [
+     {
+      "name": "New Feature",
+      "description": "",
+      "drawingTool": "esriFeatureEditToolNone",
+      "prototype": {
+       "attributes": {
+        "team_number": null,
+        "team_leader": null,
+        "contact_information_primary_bac": null,
+        "team_member_list": null,
+        "current_location": null,
+        "next_locationdeparture_and_ariv": null,
+        "equipment_list": null,
+        "resource_needs_requests": null,
+        "decisions_needed_form_ops_secti": null,
+        "todays_date_and_time": null,
+        "approved_yes_no": "No"
+       }
+      }
+     }
+    ],
+    "capabilities": "Create,Delete,Query,Update,Editing,Extract,Sync",
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "hasStaticData": false,
+    "editFieldsInfo": {
+     "creationDateField": "CreationDate",
+     "creatorField": "Creator",
+     "editDateField": "EditDate",
+     "editorField": "Editor"
+    },
+    "ownershipBasedAccessControlForFeatures": {
+     "allowOthersToQuery": true,
+     "allowOthersToDelete": true,
+     "allowOthersToUpdate": true,
+     "allowAnonymousToQuery": true,
+     "allowAnonymousToUpdate": false,
+     "allowAnonymousToDelete": false
+    },
+    "dateFieldsTimeReference": {
+     "timeZone": "UTC",
+     "timeZoneIANA": "Etc/UTC",
+     "respectsDaylightSaving": false
+    },
+    "preferredTimeReference": null,
+    "propagateVisibleFields": true,
+    "attachmentProperties": [
+     {
+      "name": "id",
+      "fieldName": "ATTACHMENTID",
+      "isEnabled": true
+     },
+     {
+      "name": "globalId",
+      "fieldName": "AttachmentGlobalID",
+      "isEnabled": true
+     },
+     {
+      "name": "name",
+      "fieldName": "ATT_NAME",
+      "isEnabled": true
+     },
+     {
+      "name": "size",
+      "fieldName": "DATA_SIZE",
+      "isEnabled": true
+     },
+     {
+      "name": "contentType",
+      "fieldName": "CONTENT_TYPE",
+      "isEnabled": true
+     },
+     {
+      "name": "keywords",
+      "fieldName": "Keywords",
+      "isEnabled": true
+     },
+     {
+      "name": "exifInfo",
+      "fieldName": "ExifInfo",
+      "isEnabled": true
+     }
+    ],
+    "adminLayerInfo": {
+     "geometryField": {
+      "name": "Shape"
+     }
+    }
+   }
+  ],
+  "tables": []
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

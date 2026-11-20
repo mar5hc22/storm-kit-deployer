@@ -1,0 +1,323 @@
+{
+ "kit_name": "Coastal Storm Response Kit",
+ "built": "2026-11-19T15:19:45Z",
+ "source_org": {
+  "id": "r4A0V7UzH9fcLVvv",
+  "url": "https://akdot.maps.arcgis.com"
+ },
+ "tools": [
+  {
+   "key": "team_status",
+   "name": "Team Status Dashboard",
+   "about": "Field teams file a daily update in a Survey123 form; the dashboard shows where each team is, what it needs and what is awaiting a decision.",
+   "items": [
+    "cdf503732eb14812adbcedb6d9937050",
+    "0da7af6291d44f87a9f4198ed43ce69c",
+    "a724ca755df04d8b93a702636a4d27d7",
+    "1e8c409fb72948feb6ecd51d431c4797",
+    "07da41e6e7954c3b872e579a12a1bffa",
+    "9deaa913bbd0454abff349fbec1cfd06",
+    "715d7cd6e6ca4ccf8fe381543ab011c0",
+    "fc275b3ab25041b7b63c15f745927a74"
+   ],
+   "primary": "9deaa913bbd0454abff349fbec1cfd06"
+  },
+  {
+   "key": "community_status",
+   "name": "Community Status Dashboard",
+   "about": "One record per impacted community with airport, power, water and drone status, a dashboard over it, and an editor app with the forms that add a community and update its checklist.",
+   "items": [
+    "09f10e86c1f944f892d15a82ec7013cb",
+    "b2b7c43225154bed9bc9ada85b8b4896",
+    "c403e5b09fff455cb3fc22489b162517",
+    "6160d84e26a241338709282a917237ec",
+    "c515919c2c804b0e89cc43a7f79e1f70",
+    "6050c8888d1b45dbbe586217c7cd8e04",
+    "f36c81b0d4b34d3fbb1470b3baee03d3",
+    "996e9c61e50947469234afc98f4ebfa9",
+    "253ec26e592540fcb07c9c931f7e5193",
+    "83a8ccbf2a954e0fb24bfd2fe3c45c0c",
+    "fe9fa8c7ba9e42659caa3308cddf9bde",
+    "7144a606ecbd4e65acb322191751ca28",
+    "0808ac356cc743b5826ca8de2d7fb1d4"
+   ],
+   "primary": "c515919c2c804b0e89cc43a7f79e1f70"
+  },
+  {
+   "key": "fema_damage",
+   "name": "FEMA Damage Assessment Dashboard",
+   "about": "The home damage assessment survey, its layers, and the dashboard that counts houses and lists assessments.",
+   "items": [
+    "4003a8031af248ad9c6a694b65e97919",
+    "e63bf365045944068e0eac4d0f367068",
+    "7fc39ab4bdad4a8eb347cfa33c20ccb5",
+    "29920d92b407461f8ba96a8d4089bad0",
+    "233b5b354d9a40ddb043bb7152e79b65",
+    "4f3554b630434ae99f12d9afdb984c3d",
+    "d3076a3b729f43f48a85a2bb9ff0b62e",
+    "3917a2cfc62443518f42518d801a1b45",
+    "f8f08acd5fe94493826f522a09bfb178"
+   ],
+   "primary": "f8f08acd5fe94493826f522a09bfb178"
+  },
+  {
+   "key": "drone_video",
+   "name": "Drone Video",
+   "about": "The layers the video player reads: one line per video service and the footprint of each. The deployer adds a map for the player and the notebook that fills the lines from a Video Server. The player page itself needs a web host.",
+   "items": [
+    "b2f8f0b331734c5b8c189b41f3a5757e",
+    "3b6f36b1be4e406e9419c4d34ff4a914",
+    "e4c4797cc7134c22a42eec21560f58b7",
+    "0ff4c59296ab41518cf63764a12161d5"
+   ],
+   "primary": null
+  }
+ ],
+ "items": {
+  "cdf503732eb14812adbcedb6d9937050": {
+   "type": "Feature Service",
+   "title": "Team Update",
+   "deps": [
+    "1e8c409fb72948feb6ecd51d431c4797"
+   ]
+  },
+  "0da7af6291d44f87a9f4198ed43ce69c": {
+   "type": "Feature Service",
+   "title": "Team Update (form view)",
+   "deps": [
+    "1e8c409fb72948feb6ecd51d431c4797",
+    "cdf503732eb14812adbcedb6d9937050"
+   ]
+  },
+  "a724ca755df04d8b93a702636a4d27d7": {
+   "type": "Feature Service",
+   "title": "Team Update (results view)",
+   "deps": [
+    "1e8c409fb72948feb6ecd51d431c4797",
+    "cdf503732eb14812adbcedb6d9937050"
+   ]
+  },
+  "1e8c409fb72948feb6ecd51d431c4797": {
+   "type": "Form",
+   "title": "Team Update",
+   "deps": [
+    "0da7af6291d44f87a9f4198ed43ce69c"
+   ]
+  },
+  "07da41e6e7954c3b872e579a12a1bffa": {
+   "type": "Web Map",
+   "title": "Team Update Map",
+   "deps": [
+    "a724ca755df04d8b93a702636a4d27d7"
+   ]
+  },
+  "9deaa913bbd0454abff349fbec1cfd06": {
+   "type": "Dashboard",
+   "title": "Team Status Dashboard",
+   "deps": [
+    "07da41e6e7954c3b872e579a12a1bffa"
+   ]
+  },
+  "715d7cd6e6ca4ccf8fe381543ab011c0": {
+   "type": "Dashboard",
+   "title": "Team Status Dashboard (read only)",
+   "deps": [
+    "07da41e6e7954c3b872e579a12a1bffa",
+    "fc275b3ab25041b7b63c15f745927a74"
+   ]
+  },
+  "fc275b3ab25041b7b63c15f745927a74": {
+   "type": "Image",
+   "title": "Team Status Dashboard instructions",
+   "deps": []
+  },
+  "09f10e86c1f944f892d15a82ec7013cb": {
+   "type": "Feature Service",
+   "title": "Impacted Communities",
+   "deps": []
+  },
+  "b2b7c43225154bed9bc9ada85b8b4896": {
+   "type": "Feature Service",
+   "title": "Impacted Communities (status view)",
+   "deps": [
+    "09f10e86c1f944f892d15a82ec7013cb"
+   ]
+  },
+  "c403e5b09fff455cb3fc22489b162517": {
+   "type": "Feature Service",
+   "title": "Impacted Communities (editor view)",
+   "deps": [
+    "09f10e86c1f944f892d15a82ec7013cb"
+   ]
+  },
+  "6160d84e26a241338709282a917237ec": {
+   "type": "Web Map",
+   "title": "Community Status Map",
+   "deps": [
+    "b2b7c43225154bed9bc9ada85b8b4896"
+   ]
+  },
+  "c515919c2c804b0e89cc43a7f79e1f70": {
+   "type": "Dashboard",
+   "title": "Community Status Dashboard",
+   "deps": [
+    "6050c8888d1b45dbbe586217c7cd8e04",
+    "6160d84e26a241338709282a917237ec"
+   ]
+  },
+  "6050c8888d1b45dbbe586217c7cd8e04": {
+   "type": "Image",
+   "title": "Organization logo (replace with your own)",
+   "deps": []
+  },
+  "f36c81b0d4b34d3fbb1470b3baee03d3": {
+   "type": "Web Map",
+   "title": "Community Status Editor Map",
+   "deps": [
+    "c403e5b09fff455cb3fc22489b162517"
+   ]
+  },
+  "996e9c61e50947469234afc98f4ebfa9": {
+   "type": "Dashboard",
+   "title": "Community Status Editor Table",
+   "deps": [
+    "f36c81b0d4b34d3fbb1470b3baee03d3"
+   ]
+  },
+  "253ec26e592540fcb07c9c931f7e5193": {
+   "type": "Form",
+   "title": "Impacted Community Checklist",
+   "deps": [
+    "09f10e86c1f944f892d15a82ec7013cb"
+   ]
+  },
+  "83a8ccbf2a954e0fb24bfd2fe3c45c0c": {
+   "type": "Web Map",
+   "title": "Impacted Community Checklist (form map)",
+   "deps": [
+    "09f10e86c1f944f892d15a82ec7013cb"
+   ]
+  },
+  "fe9fa8c7ba9e42659caa3308cddf9bde": {
+   "type": "Form",
+   "title": "Add Community",
+   "deps": [
+    "c403e5b09fff455cb3fc22489b162517"
+   ]
+  },
+  "7144a606ecbd4e65acb322191751ca28": {
+   "type": "Web Map",
+   "title": "Add Community (form map)",
+   "deps": [
+    "c403e5b09fff455cb3fc22489b162517"
+   ]
+  },
+  "0808ac356cc743b5826ca8de2d7fb1d4": {
+   "type": "Web Experience",
+   "title": "Community Status Editor",
+   "deps": [
+    "253ec26e592540fcb07c9c931f7e5193",
+    "6160d84e26a241338709282a917237ec",
+    "996e9c61e50947469234afc98f4ebfa9",
+    "b2b7c43225154bed9bc9ada85b8b4896",
+    "fe9fa8c7ba9e42659caa3308cddf9bde"
+   ]
+  },
+  "4003a8031af248ad9c6a694b65e97919": {
+   "type": "Feature Service",
+   "title": "Home Damage Assessment",
+   "deps": [
+    "29920d92b407461f8ba96a8d4089bad0"
+   ]
+  },
+  "e63bf365045944068e0eac4d0f367068": {
+   "type": "Feature Service",
+   "title": "Home Damage Assessment (form view)",
+   "deps": [
+    "29920d92b407461f8ba96a8d4089bad0",
+    "4003a8031af248ad9c6a694b65e97919"
+   ]
+  },
+  "7fc39ab4bdad4a8eb347cfa33c20ccb5": {
+   "type": "Feature Service",
+   "title": "Home Damage Assessment (results view)",
+   "deps": [
+    "29920d92b407461f8ba96a8d4089bad0",
+    "4003a8031af248ad9c6a694b65e97919"
+   ]
+  },
+  "29920d92b407461f8ba96a8d4089bad0": {
+   "type": "Form",
+   "title": "Home Damage Assessment",
+   "deps": []
+  },
+  "233b5b354d9a40ddb043bb7152e79b65": {
+   "type": "Feature Service",
+   "title": "Repair Inspection",
+   "deps": []
+  },
+  "4f3554b630434ae99f12d9afdb984c3d": {
+   "type": "Feature Service",
+   "title": "Repair Inspection (survey view)",
+   "deps": [
+    "233b5b354d9a40ddb043bb7152e79b65"
+   ]
+  },
+  "d3076a3b729f43f48a85a2bb9ff0b62e": {
+   "type": "Feature Service",
+   "title": "Combined House Damage and Inspection",
+   "deps": []
+  },
+  "3917a2cfc62443518f42518d801a1b45": {
+   "type": "Web Map",
+   "title": "Home Damage Assessment Map",
+   "deps": [
+    "4f3554b630434ae99f12d9afdb984c3d",
+    "7fc39ab4bdad4a8eb347cfa33c20ccb5",
+    "c403e5b09fff455cb3fc22489b162517",
+    "d3076a3b729f43f48a85a2bb9ff0b62e"
+   ]
+  },
+  "f8f08acd5fe94493826f522a09bfb178": {
+   "type": "Dashboard",
+   "title": "Home Damage Assessment Dashboard",
+   "deps": [
+    "3917a2cfc62443518f42518d801a1b45"
+   ]
+  },
+  "b2f8f0b331734c5b8c189b41f3a5757e": {
+   "type": "Feature Service",
+   "title": "Video Lines",
+   "deps": []
+  },
+  "3b6f36b1be4e406e9419c4d34ff4a914": {
+   "type": "Feature Service",
+   "title": "Video Lines (public view)",
+   "deps": [
+    "b2f8f0b331734c5b8c189b41f3a5757e"
+   ]
+  },
+  "e4c4797cc7134c22a42eec21560f58b7": {
+   "type": "Feature Service",
+   "title": "Video Services",
+   "deps": []
+  },
+  "0ff4c59296ab41518cf63764a12161d5": {
+   "type": "Feature Service",
+   "title": "Video Services (read only view)",
+   "deps": [
+    "e4c4797cc7134c22a42eec21560f58b7"
+   ]
+  }
+ },
+ "left_out": [
+  "The communities the last storm hit, and the map layers built for that event",
+  "The last event's drone imagery; the next event has its own",
+  "Layers that belong to partner organizations"
+ ],
+ "linked": [
+  "Alaska DOT&PF statewide route data (public)",
+  "Alaska DOT&PF highway lighting (public)",
+  "Alaska DEC solid waste sites (public)"
+ ]
+}

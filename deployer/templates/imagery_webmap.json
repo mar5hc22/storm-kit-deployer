@@ -1,0 +1,38 @@
+{
+ "operationalLayers": [
+  {
+   "id": "before_imagery",
+   "title": "{{imagery.before_title}}",
+   "layerType": "{{imagery.before_type}}",
+   "url": "{{imagery.before_url}}",
+   "visibility": true,
+   "opacity": 1
+  },
+  {
+   "id": "after_imagery",
+   "title": "{{imagery.after_title}}",
+   "layerType": "{{imagery.after_type}}",
+   "url": "{{imagery.after_url}}",
+   "visibility": true,
+   "opacity": 1
+  }
+ ],
+ "baseMap": {
+  "title": "Topographic",
+  "baseMapLayers": [
+   {
+    "id": "topo",
+    "layerType": "VectorTileLayer",
+    "title": "World Topographic Map",
+    "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json"
+   }
+  ]
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "version": "2.30",
+ "authoringApp": "StormResponseKit",
+ "authoringAppVersion": "0.1"
+}

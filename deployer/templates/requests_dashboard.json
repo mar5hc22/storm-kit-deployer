@@ -1,0 +1,1465 @@
+{
+ "version": 53,
+ "authoringApp": "ArcGIS Dashboards",
+ "authoringAppVersion": "4.26.0",
+ "maxPaginationRecords": 50000,
+ "mapOverrides": {
+  "highlightColor": "#C8742B",
+  "trackedFeatureColor": "#2A7F8E",
+  "trackedFeatureRadius": 100
+ },
+ "theme": "light",
+ "themeOverrides": {},
+ "numberPrefixOverrides": [
+  {
+   "key": "yotta",
+   "symbol": "Y",
+   "enabled": true
+  },
+  {
+   "key": "zeta",
+   "symbol": "Z",
+   "enabled": true
+  },
+  {
+   "key": "exa",
+   "symbol": "E",
+   "enabled": true
+  },
+  {
+   "key": "peta",
+   "symbol": "P",
+   "enabled": true
+  },
+  {
+   "key": "tera",
+   "symbol": "T",
+   "enabled": true
+  },
+  {
+   "key": "giga",
+   "symbol": "G",
+   "enabled": true
+  },
+  {
+   "key": "mega",
+   "symbol": "M",
+   "enabled": true
+  },
+  {
+   "key": "kilo",
+   "symbol": "k",
+   "enabled": true
+  },
+  {
+   "key": "base",
+   "symbol": "",
+   "enabled": true
+  },
+  {
+   "key": "deci",
+   "symbol": "d",
+   "enabled": false
+  },
+  {
+   "key": "centi",
+   "symbol": "c",
+   "enabled": false
+  },
+  {
+   "key": "milli",
+   "symbol": "m",
+   "enabled": false
+  },
+  {
+   "key": "micro",
+   "symbol": "\u00b5",
+   "enabled": false
+  },
+  {
+   "key": "nano",
+   "symbol": "n",
+   "enabled": false
+  }
+ ],
+ "desktopView": {
+  "type": "desktop",
+  "numberPrefixOverrides": [
+   {
+    "key": "yotta",
+    "symbol": "Y",
+    "enabled": true
+   },
+   {
+    "key": "zeta",
+    "symbol": "Z",
+    "enabled": true
+   },
+   {
+    "key": "exa",
+    "symbol": "E",
+    "enabled": true
+   },
+   {
+    "key": "peta",
+    "symbol": "P",
+    "enabled": true
+   },
+   {
+    "key": "tera",
+    "symbol": "T",
+    "enabled": true
+   },
+   {
+    "key": "giga",
+    "symbol": "G",
+    "enabled": true
+   },
+   {
+    "key": "mega",
+    "symbol": "M",
+    "enabled": true
+   },
+   {
+    "key": "kilo",
+    "symbol": "k",
+    "enabled": true
+   },
+   {
+    "key": "base",
+    "symbol": "",
+    "enabled": true
+   },
+   {
+    "key": "deci",
+    "symbol": "d",
+    "enabled": false
+   },
+   {
+    "key": "centi",
+    "symbol": "c",
+    "enabled": false
+   },
+   {
+    "key": "milli",
+    "symbol": "m",
+    "enabled": false
+   },
+   {
+    "key": "micro",
+    "symbol": "\u00b5",
+    "enabled": false
+   },
+   {
+    "key": "nano",
+    "symbol": "n",
+    "enabled": false
+   }
+  ],
+  "layout": {
+   "type": "dockingLayout",
+   "rootElement": {
+    "width": 1,
+    "height": 1,
+    "id": "4aa87ccd-977e-54e9-82a1-c29935b197ac",
+    "type": "groupLayoutElement",
+    "orientation": "row",
+    "elements": [
+     {
+      "width": 1,
+      "height": 0.16,
+      "id": "b0f9ecc7-d8d0-5502-9268-c24a66f03530",
+      "type": "groupLayoutElement",
+      "orientation": "col",
+      "elements": [
+       {
+        "width": 0.25,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "62388568-a4c9-523f-863b-d22520991ad2"
+       },
+       {
+        "width": 0.25,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "f5563735-faec-5baa-8ee1-6fddc77811f8"
+       },
+       {
+        "width": 0.25,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "e0e0c2b9-c812-5f7f-89e3-1420a6c4c764"
+       },
+       {
+        "width": 0.25,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "38dff23b-638e-5835-98a7-bb3dffdf689d"
+       }
+      ]
+     },
+     {
+      "width": 1,
+      "height": 0.54,
+      "id": "4aa22877-a2d5-5aaa-835b-8a1f90d5d8f3",
+      "type": "groupLayoutElement",
+      "orientation": "col",
+      "elements": [
+       {
+        "width": 0.62,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "ac23dcd1-7c43-5559-a836-61cd1f7cb278"
+       },
+       {
+        "width": 0.38,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "f736ca2a-98b1-5938-a964-9408ae8d5009"
+       }
+      ]
+     },
+     {
+      "width": 1,
+      "height": 0.3,
+      "id": "200747fb-0130-5794-87c3-e4aa997e3eb4",
+      "type": "groupLayoutElement",
+      "orientation": "col",
+      "elements": [
+       {
+        "width": 0.5,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "241b82b7-564c-537d-a3d0-9e954d9d90ce"
+       },
+       {
+        "width": 0.5,
+        "height": 1,
+        "type": "itemLayoutElement",
+        "id": "339763f7-e561-5674-8cee-c234d11d379b"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "widgets": [
+   {
+    "id": "62388568-a4c9-523f-863b-d22520991ad2",
+    "name": "New",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "indicatorWidget",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "outStatisticFieldName": "value",
+        "statisticType": "count"
+       }
+      ],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false,
+      "filter": {
+       "type": "filterGroup",
+       "condition": "OR",
+       "rules": [
+        {
+         "type": "filterGroup",
+         "condition": "AND",
+         "rules": [
+          {
+           "type": "filterRule",
+           "field": {
+            "name": "status",
+            "type": "string"
+           },
+           "operator": "equal",
+           "constraint": {
+            "type": "value",
+            "value": "new"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "defaultSettings": {
+     "topSection": {
+      "fontSize": 28,
+      "textInfo": {
+       "text": "New"
+      }
+     },
+     "middleSection": {
+      "fontSize": 80,
+      "textInfo": {
+       "text": "{value}"
+      }
+     },
+     "bottomSection": {
+      "fontSize": 28,
+      "textInfo": {}
+     }
+    },
+    "comparison": "none",
+    "valueFormat": {
+     "name": "value",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true
+    },
+    "ratioFormat": {
+     "name": "ratio",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 2
+    },
+    "valueType": "statistic",
+    "noValueState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    }
+   },
+   {
+    "id": "f5563735-faec-5baa-8ee1-6fddc77811f8",
+    "name": "Accepted or scheduled",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "indicatorWidget",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "outStatisticFieldName": "value",
+        "statisticType": "count"
+       }
+      ],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false,
+      "filter": {
+       "type": "filterGroup",
+       "condition": "OR",
+       "rules": [
+        {
+         "type": "filterGroup",
+         "condition": "AND",
+         "rules": [
+          {
+           "type": "filterRule",
+           "field": {
+            "name": "status",
+            "type": "string"
+           },
+           "operator": "is_in",
+           "constraint": {
+            "type": "values",
+            "values": [
+             "accepted",
+             "scheduled"
+            ]
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "defaultSettings": {
+     "topSection": {
+      "fontSize": 28,
+      "textInfo": {
+       "text": "Accepted or scheduled"
+      }
+     },
+     "middleSection": {
+      "fontSize": 80,
+      "textInfo": {
+       "text": "{value}"
+      }
+     },
+     "bottomSection": {
+      "fontSize": 28,
+      "textInfo": {}
+     }
+    },
+    "comparison": "none",
+    "valueFormat": {
+     "name": "value",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true
+    },
+    "ratioFormat": {
+     "name": "ratio",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 2
+    },
+    "valueType": "statistic",
+    "noValueState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    }
+   },
+   {
+    "id": "e0e0c2b9-c812-5f7f-89e3-1420a6c4c764",
+    "name": "In progress",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "indicatorWidget",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "outStatisticFieldName": "value",
+        "statisticType": "count"
+       }
+      ],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false,
+      "filter": {
+       "type": "filterGroup",
+       "condition": "OR",
+       "rules": [
+        {
+         "type": "filterGroup",
+         "condition": "AND",
+         "rules": [
+          {
+           "type": "filterRule",
+           "field": {
+            "name": "status",
+            "type": "string"
+           },
+           "operator": "equal",
+           "constraint": {
+            "type": "value",
+            "value": "in_progress"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "defaultSettings": {
+     "topSection": {
+      "fontSize": 28,
+      "textInfo": {
+       "text": "In progress"
+      }
+     },
+     "middleSection": {
+      "fontSize": 80,
+      "textInfo": {
+       "text": "{value}"
+      }
+     },
+     "bottomSection": {
+      "fontSize": 28,
+      "textInfo": {}
+     }
+    },
+    "comparison": "none",
+    "valueFormat": {
+     "name": "value",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true
+    },
+    "ratioFormat": {
+     "name": "ratio",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 2
+    },
+    "valueType": "statistic",
+    "noValueState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    }
+   },
+   {
+    "id": "38dff23b-638e-5835-98a7-bb3dffdf689d",
+    "name": "Complete",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "indicatorWidget",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [],
+      "orderByFields": [],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "outStatisticFieldName": "value",
+        "statisticType": "count"
+       }
+      ],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false,
+      "filter": {
+       "type": "filterGroup",
+       "condition": "OR",
+       "rules": [
+        {
+         "type": "filterGroup",
+         "condition": "AND",
+         "rules": [
+          {
+           "type": "filterRule",
+           "field": {
+            "name": "status",
+            "type": "string"
+           },
+           "operator": "equal",
+           "constraint": {
+            "type": "value",
+            "value": "complete"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "defaultSettings": {
+     "topSection": {
+      "fontSize": 28,
+      "textInfo": {
+       "text": "Complete"
+      }
+     },
+     "middleSection": {
+      "fontSize": 80,
+      "textInfo": {
+       "text": "{value}"
+      }
+     },
+     "bottomSection": {
+      "fontSize": 28,
+      "textInfo": {}
+     }
+    },
+    "comparison": "none",
+    "valueFormat": {
+     "name": "value",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true
+    },
+    "ratioFormat": {
+     "name": "ratio",
+     "prefix": false,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 2
+    },
+    "valueType": "statistic",
+    "noValueState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    }
+   },
+   {
+    "id": "ac23dcd1-7c43-5559-a836-61cd1f7cb278",
+    "name": "Map",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "mapWidget",
+    "events": [],
+    "flashRepeats": 3,
+    "itemId": "{{requests_map.itemId}}",
+    "mapTools": [
+     {
+      "type": "legendTool"
+     },
+     {
+      "type": "searchTool"
+     }
+    ],
+    "showNavigation": true,
+    "showPopup": true,
+    "scalebarStyle": "none"
+   },
+   {
+    "id": "241b82b7-564c-537d-a3d0-9e954d9d90ce",
+    "name": "Requests by type",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "pieChartWidget",
+    "caption": "<p style=\"text-align:center\"><strong>Requests by type</strong></p>\n",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [
+       "request_type"
+      ],
+      "orderByFields": [
+       "value DESC"
+      ],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "outStatisticFieldName": "value",
+        "statisticType": "count"
+       }
+      ],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false,
+      "maxFeatures": 20
+     }
+    ],
+    "events": [],
+    "selectionMode": "single",
+    "categoryType": "groupByValues",
+    "category": {
+     "fieldName": "request_type",
+     "nullLabel": "null",
+     "blankLabel": "blank",
+     "defaultColor": "#d6d6d6",
+     "nullColor": "#d6d6d6",
+     "blankColor": "#d6d6d6",
+     "sliceProperties": []
+    },
+    "pie": {
+     "type": "pie",
+     "fontSize": 13,
+     "titleField": "category",
+     "valueField": "absoluteValue",
+     "alpha": 1,
+     "outlineAlpha": 0,
+     "outlineColor": "",
+     "outlineThickness": 1,
+     "innerRadius": "55%",
+     "labelsEnabled": false,
+     "labelsFormat": "percentage",
+     "labelTickAlpha": 0.5,
+     "labelTickColor": "",
+     "labelRadius": 10,
+     "maxLabelWidth": 100,
+     "startAngle": 90,
+     "groupedColor": "#d6d6d6"
+    },
+    "legend": {
+     "enabled": true,
+     "format": "percentage",
+     "position": "right",
+     "markerSize": 12,
+     "markerType": "circle",
+     "align": "center",
+     "labelWidth": 110,
+     "valueWidth": 50
+    },
+    "showBalloon": true,
+    "valueFormat": {
+     "name": "value",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "percentageFormat": {
+     "name": "percentage",
+     "prefix": false,
+     "style": "percent",
+     "useGrouping": true,
+     "maximumFractionDigits": 1
+    }
+   },
+   {
+    "id": "339763f7-e561-5674-8cee-c234d11d379b",
+    "name": "Requests by status",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "serialChartWidget",
+    "caption": "<p style=\"text-align:center\"><strong>Requests by status</strong></p>\n",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [
+       "status"
+      ],
+      "orderByFields": [
+       "value DESC"
+      ],
+      "statisticDefinitions": [
+       {
+        "onStatisticField": "objectid",
+        "outStatisticFieldName": "value",
+        "statisticType": "count"
+       }
+      ],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false
+     }
+    ],
+    "events": [],
+    "selectionMode": "single",
+    "categoryType": "groupByValues",
+    "category": {
+     "fieldName": "status",
+     "nullLabel": "null",
+     "blankLabel": "blank",
+     "defaultColor": "#d6d6d6",
+     "nullColor": "#d6d6d6",
+     "blankColor": "#d6d6d6",
+     "labelOverrides": [],
+     "byCategoryColors": false,
+     "labelsPlacement": "default",
+     "labelRotation": 0
+    },
+    "fontSize": 13,
+    "valueFormat": {
+     "name": "value",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "labelFormat": {
+     "name": "label",
+     "prefix": true,
+     "style": "decimal",
+     "useGrouping": true,
+     "maximumFractionDigits": 0
+    },
+    "datePeriodPatterns": [
+     {
+      "period": "ss",
+      "pattern": "HH:mm:ss"
+     },
+     {
+      "period": "mm",
+      "pattern": "HH:mm"
+     },
+     {
+      "period": "hh",
+      "pattern": "HH:mm"
+     },
+     {
+      "period": "DD",
+      "pattern": "MMM d"
+     },
+     {
+      "period": "MM",
+      "pattern": "MMM yyyy"
+     },
+     {
+      "period": "YYYY",
+      "pattern": "yyyy"
+     }
+    ],
+    "chartScrollbar": {
+     "enabled": true,
+     "dragIcon": "dragIconRoundSmall",
+     "dragIconHeight": 20,
+     "dragIconWidth": 20,
+     "scrollbarHeight": 15
+    },
+    "categoryAxis": {
+     "title": "",
+     "titleRotation": 0,
+     "gridPosition": "start",
+     "gridThickness": 1,
+     "gridAlpha": 0.15,
+     "axisThickness": 1,
+     "axisAlpha": 0.5,
+     "labelsEnabled": true,
+     "parseDates": false,
+     "minPeriod": "DD"
+    },
+    "valueAxis": {
+     "title": "",
+     "titleRotation": 270,
+     "gridThickness": 1,
+     "gridAlpha": 0.15,
+     "axisThickness": 1,
+     "axisAlpha": 0.5,
+     "labelsEnabled": true,
+     "stackType": "none",
+     "integersOnly": true,
+     "logarithmic": false,
+     "minimum": 0
+    },
+    "legend": {
+     "enabled": false,
+     "position": "bottom",
+     "markerSize": 15,
+     "markerType": "circle",
+     "align": "center",
+     "labelWidth": 100,
+     "valueWidth": 0
+    },
+    "seriesOrderByFields": [],
+    "graphs": [
+     {
+      "lineColorField": "_lineColor_",
+      "fillColorsField": "_fillColor_",
+      "type": "column",
+      "fillAlphas": 1,
+      "lineAlpha": 1,
+      "lineThickness": 1,
+      "bullet": "none",
+      "bulletAlpha": 1,
+      "bulletBorderAlpha": 0,
+      "bulletBorderThickness": 2,
+      "showBalloon": true,
+      "bulletSize": 8,
+      "connect": true,
+      "valueField": "value",
+      "lineColor": "#2A7F8E"
+     }
+    ],
+    "guides": [],
+    "splitBy": {
+     "defaultColor": "#d6d6d6",
+     "seriesProperties": []
+    },
+    "rotate": false,
+    "commonGraphProperties": {
+     "lineColorField": "_lineColor_",
+     "fillColorsField": "_fillColor_",
+     "type": "column",
+     "fillAlphas": 1,
+     "lineAlpha": 1,
+     "lineThickness": 1,
+     "bullet": "none",
+     "bulletAlpha": 1,
+     "bulletBorderAlpha": 0,
+     "bulletBorderThickness": 2,
+     "showBalloon": true,
+     "bulletSize": 8,
+     "connect": true
+    }
+   },
+   {
+    "id": "f736ca2a-98b1-5938-a964-9408ae8d5009",
+    "name": "Requests, most urgent first",
+    "showLastUpdate": false,
+    "noDataState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "noFilterState": {
+     "verticalAlignment": "middle",
+     "showCaption": true,
+     "showDescription": true
+    },
+    "type": "listWidget",
+    "caption": "<p style=\"text-align:center\"><strong>Requests, most urgent first</strong></p>\n",
+    "datasets": [
+     {
+      "type": "serviceDataset",
+      "name": "main",
+      "dataSource": {
+       "type": "layerDataSource",
+       "itemId": "{{requests_map.itemId}}",
+       "layerId": "requests"
+      },
+      "groupByFields": [],
+      "orderByFields": [
+       "needed_by ASC"
+      ],
+      "statisticDefinitions": [],
+      "clientSideStatistics": false,
+      "outFields": [
+       "*"
+      ],
+      "returnDistinctValues": false,
+      "allowSourceDownload": false,
+      "allowSummaryDownload": false,
+      "maxFeatures": 200,
+      "filter": {
+       "type": "filterGroup",
+       "condition": "OR",
+       "rules": [
+        {
+         "type": "filterGroup",
+         "condition": "AND",
+         "rules": [
+          {
+           "type": "filterRule",
+           "field": {
+            "name": "status",
+            "type": "string"
+           },
+           "operator": "not_equal",
+           "constraint": {
+            "type": "value",
+            "value": "complete"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "events": [],
+    "selectionMode": "single",
+    "iconType": "none",
+    "text": "<div style=\"padding:4px 6px\"><strong>{request_type}</strong> &middot; {area_name}<br/>{priority} priority, {status}<br/>{requester_name} ({requester_org})</div>\n",
+    "separatorColor": "#dbdbdb",
+    "selectionColor": "#2A7F8E",
+    "showFilter": false
+   }
+  ],
+  "settings": {
+   "allowElementResizing": false,
+   "allowElementExpansion": true,
+   "allowReset": true
+  },
+  "header": {
+   "type": "header",
+   "title": "Data Collection Requests",
+   "subtitle": "Area-based requests for drone footage, drone imagery and home or infrastructure assessments",
+   "logoSize": "small",
+   "titleTextColor": "#ffffff",
+   "textColor": "#ffffff",
+   "backgroundColor": "#1F3A5F",
+   "backgroundImageSizing": "fit-height",
+   "normalBackgroundImagePlacement": "left",
+   "horizontalBackgroundImagePlacement": "top",
+   "showSignOutMenu": false,
+   "menuLinks": [],
+   "selectors": [
+    {
+     "id": "66c66d29-77f9-5173-9c71-38f1f2b2e352",
+     "name": "Request",
+     "label": "Request",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showCaption": true,
+      "showDescription": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showCaption": true,
+      "showDescription": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "62388568-a4c9-523f-863b-d22520991ad2#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "f5563735-faec-5baa-8ee1-6fddc77811f8#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "e0e0c2b9-c812-5f7f-89e3-1420a6c4c764#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "38dff23b-638e-5835-98a7-bb3dffdf689d#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "ac23dcd1-7c43-5559-a836-61cd1f7cb278#requests",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "241b82b7-564c-537d-a3d0-9e954d9d90ce#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "339763f7-e561-5674-8cee-c234d11d379b#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "f736ca2a-98b1-5938-a964-9408ae8d5009#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        }
+       ]
+      }
+     ],
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{requests_map.itemId}}",
+        "layerId": "requests"
+       },
+       "groupByFields": [
+        "request_type"
+       ],
+       "orderByFields": [
+        "request_type ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "request_type",
+         "outStatisticFieldName": "count_result",
+         "statisticType": "count"
+        }
+       ],
+       "clientSideStatistics": false,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false,
+       "maxFeatures": 100
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "multiple",
+      "defaultSelection": "none"
+     },
+     "showFilter": true,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "e3212f7d-6ff8-5a1a-b327-63eb8149fdea",
+     "name": "Priority",
+     "label": "Priority",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showCaption": true,
+      "showDescription": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showCaption": true,
+      "showDescription": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "62388568-a4c9-523f-863b-d22520991ad2#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "f5563735-faec-5baa-8ee1-6fddc77811f8#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "e0e0c2b9-c812-5f7f-89e3-1420a6c4c764#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "38dff23b-638e-5835-98a7-bb3dffdf689d#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "ac23dcd1-7c43-5559-a836-61cd1f7cb278#requests",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "241b82b7-564c-537d-a3d0-9e954d9d90ce#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "339763f7-e561-5674-8cee-c234d11d379b#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "f736ca2a-98b1-5938-a964-9408ae8d5009#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        }
+       ]
+      }
+     ],
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{requests_map.itemId}}",
+        "layerId": "requests"
+       },
+       "groupByFields": [
+        "priority"
+       ],
+       "orderByFields": [
+        "priority ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "priority",
+         "outStatisticFieldName": "count_result",
+         "statisticType": "count"
+        }
+       ],
+       "clientSideStatistics": false,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false,
+       "maxFeatures": 100
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "multiple",
+      "defaultSelection": "none"
+     },
+     "showFilter": true,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    },
+    {
+     "id": "c0a1f3b8-32ca-5a2d-b2b0-5eaa75198b6a",
+     "name": "Status",
+     "label": "Status",
+     "showLastUpdate": false,
+     "noDataState": {
+      "verticalAlignment": "middle",
+      "showCaption": true,
+      "showDescription": true
+     },
+     "noFilterState": {
+      "verticalAlignment": "middle",
+      "showCaption": true,
+      "showDescription": true
+     },
+     "events": [
+      {
+       "type": "selectionChanged",
+       "actions": [
+        {
+         "targets": [
+          {
+           "targetId": "62388568-a4c9-523f-863b-d22520991ad2#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "f5563735-faec-5baa-8ee1-6fddc77811f8#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "e0e0c2b9-c812-5f7f-89e3-1420a6c4c764#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "38dff23b-638e-5835-98a7-bb3dffdf689d#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "ac23dcd1-7c43-5559-a836-61cd1f7cb278#requests",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "241b82b7-564c-537d-a3d0-9e954d9d90ce#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "339763f7-e561-5674-8cee-c234d11d379b#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          },
+          {
+           "targetId": "f736ca2a-98b1-5938-a964-9408ae8d5009#main",
+           "by": "whereClause",
+           "requiresSelection": false
+          }
+         ],
+         "type": "filter"
+        }
+       ]
+      }
+     ],
+     "datasets": [
+      {
+       "type": "serviceDataset",
+       "name": "main",
+       "dataSource": {
+        "type": "layerDataSource",
+        "itemId": "{{requests_map.itemId}}",
+        "layerId": "requests"
+       },
+       "groupByFields": [
+        "status"
+       ],
+       "orderByFields": [
+        "status ASC"
+       ],
+       "statisticDefinitions": [
+        {
+         "onStatisticField": "status",
+         "outStatisticFieldName": "count_result",
+         "statisticType": "count"
+        }
+       ],
+       "clientSideStatistics": false,
+       "outFields": [
+        "*"
+       ],
+       "returnDistinctValues": false,
+       "allowSourceDownload": false,
+       "allowSummaryDownload": false,
+       "maxFeatures": 100
+      }
+     ],
+     "type": "categorySelectorWidget",
+     "category": {
+      "type": "groupByValues",
+      "labelOverrides": []
+     },
+     "selection": {
+      "operator": "equal",
+      "allowNone": true,
+      "noneLabel": "All",
+      "noneLabelPlacement": "first",
+      "type": "multiple",
+      "defaultSelection": "none"
+     },
+     "showFilter": true,
+     "displayType": "list",
+     "maxSize": "compact",
+     "presentationMode": "dropdown"
+    }
+   ]
+  }
+ }
+}

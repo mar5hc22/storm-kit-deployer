@@ -1,0 +1,2066 @@
+{
+ "key": "09f10e86c1f944f892d15a82ec7013cb",
+ "type": "Feature Service",
+ "title": "Impacted Communities",
+ "snippet": null,
+ "description": null,
+ "tags": [
+  "XForm",
+  "XForms"
+ ],
+ "extent": [
+  [
+   -180,
+   -90
+  ],
+  [
+   180,
+   90
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [],
+ "service": {
+  "name": "ImpactedCommunities",
+  "is_view": false,
+  "create": {
+   "serviceDescription": "Typhoon Halong Impacted Communities",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 1000,
+   "capabilities": "Create,Query,Update,Editing,Extract",
+   "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+   },
+   "initialExtent": {
+    "xmin": -180,
+    "ymin": -90,
+    "xmax": 180,
+    "ymax": 90,
+    "spatialReference": {
+     "wkid": 4326,
+     "latestWkid": 4326
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriDecimalDegrees",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": true,
+    "enableOwnershipAccessControl": true,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": true,
+    "allowOthersToDelete": true,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "layers": [
+   {
+    "id": 0,
+    "name": "Typhoon_Halong_Impacted_Communities",
+    "type": "Feature Layer",
+    "description": "",
+    "copyrightText": "",
+    "defaultVisibility": true,
+    "relationships": [
+     {
+      "id": 1,
+      "name": "Typhoon_Halong_Impacted_Communities_attach_image",
+      "relatedTableId": 1,
+      "cardinality": "esriRelCardinalityOneToMany",
+      "role": "esriRelRoleOrigin",
+      "keyField": "globalid",
+      "composite": true
+     }
+    ],
+    "geometryType": "esriGeometryPoint",
+    "minScale": 0,
+    "maxScale": 0,
+    "extent": {
+     "xmin": -180,
+     "ymin": -90,
+     "xmax": 180,
+     "ymax": 90,
+     "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+     }
+    },
+    "drawingInfo": {
+     "labelingInfo": null,
+     "renderer": {
+      "description": "Survey Data Locations",
+      "label": "Typhoon Halong Impacted Communities",
+      "symbol": {
+       "angle": 0,
+       "color": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "outline": {
+        "color": [
+         255,
+         255,
+         0,
+         255
+        ],
+        "width": 1
+       },
+       "size": 8,
+       "style": "esriSMSCircle",
+       "type": "esriSMS",
+       "xoffset": 0,
+       "yoffset": 0
+      },
+      "type": "simple"
+     },
+     "transparency": 0
+    },
+    "allowGeometryUpdates": true,
+    "hasAttachments": false,
+    "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+    "hasM": false,
+    "hasZ": false,
+    "objectIdField": "objectid",
+    "globalIdField": "globalid",
+    "displayField": "objectid",
+    "typeIdField": "",
+    "fields": [
+     {
+      "name": "objectid",
+      "type": "esriFieldTypeOID",
+      "alias": "ObjectID",
+      "sqlType": "sqlTypeOther",
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "globalid",
+      "type": "esriFieldTypeGlobalID",
+      "alias": "GlobalID",
+      "sqlType": "sqlTypeGUID",
+      "length": 38,
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "community_name",
+      "type": "esriFieldTypeString",
+      "alias": "Community Name",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "are_there_electrical_outages",
+      "type": "esriFieldTypeString",
+      "alias": "Electrical outages?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_there_electrical_outages",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_there_been_damage_to_water",
+      "type": "esriFieldTypeString",
+      "alias": "Damage to water systems?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_there_been_damage_to_water",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_there_been_damage_to_sewage",
+      "type": "esriFieldTypeString",
+      "alias": "Damage to sewage systems?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_there_been_damage_to_sewage",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "is_there_a_boil_water_notice",
+      "type": "esriFieldTypeString",
+      "alias": "Boil Water Notice",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_is_there_a_boil_water_notice",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_communications_phone_intern",
+      "type": "esriFieldTypeString",
+      "alias": "Are communications (phone, internet, radio) functioning?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_communications_phone_intern",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "is_the_local_clinic_or_health_c",
+      "type": "esriFieldTypeString",
+      "alias": "Is the local clinic or health center operational?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_is_the_local_clinic_or_health_c",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "have_dotpf_offices_or_facilitie",
+      "type": "esriFieldTypeString",
+      "alias": "Have DOT&PF offices or facilities been damaged?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_have_dotpf_offices_or_facilitie",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_fuel_supplies_available",
+      "type": "esriFieldTypeString",
+      "alias": "Fuel supplies available?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_fuel_supplies_available",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_backup_generators_available",
+      "type": "esriFieldTypeString",
+      "alias": "Backup generators available and operational?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_backup_generators_available",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "is_the_airport_accessible_to_co",
+      "type": "esriFieldTypeString",
+      "alias": "Airport accessible to commercial aircraft?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_is_the_airport_accessible_to_co",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "is_the_airport_accessible_to_em",
+      "type": "esriFieldTypeString",
+      "alias": "Airport accessible to emergency aircraft?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_is_the_airport_accessible_to_em",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_dotpf_landed_at_the_airport",
+      "type": "esriFieldTypeString",
+      "alias": "Has DOT&PF landed at the airport?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_dotpf_landed_at_the_airport",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_bridges_passable_for_emerge",
+      "type": "esriFieldTypeString",
+      "alias": "Bridges passable for emergency vehicles?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_bridges_passable_for_emerge",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_roadsboardwalks_passable_fo",
+      "type": "esriFieldTypeString",
+      "alias": "Roads/boardwalks passable for emergency vehicles?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_roadsboardwalks_passable_fo",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_roadsboardwalks_and_bridges",
+      "type": "esriFieldTypeString",
+      "alias": "Roads/boardwalks and bridges passable for everyday travel?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_roadsboardwalks_and_bridges",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_docks_or_boat_landings_usab",
+      "type": "esriFieldTypeString",
+      "alias": "Docks or boat landings usable?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_docks_or_boat_landings_usab",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_there_been_a_notam_issued",
+      "type": "esriFieldTypeString",
+      "alias": "NOTAM issued?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_there_been_a_notam_issued",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_the_national_guard_been_dep",
+      "type": "esriFieldTypeString",
+      "alias": "National Guard been deployed to this location?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_the_national_guard_been_dep",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_there_dotpf_staff_on_site",
+      "type": "esriFieldTypeString",
+      "alias": "DOT&PF staff on site?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_there_dotpf_staff_on_site",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_dotpf_captured_drone_footag",
+      "type": "esriFieldTypeString",
+      "alias": "DOT&PF captured drone footage?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_dotpf_captured_drone_footag",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_there_other_agencies_on_sit",
+      "type": "esriFieldTypeString",
+      "alias": "Other agencies on site? (troopers, volunteers, etc)",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_there_other_agencies_on_sit",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "have_people_been_evacuated_from",
+      "type": "esriFieldTypeString",
+      "alias": "Have people been evacuated from homes?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_have_people_been_evacuated_from",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "has_a_central_evacuation_locati",
+      "type": "esriFieldTypeString",
+      "alias": "Has a central evacuation location been established?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_has_a_central_evacuation_locati",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_there_enough_shelters_for_d",
+      "type": "esriFieldTypeString",
+      "alias": "Enough shelters for displaced residents?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_there_enough_shelters_for_d",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "is_there_standing_water_or_floo",
+      "type": "esriFieldTypeString",
+      "alias": "Standing water or flooding in residential areas?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_is_there_standing_water_or_floo",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "is_there_erosion_that_is_threat",
+      "type": "esriFieldTypeString",
+      "alias": "Erosion that is threatening buildings?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_is_there_erosion_that_is_threat",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_there_downed_powerlines",
+      "type": "esriFieldTypeString",
+      "alias": "Downed powerlines?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_there_downed_powerlines",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "are_there_other_environmental_h",
+      "type": "esriFieldTypeString",
+      "alias": "Other environmental hazards that need immediate attention?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_are_there_other_environmental_h",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "medical_supplies",
+      "type": "esriFieldTypeString",
+      "alias": "Medical Supplies",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_medical_supplies",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "food",
+      "type": "esriFieldTypeString",
+      "alias": "Food",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_food",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "water",
+      "type": "esriFieldTypeString",
+      "alias": " Water",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_water",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null,
+      "description": "{\"value\":\"Status of the waste water systems in communities. \",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "bedding",
+      "type": "esriFieldTypeString",
+      "alias": "Bedding",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_bedding",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "clothing",
+      "type": "esriFieldTypeString",
+      "alias": "Clothing",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_clothing",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "heating_fuel",
+      "type": "esriFieldTypeString",
+      "alias": "Heating Fuel",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_heating_fuel",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "repair_hand_tools",
+      "type": "esriFieldTypeString",
+      "alias": "Repair Hand Tools",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_repair_hand_tools",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "repair_equipment",
+      "type": "esriFieldTypeString",
+      "alias": "Repair Equipment",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_repair_equipment",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "toiletries",
+      "type": "esriFieldTypeString",
+      "alias": "Toiletries",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_toiletries",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "baby_supplies",
+      "type": "esriFieldTypeString",
+      "alias": "Baby Supplies",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_baby_supplies",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "elder_supplies",
+      "type": "esriFieldTypeString",
+      "alias": "Elder Supplies",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_elder_supplies",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "pet_supplies",
+      "type": "esriFieldTypeString",
+      "alias": "Pet Supplies",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_pet_supplies",
+       "codedValues": [
+        {
+         "name": "Needed",
+         "code": "Needed"
+        },
+        {
+         "name": "Not Needed",
+         "code": "Not Needed"
+        },
+        {
+         "name": "Delivered",
+         "code": "Delivered"
+        },
+        {
+         "name": "Not Delivered",
+         "code": "Not Delivered"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "who_on_ground",
+      "type": "esriFieldTypeString",
+      "alias": "Who is on the ground? When?",
+      "sqlType": "sqlTypeOther",
+      "length": 5000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "airport_status",
+      "type": "esriFieldTypeString",
+      "alias": "Airport Status?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_airport_status",
+       "codedValues": [
+        {
+         "name": "Open",
+         "code": "Open"
+        },
+        {
+         "name": "Closed",
+         "code": "Closed"
+        },
+        {
+         "name": "Open for Helicopters Only",
+         "code": "Open for Helicopters Only"
+        },
+        {
+         "name": "Open with Power Outages",
+         "code": "Open with Power Outages"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "dot_pf_been_onsite",
+      "type": "esriFieldTypeString",
+      "alias": "Has DOT&PF personnel visited the site?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_dot_pf_been_onsite",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "power",
+      "type": "esriFieldTypeString",
+      "alias": "Does the community have power?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_power",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "water_restriction",
+      "type": "esriFieldTypeString",
+      "alias": "Is there a water restriction?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_water_restriction",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "notes",
+      "type": "esriFieldTypeString",
+      "alias": "Additional Notes",
+      "sqlType": "sqlTypeOther",
+      "length": 8000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "runway_open",
+      "type": "esriFieldTypeString",
+      "alias": "Is the runway open?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_runway_open",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "drone_footage",
+      "type": "esriFieldTypeString",
+      "alias": "Has DOT&PF captured drone footage?",
+      "sqlType": "sqlTypeOther",
+      "length": 255,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "cvd_drone_footage",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null
+     },
+     {
+      "name": "drone_footage_details",
+      "type": "esriFieldTypeString",
+      "alias": "Who captured the drone footage? When?",
+      "sqlType": "sqlTypeOther",
+      "length": 5000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "CreationDate",
+      "type": "esriFieldTypeDate",
+      "alias": "CreationDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Creator",
+      "type": "esriFieldTypeString",
+      "alias": "Creator",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "EditDate",
+      "type": "esriFieldTypeDate",
+      "alias": "Edit Date",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Editor",
+      "type": "esriFieldTypeString",
+      "alias": "Editor",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "when_drone_footage_captured",
+      "type": "esriFieldTypeDate",
+      "alias": "When was drone footage captured?",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "drone_footage_captued_on",
+      "type": "esriFieldTypeDateOnly",
+      "alias": "Drone footage captured on",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Community_Contact",
+      "type": "esriFieldTypeString",
+      "alias": "Community Contact",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Phone_Number",
+      "type": "esriFieldTypeString",
+      "alias": "Phone Number",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Tribe_Community",
+      "type": "esriFieldTypeString",
+      "alias": "Tribe ",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Community_Needs",
+      "type": "esriFieldTypeString",
+      "alias": "Community Needs",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Local_Insight",
+      "type": "esriFieldTypeString",
+      "alias": "Local Insight",
+      "sqlType": "sqlTypeOther",
+      "length": 5000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Date_Video",
+      "type": "esriFieldTypeDateOnly",
+      "alias": "Video Date",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Imagery_Date",
+      "type": "esriFieldTypeDateOnly",
+      "alias": "Orthomosaic Date",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Drone_Type",
+      "type": "esriFieldTypeString",
+      "alias": "Drone Type",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"Enter SkyDio or DJI\",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "Drone_Data_uploaded",
+      "type": "esriFieldTypeDateOnly",
+      "alias": "Drone Data uploaded",
+      "sqlType": "sqlTypeOther",
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Go_Pro_360",
+      "type": "esriFieldTypeString",
+      "alias": "Go Pro 360",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": {
+       "type": "codedValue",
+       "name": "Typhoon_Halong_Impacted_Communities_Go_Pro_360_44ba1515-b303-4e83-9823-6ab98dbf1d07",
+       "codedValues": [
+        {
+         "name": "Yes",
+         "code": "yes"
+        },
+        {
+         "name": "No",
+         "code": "no"
+        }
+       ]
+      },
+      "defaultValue": null,
+      "description": "{\"value\":\"Was Go Pro 360 footage captured at this location.\",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "more_video_imagery_needed",
+      "type": "esriFieldTypeString",
+      "alias": "more video or imagery needed?",
+      "sqlType": "sqlTypeOther",
+      "length": 1000,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"tell us what imagery/ video you need and why\",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "Orthomosaic_published_on_website",
+      "type": "esriFieldTypeString",
+      "alias": "Orthomosaic published on website",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Video_published_on_website",
+      "type": "esriFieldTypeString",
+      "alias": "Video published on website",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"when/ if video has been published on website\",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "DOT_Const_Mangr_Phn_Nmbr",
+      "type": "esriFieldTypeString",
+      "alias": "DOT Construction Manager & Phone Number ",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Emergency_Contact",
+      "type": "esriFieldTypeString",
+      "alias": "Emergency Contact & Phone Number ",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "DOT_Contractor_Phone_Number",
+      "type": "esriFieldTypeString",
+      "alias": "DOT Contractor Name & Phone Number ",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Board_Road",
+      "type": "esriFieldTypeString",
+      "alias": "Board Road Complete?",
+      "sqlType": "sqlTypeOther",
+      "length": 500,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"This will be a spot to comment on the status of the board road reconstruction \",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "Barge_Landings",
+      "type": "esriFieldTypeString",
+      "alias": "Barge Landing Usable?",
+      "sqlType": "sqlTypeOther",
+      "length": 500,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"Barge landing status here: complete/open, under construction/ closed, or closed and not under construction\",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "Date_updated",
+      "type": "esriFieldTypeDate",
+      "alias": "Airport Date Updated",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"A spot for select individuals to input the current date when in putting community information. \",\"fieldValueType\":\"\"}",
+      "precision": 1
+     },
+     {
+      "name": "Waste_Water",
+      "type": "esriFieldTypeString",
+      "alias": "Waste Water ",
+      "sqlType": "sqlTypeOther",
+      "length": 500,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Potable_Water",
+      "type": "esriFieldTypeString",
+      "alias": "Potable Water",
+      "sqlType": "sqlTypeOther",
+      "length": 500,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null,
+      "description": "{\"value\":\"Potable water status for communities\",\"fieldValueType\":\"\"}"
+     },
+     {
+      "name": "Edited_By",
+      "type": "esriFieldTypeString",
+      "alias": "Edited By",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "Edit_Date",
+      "type": "esriFieldTypeString",
+      "alias": "Edit Date",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     }
+    ],
+    "types": [],
+    "templates": [
+     {
+      "name": "New Feature",
+      "description": "",
+      "drawingTool": "esriFeatureEditToolNone",
+      "prototype": {
+       "attributes": {
+        "community_name": null,
+        "are_there_electrical_outages": null,
+        "has_there_been_damage_to_water": null,
+        "has_there_been_damage_to_sewage": null,
+        "is_there_a_boil_water_notice": null,
+        "are_communications_phone_intern": null,
+        "is_the_local_clinic_or_health_c": null,
+        "have_dotpf_offices_or_facilitie": null,
+        "are_fuel_supplies_available": null,
+        "are_backup_generators_available": null,
+        "is_the_airport_accessible_to_co": null,
+        "is_the_airport_accessible_to_em": null,
+        "has_dotpf_landed_at_the_airport": null,
+        "are_bridges_passable_for_emerge": null,
+        "are_roadsboardwalks_passable_fo": null,
+        "are_roadsboardwalks_and_bridges": null,
+        "are_docks_or_boat_landings_usab": null,
+        "has_there_been_a_notam_issued": null,
+        "has_the_national_guard_been_dep": null,
+        "are_there_dotpf_staff_on_site": null,
+        "has_dotpf_captured_drone_footag": null,
+        "are_there_other_agencies_on_sit": null,
+        "have_people_been_evacuated_from": null,
+        "has_a_central_evacuation_locati": null,
+        "are_there_enough_shelters_for_d": null,
+        "is_there_standing_water_or_floo": null,
+        "is_there_erosion_that_is_threat": null,
+        "are_there_downed_powerlines": null,
+        "are_there_other_environmental_h": null,
+        "medical_supplies": null,
+        "food": null,
+        "water": null,
+        "bedding": null,
+        "clothing": null,
+        "heating_fuel": null,
+        "repair_hand_tools": null,
+        "repair_equipment": null,
+        "toiletries": null,
+        "baby_supplies": null,
+        "elder_supplies": null,
+        "pet_supplies": null,
+        "who_on_ground": null,
+        "airport_status": null,
+        "dot_pf_been_onsite": null,
+        "power": null,
+        "water_restriction": null,
+        "notes": null,
+        "runway_open": null,
+        "drone_footage": null,
+        "drone_footage_details": null,
+        "when_drone_footage_captured": null,
+        "drone_footage_captued_on": null,
+        "Community_Contact": null,
+        "Phone_Number": null,
+        "Tribe_Community": null,
+        "Community_Needs": null,
+        "Local_Insight": null,
+        "Date_Video": null,
+        "Imagery_Date": null,
+        "Drone_Type": null,
+        "Drone_Data_uploaded": null,
+        "Go_Pro_360": null,
+        "more_video_imagery_needed": null,
+        "Orthomosaic_published_on_website": null,
+        "Video_published_on_website": null,
+        "DOT_Const_Mangr_Phn_Nmbr": null,
+        "Emergency_Contact": null,
+        "DOT_Contractor_Phone_Number": null,
+        "Board_Road": null,
+        "Barge_Landings": null,
+        "Date_updated": null,
+        "Waste_Water": null,
+        "Potable_Water": null,
+        "Edited_By": null,
+        "Edit_Date": null
+       }
+      }
+     }
+    ],
+    "capabilities": "Create,Query,Update,Editing,Extract",
+    "maxRecordCount": 1000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "hasStaticData": false,
+    "editFieldsInfo": {
+     "creationDateField": "CreationDate",
+     "creatorField": "Creator",
+     "editDateField": "EditDate",
+     "editorField": "Editor"
+    },
+    "ownershipBasedAccessControlForFeatures": {
+     "allowOthersToQuery": true,
+     "allowOthersToDelete": true,
+     "allowOthersToUpdate": true,
+     "allowAnonymousToQuery": true,
+     "allowAnonymousToUpdate": false,
+     "allowAnonymousToDelete": false
+    },
+    "dateFieldsTimeReference": {
+     "timeZone": "UTC",
+     "timeZoneIANA": "Etc/UTC",
+     "respectsDaylightSaving": false
+    },
+    "preferredTimeReference": null,
+    "propagateVisibleFields": true,
+    "adminLayerInfo": {
+     "geometryField": {
+      "name": "Shape"
+     }
+    }
+   }
+  ],
+  "tables": [
+   {
+    "id": 1,
+    "name": "attach_image",
+    "type": "Table",
+    "description": "",
+    "copyrightText": "",
+    "defaultVisibility": true,
+    "relationships": [
+     {
+      "id": 1,
+      "name": "Typhoon_Halong_Impacted_Communities_attach_image",
+      "relatedTableId": 0,
+      "cardinality": "esriRelCardinalityOneToMany",
+      "role": "esriRelRoleDestination",
+      "keyField": "parentglobalid",
+      "composite": true
+     }
+    ],
+    "allowGeometryUpdates": true,
+    "hasAttachments": true,
+    "htmlPopupType": "esriServerHTMLPopupTypeNone",
+    "hasM": false,
+    "hasZ": false,
+    "objectIdField": "objectid",
+    "globalIdField": "globalid",
+    "displayField": "objectid",
+    "typeIdField": "",
+    "fields": [
+     {
+      "name": "objectid",
+      "type": "esriFieldTypeOID",
+      "alias": "ObjectID",
+      "sqlType": "sqlTypeOther",
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "globalid",
+      "type": "esriFieldTypeGlobalID",
+      "alias": "GlobalID",
+      "sqlType": "sqlTypeGUID",
+      "length": 38,
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "parentglobalid",
+      "type": "esriFieldTypeGUID",
+      "alias": "ParentGlobalID",
+      "sqlType": "sqlTypeGUID",
+      "length": 38,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "CreationDate",
+      "type": "esriFieldTypeDate",
+      "alias": "CreationDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Creator",
+      "type": "esriFieldTypeString",
+      "alias": "Creator",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "EditDate",
+      "type": "esriFieldTypeDate",
+      "alias": "EditDate",
+      "sqlType": "sqlTypeOther",
+      "length": 8,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null,
+      "precision": 1
+     },
+     {
+      "name": "Editor",
+      "type": "esriFieldTypeString",
+      "alias": "Editor",
+      "sqlType": "sqlTypeOther",
+      "length": 128,
+      "nullable": true,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     }
+    ],
+    "types": [],
+    "templates": [
+     {
+      "name": "New Feature",
+      "description": "",
+      "drawingTool": "esriFeatureEditToolNone",
+      "prototype": {
+       "attributes": {
+        "parentglobalid": null
+       }
+      }
+     }
+    ],
+    "capabilities": "Create,Query,Update,Editing,Extract",
+    "maxRecordCount": 1000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "hasStaticData": false,
+    "editFieldsInfo": {
+     "creationDateField": "CreationDate",
+     "creatorField": "Creator",
+     "editDateField": "EditDate",
+     "editorField": "Editor"
+    },
+    "ownershipBasedAccessControlForFeatures": {
+     "allowOthersToQuery": true,
+     "allowOthersToDelete": true,
+     "allowOthersToUpdate": true,
+     "allowAnonymousToQuery": true,
+     "allowAnonymousToUpdate": false,
+     "allowAnonymousToDelete": false
+    },
+    "dateFieldsTimeReference": {
+     "timeZone": "UTC",
+     "timeZoneIANA": "Etc/UTC",
+     "respectsDaylightSaving": false
+    },
+    "preferredTimeReference": null,
+    "propagateVisibleFields": true,
+    "attachmentProperties": [
+     {
+      "name": "id",
+      "fieldName": "ATTACHMENTID",
+      "isEnabled": true
+     },
+     {
+      "name": "globalId",
+      "fieldName": "AttachmentGlobalID",
+      "isEnabled": true
+     },
+     {
+      "name": "name",
+      "fieldName": "ATT_NAME",
+      "isEnabled": true
+     },
+     {
+      "name": "size",
+      "fieldName": "DATA_SIZE",
+      "isEnabled": true
+     },
+     {
+      "name": "contentType",
+      "fieldName": "CONTENT_TYPE",
+      "isEnabled": true
+     },
+     {
+      "name": "keywords",
+      "fieldName": "Keywords",
+      "isEnabled": true
+     },
+     {
+      "name": "exifInfo",
+      "fieldName": "ExifInfo",
+      "isEnabled": true
+     }
+    ]
+   }
+  ]
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

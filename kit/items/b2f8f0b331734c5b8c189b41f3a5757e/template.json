@@ -1,0 +1,224 @@
+{
+ "key": "b2f8f0b331734c5b8c189b41f3a5757e",
+ "type": "Feature Service",
+ "title": "Video Lines",
+ "snippet": null,
+ "description": null,
+ "tags": [],
+ "extent": [
+  [
+   -166.26579298929582,
+   -80.00000000000001
+  ],
+  [
+   160,
+   80
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [],
+ "service": {
+  "name": "VideoLine",
+  "is_view": false,
+  "create": {
+   "serviceDescription": "",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 2000,
+   "capabilities": "Create,Delete,Query,Update,Editing",
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   },
+   "initialExtent": {
+    "xmin": -17811118.526923772,
+    "ymin": -15538711.096309224,
+    "xmax": 17811118.526923772,
+    "ymax": 15538711.096309224,
+    "spatialReference": {
+     "wkid": 102100,
+     "latestWkid": 3857
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriMeters",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": false,
+    "enableOwnershipAccessControl": false,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": true,
+    "allowOthersToDelete": false,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": true,
+    "allowAnonymousToDelete": true
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "layers": [
+   {
+    "id": 0,
+    "name": "VideoLine",
+    "type": "Feature Layer",
+    "description": "",
+    "copyrightText": "",
+    "defaultVisibility": true,
+    "relationships": [],
+    "geometryType": "esriGeometryPolyline",
+    "minScale": 0,
+    "maxScale": 0,
+    "extent": {
+     "xmin": -18508623.411908247,
+     "ymin": 8333276.422452965,
+     "xmax": -17917589.48605958,
+     "ymax": 10367120.484954476,
+     "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+     }
+    },
+    "drawingInfo": {
+     "renderer": {
+      "type": "simple",
+      "symbol": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        165,
+        83,
+        183,
+        255
+       ],
+       "width": 1
+      }
+     },
+     "transparency": 0,
+     "labelingInfo": null
+    },
+    "allowGeometryUpdates": true,
+    "hasAttachments": true,
+    "htmlPopupType": "esriServerHTMLPopupTypeNone",
+    "hasM": false,
+    "hasZ": true,
+    "enableZDefaults": true,
+    "zDefault": 0,
+    "objectIdField": "OBJECTID",
+    "globalIdField": "",
+    "displayField": "",
+    "typeIdField": "",
+    "fields": [
+     {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID",
+      "sqlType": "sqlTypeOther",
+      "nullable": false,
+      "editable": false,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "URL",
+      "type": "esriFieldTypeString",
+      "alias": "URL",
+      "sqlType": "sqlTypeOther",
+      "length": 512,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     },
+     {
+      "name": "service_name",
+      "type": "esriFieldTypeString",
+      "alias": "Service Name",
+      "sqlType": "sqlTypeOther",
+      "length": 256,
+      "nullable": true,
+      "editable": true,
+      "domain": null,
+      "defaultValue": null
+     }
+    ],
+    "types": [],
+    "templates": [
+     {
+      "name": "New Feature",
+      "description": "",
+      "drawingTool": "esriFeatureEditToolLine",
+      "prototype": {
+       "attributes": {
+        "URL": null,
+        "service_name": null
+       }
+      }
+     }
+    ],
+    "capabilities": "Create,Delete,Query,Update,Editing",
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "hasStaticData": false,
+    "dateFieldsTimeReference": {
+     "timeZone": "UTC",
+     "timeZoneIANA": "Etc/UTC",
+     "respectsDaylightSaving": false
+    },
+    "preferredTimeReference": null,
+    "attachmentProperties": [
+     {
+      "name": "id",
+      "fieldName": "ATTACHMENTID",
+      "isEnabled": true
+     },
+     {
+      "name": "globalId",
+      "fieldName": "AttachmentGlobalID",
+      "isEnabled": true
+     },
+     {
+      "name": "name",
+      "fieldName": "ATT_NAME",
+      "isEnabled": true
+     },
+     {
+      "name": "size",
+      "fieldName": "DATA_SIZE",
+      "isEnabled": true
+     },
+     {
+      "name": "contentType",
+      "fieldName": "CONTENT_TYPE",
+      "isEnabled": true
+     },
+     {
+      "name": "keywords",
+      "fieldName": "Keywords",
+      "isEnabled": true
+     },
+     {
+      "name": "exifInfo",
+      "fieldName": "ExifInfo",
+      "isEnabled": true
+     }
+    ],
+    "adminLayerInfo": {
+     "geometryField": {
+      "name": "Shape"
+     }
+    }
+   }
+  ],
+  "tables": []
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

@@ -1,0 +1,8 @@
+{
+  "portalUrl": "https://yourorg.maps.arcgis.com",
+  "appId": "the client id of an OAuth app whose redirect address is this page's folder + oauth-callback.html",
+  "webmapId": "the Drone Video Map the deployer created",
+  "videoLinesLayerUrl": "the Video Lines (public view) layer the deployer created, ending in /0",
+  "enterprisePortalUrl": "",
+  "tokenBrokerUrl": ""
+}

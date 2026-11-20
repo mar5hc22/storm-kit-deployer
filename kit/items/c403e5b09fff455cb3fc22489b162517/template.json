@@ -1,0 +1,179 @@
+{
+ "key": "c403e5b09fff455cb3fc22489b162517",
+ "type": "Feature Service",
+ "title": "Impacted Communities (editor view)",
+ "snippet": null,
+ "description": null,
+ "tags": [
+  "XForm",
+  "XForms"
+ ],
+ "extent": [
+  [
+   -180,
+   -90
+  ],
+  [
+   180,
+   90
+  ]
+ ],
+ "accessInformation": null,
+ "licenseInfo": null,
+ "culture": "",
+ "properties": null,
+ "extra_keywords": [],
+ "service": {
+  "name": "ImpactedCommunities_editor",
+  "is_view": true,
+  "create": {
+   "serviceDescription": "",
+   "description": "",
+   "copyrightText": "",
+   "maxRecordCount": 1000,
+   "capabilities": "Create,Query,Update,Editing,Extract",
+   "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+   },
+   "initialExtent": {
+    "xmin": -180,
+    "ymin": -90,
+    "xmax": 180,
+    "ymax": 90,
+    "spatialReference": {
+     "wkid": 4326,
+     "latestWkid": 4326
+    }
+   },
+   "allowGeometryUpdates": true,
+   "units": "esriDecimalDegrees",
+   "xssPreventionInfo": {
+    "xssPreventionEnabled": true,
+    "xssPreventionRule": "InputOnly",
+    "xssInputRule": "rejectInvalid"
+   },
+   "editorTrackingInfo": {
+    "enableEditorTracking": true,
+    "enableOwnershipAccessControl": true,
+    "allowOthersToQuery": true,
+    "allowOthersToUpdate": true,
+    "allowOthersToDelete": true,
+    "allowAnonymousToQuery": true,
+    "allowAnonymousToUpdate": false,
+    "allowAnonymousToDelete": false
+   },
+   "hasStaticData": false,
+   "supportedQueryFormats": "JSON"
+  },
+  "source": "{{09f10e86c1f944f892d15a82ec7013cb.itemId}}",
+  "view_layers": [
+   {
+    "id": 0,
+    "name": "Typhoon_Halong_Impacted_Communities",
+    "is_table": false,
+    "source_layer_id": 0,
+    "hidden_fields": [
+     "are_there_electrical_outages",
+     "has_there_been_damage_to_water",
+     "has_there_been_damage_to_sewage",
+     "is_there_a_boil_water_notice",
+     "are_communications_phone_intern",
+     "is_the_local_clinic_or_health_c",
+     "have_dotpf_offices_or_facilitie",
+     "are_fuel_supplies_available",
+     "are_backup_generators_available",
+     "is_the_airport_accessible_to_co",
+     "is_the_airport_accessible_to_em",
+     "has_dotpf_landed_at_the_airport",
+     "are_bridges_passable_for_emerge",
+     "are_roadsboardwalks_passable_fo",
+     "are_roadsboardwalks_and_bridges",
+     "are_docks_or_boat_landings_usab",
+     "has_there_been_a_notam_issued",
+     "has_the_national_guard_been_dep",
+     "are_there_dotpf_staff_on_site",
+     "has_dotpf_captured_drone_footag",
+     "are_there_other_agencies_on_sit",
+     "have_people_been_evacuated_from",
+     "has_a_central_evacuation_locati",
+     "are_there_enough_shelters_for_d",
+     "is_there_standing_water_or_floo",
+     "is_there_erosion_that_is_threat",
+     "are_there_downed_powerlines",
+     "are_there_other_environmental_h",
+     "medical_supplies",
+     "food",
+     "water",
+     "bedding",
+     "clothing",
+     "heating_fuel",
+     "repair_hand_tools",
+     "repair_equipment",
+     "toiletries",
+     "baby_supplies",
+     "elder_supplies",
+     "pet_supplies",
+     "drone_footage_details",
+     "CreationDate",
+     "Creator",
+     "when_drone_footage_captured"
+    ],
+    "definition_query": null,
+    "update": {
+     "drawingInfo": {
+      "labelingInfo": null,
+      "renderer": {
+       "description": "Survey Data Locations",
+       "label": "Typhoon Halong Impacted Communities",
+       "symbol": {
+        "angle": 0,
+        "color": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "outline": {
+         "color": [
+          255,
+          255,
+          0,
+          255
+         ],
+         "width": 1
+        },
+        "size": 8,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0,
+        "yoffset": 0
+       },
+       "type": "simple"
+      },
+      "transparency": 0
+     },
+     "displayField": "objectid",
+     "minScale": 0,
+     "maxScale": 0,
+     "capabilities": "Create,Query,Update,Editing,Extract"
+    }
+   },
+   {
+    "id": 1,
+    "name": "attach_image",
+    "is_table": true,
+    "source_layer_id": 1,
+    "hidden_fields": [],
+    "definition_query": null,
+    "update": {
+     "displayField": "objectid",
+     "capabilities": "Create,Query,Update,Editing,Extract"
+    }
+   }
+  ]
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

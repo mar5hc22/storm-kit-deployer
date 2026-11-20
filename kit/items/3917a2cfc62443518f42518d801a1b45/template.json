@@ -1,0 +1,41 @@
+{
+ "key": "3917a2cfc62443518f42518d801a1b45",
+ "type": "Web Map",
+ "title": "Home Damage Assessment Map",
+ "snippet": "",
+ "description": "",
+ "tags": [
+  ""
+ ],
+ "extent": [
+  [
+   -170.0841862835927,
+   58.35011230287608
+  ],
+  [
+   -155.88985034609644,
+   62.724748340828064
+  ]
+ ],
+ "accessInformation": "",
+ "licenseInfo": "",
+ "culture": "en-us",
+ "properties": null,
+ "typeKeywords": [
+  "ArcGIS API for JavaScript",
+  "ArcGIS Online",
+  "Collector",
+  "Data Editing",
+  "Explorer Web Map",
+  "Map",
+  "Online Map",
+  "Web Map"
+ ],
+ "data": {
+  "file": "data.json",
+  "json": true
+ },
+ "resources": [],
+ "thumbnail": "thumbnail.png",
+ "relationships": []
+}

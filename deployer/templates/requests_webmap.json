@@ -1,0 +1,414 @@
+{
+ "operationalLayers": [
+  {
+   "id": "requests",
+   "layerType": "ArcGISFeatureLayer",
+   "url": "{{requests.url}}/0",
+   "itemId": "{{requests.itemId}}",
+   "title": "Data collection requests",
+   "visibility": true,
+   "opacity": 1,
+   "layerDefinition": {
+    "drawingInfo": {
+     "renderer": {
+      "type": "uniqueValue",
+      "field1": "status",
+      "defaultLabel": "Other",
+      "defaultSymbol": {
+       "type": "esriSFS",
+       "style": "esriSFSSolid",
+       "color": [
+        138,
+        148,
+        160,
+        90
+       ],
+       "outline": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+         138,
+         148,
+         160,
+         255
+        ],
+        "width": 2
+       }
+      },
+      "uniqueValueInfos": [
+       {
+        "value": "new",
+        "label": "New",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          211,
+          47,
+          47,
+          90
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           211,
+           47,
+           47,
+           255
+          ],
+          "width": 2
+         }
+        }
+       },
+       {
+        "value": "accepted",
+        "label": "Accepted",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          245,
+          124,
+          0,
+          90
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           245,
+           124,
+           0,
+           255
+          ],
+          "width": 2
+         }
+        }
+       },
+       {
+        "value": "scheduled",
+        "label": "Scheduled",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          251,
+          192,
+          45,
+          90
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           251,
+           192,
+           45,
+           255
+          ],
+          "width": 2
+         }
+        }
+       },
+       {
+        "value": "in_progress",
+        "label": "In progress",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          25,
+          118,
+          210,
+          90
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           25,
+           118,
+           210,
+           255
+          ],
+          "width": 2
+         }
+        }
+       },
+       {
+        "value": "complete",
+        "label": "Complete",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          46,
+          125,
+          50,
+          90
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           46,
+           125,
+           50,
+           255
+          ],
+          "width": 2
+         }
+        }
+       },
+       {
+        "value": "declined",
+        "label": "Declined",
+        "symbol": {
+         "type": "esriSFS",
+         "style": "esriSFSSolid",
+         "color": [
+          117,
+          117,
+          117,
+          90
+         ],
+         "outline": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+           117,
+           117,
+           117,
+           255
+          ],
+          "width": 2
+         }
+        }
+       }
+      ]
+     }
+    }
+   },
+   "popupInfo": {
+    "title": "{request_type}: {area_name}",
+    "fieldInfos": [
+     {
+      "fieldName": "request_type",
+      "label": "Request",
+      "visible": true
+     },
+     {
+      "fieldName": "area_name",
+      "label": "Area",
+      "visible": true
+     },
+     {
+      "fieldName": "details",
+      "label": "Details",
+      "visible": true
+     },
+     {
+      "fieldName": "priority",
+      "label": "Priority",
+      "visible": true
+     },
+     {
+      "fieldName": "needed_by",
+      "label": "Needed by",
+      "visible": true
+     },
+     {
+      "fieldName": "status",
+      "label": "Status",
+      "visible": true
+     },
+     {
+      "fieldName": "requester_name",
+      "label": "Requested by",
+      "visible": true
+     },
+     {
+      "fieldName": "requester_org",
+      "label": "Organization",
+      "visible": true
+     },
+     {
+      "fieldName": "requester_contact",
+      "label": "Contact",
+      "visible": true
+     },
+     {
+      "fieldName": "assigned_to",
+      "label": "Assigned to",
+      "visible": true
+     },
+     {
+      "fieldName": "response_notes",
+      "label": "Response notes",
+      "visible": true
+     }
+    ]
+   },
+   "formInfo": {
+    "title": "Data collection request",
+    "description": "Draw the area on the map, then say what you need there.",
+    "formElements": [
+     {
+      "type": "group",
+      "label": "Request",
+      "initialState": "expanded",
+      "formElements": [
+       {
+        "type": "field",
+        "fieldName": "request_type",
+        "label": "What do you need?",
+        "inputType": {
+         "type": "combo-box",
+         "showNoValueOption": false
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "area_name",
+        "label": "Name of the area",
+        "inputType": {
+         "type": "text-box",
+         "minLength": 0,
+         "maxLength": 120
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "details",
+        "label": "Details",
+        "description": "What to capture, access notes, hazards.",
+        "inputType": {
+         "type": "text-area",
+         "minLength": 0,
+         "maxLength": 2000
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "priority",
+        "label": "Priority",
+        "inputType": {
+         "type": "combo-box",
+         "showNoValueOption": false
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "needed_by",
+        "label": "Needed by",
+        "inputType": {
+         "type": "datetime-picker",
+         "includeTime": false
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "requester_name",
+        "label": "Your name",
+        "inputType": {
+         "type": "text-box",
+         "minLength": 0,
+         "maxLength": 120
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "requester_org",
+        "label": "Your organization",
+        "inputType": {
+         "type": "text-box",
+         "minLength": 0,
+         "maxLength": 120
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "requester_contact",
+        "label": "Phone or email",
+        "inputType": {
+         "type": "text-box",
+         "minLength": 0,
+         "maxLength": 200
+        }
+       }
+      ]
+     },
+     {
+      "type": "group",
+      "label": "Response team",
+      "initialState": "collapsed",
+      "formElements": [
+       {
+        "type": "field",
+        "fieldName": "status",
+        "label": "Status",
+        "inputType": {
+         "type": "combo-box",
+         "showNoValueOption": false
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "assigned_to",
+        "label": "Assigned to",
+        "inputType": {
+         "type": "text-box",
+         "minLength": 0,
+         "maxLength": 120
+        }
+       },
+       {
+        "type": "field",
+        "fieldName": "response_notes",
+        "label": "Response notes",
+        "inputType": {
+         "type": "text-area",
+         "minLength": 0,
+         "maxLength": 2000
+        }
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "tables": [],
+ "baseMap": {
+  "title": "Topographic",
+  "baseMapLayers": [
+   {
+    "id": "topo",
+    "layerType": "VectorTileLayer",
+    "title": "World Topographic Map",
+    "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json"
+   }
+  ]
+ },
+ "initialState": {
+  "viewpoint": {
+   "targetGeometry": {
+    "xmin": -180,
+    "ymin": 15,
+    "xmax": -60,
+    "ymax": 72,
+    "spatialReference": {
+     "wkid": 4326
+    }
+   }
+  }
+ },
+ "spatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857
+ },
+ "version": "2.30",
+ "authoringApp": "arcgis-dashboards-deploy",
+ "authoringAppVersion": "0.1.0"
+}
